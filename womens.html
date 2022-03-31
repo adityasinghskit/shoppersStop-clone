@@ -1,0 +1,478 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>Document</title>
+
+        <style>
+#one{
+    height: 40px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-left:600px;
+}
+#firstDiv{
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin-left:150px ;
+    margin-bottom: 40px;
+}
+#first{
+    height: 400px;
+    width: 1500px;
+    margin-bottom: 40px;
+}
+#secDiv{
+    display: grid;
+    grid-template-columns: repeat(6,250px);
+    grid-template-rows: auto;
+    margin-bottom: 40px;
+}
+#second{
+   width: 1500px;
+}
+#secondDiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+    margin-left: 150px;
+    margin-right: 100px;
+   
+}
+#secondDiv>div{
+    margin-bottom: 100px;
+}
+#thirdDiv{
+display: grid;
+grid-template-columns: repeat(6,250px);
+grid-template-rows: auto;
+}
+#heading1{
+    text-align: center;
+    font-family: italic;
+    font-size: 40px;
+}
+#shop{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    margin-left:160px ;
+    margin-right: 160px;
+}
+#shop>div>img{
+    height: 300px;
+width: 200px;
+}
+#para1{
+    font-size: 30px;
+    text-align: center;
+}
+#fourthDiv{
+    display: grid;
+    grid-template-columns: repeat(6,200px);
+    background-color: #f6f6f6;
+}
+#fourthDiv>div{
+        margin-left: 100px;
+        /* margin-left: px; */
+    
+    }
+    
+        </style>
+    </head>
+    <body>
+        <h1 id="one">
+            SHOPPERS STOP
+        </h1>
+        <div id="firstDiv">
+            <div>BARGINS</div>
+            <div>MEN</div>
+            <div>WOMEN</div>
+            <div>KIDS</div>
+            <div>WATCHES</div>
+            <div>BEAUTY</div>
+            <div>HOMESTOP</div>
+            <div>LUXE</div>
+            <div>GIFTS</div>
+            <div>BRANDS</div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/h70/hd3/27330037612574/web_wom_kraus_main-carousel_29032022.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hd3/hbb/27131778695198/Top-Carousal-Dresses-Web.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/he7/hdc/27330037383198/Top-Carousal-AND-Web--29032022revisewom.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <h1>Shop By Category</h1> 
+        <div id="secDiv">
+            
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hef/hd8/27300386996254/app_wom_kurta_shop-by-categories_24032022.jpg">
+           
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/hce/27300387455006/app_wom_top-%26-tees_shop-by-categories_24032022.jpg">
+            
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hcb/27300387520542/app_wom_dresess_shop-by-categories_24032022.jpg">
+            
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hf6/hc7/27300387651614/app_wom_denim_shop-by-categories_24032022.jpg">
+          
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hc4/27300387717150/app_wom_handbag_shop-by-categories_24032022.jpg">
+           
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/h37/hc4/27300387782686/app_wom_lingeris_shop-by-categories_24032022.jpg">
+           
+            </div>
+        </div>
+
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h41/hef/27309538607134/2000x500--padlakwpm.jpg">
+<img id="first" src ="https://sslimages.shoppersstop.com/sys-master/root/h06/h6d/27303475380254/web_wom_pg_jewellery__office-reboot_carousel_20220324.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h95/hc7/27300373823518/office-24-03-22new-brands_hom-greboot_strip_web.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h33/h69/27303475249182/web_wom_pg_trausel__office-reboot_carousel_20220324.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb2/27089609424926/web_wom_shoppers-stop-select_20220217.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/he2/h2b/27045880922142/web_wom_insense_shoppersstop-selects_po2_20220210.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h10/hfd/27197980868638/web_wom-excl_launch_strips_20220307.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hf3/h5b/27200288227358/web_wom-pg_zink-lon_ss22_2022-03-07.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h85/hc1/27252820181022/Ready-Your-Brand-Wishlist-Strip-Web.jpg">
+
+<div id="secondDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hf9/27287356637214/AND---4-Widgets-WEb.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h9c/27045883772958/web_wom_kraus_unbelievable%20deals_po2_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h7e/hf5/27232554156062/web_wom-pg_foerver-new-2022-311_without-offe.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h2d/hc6/27050142662686/web_wom_indya-womens_20220201_unbilav.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h01/h2d/27045884919838/web_wom_handbags_unbelievable%20deals_po3_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h42/hba/27252839055390/Erotissch--4-Widgets-web.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h64/27269485395998/web_wom_rayben_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.s3-ap-southeast-1.amazonaws.com/sys-master/root/h3e/h61/27269485461534/web_wom_idee_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h40/h5e/27269485527070/web_wom_shaya_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h7f/h5d/27269485592606/web_wom_jewelz_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+    </div>
+</div>
+
+
+
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/he8/ha3/27232553238558/WEB_WOM-BRAND-TO-BAG-STRIPS_20220311.jpg">
+<div id="thirdDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha4/hc3/27112042201118/Juniper------WEB--01.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc7/hbf/27050112319518/web_wom_yuris_price%20drops_po2_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb8/h04/27076501995550/web_wom_au_6widget_20220216.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h29/h64/27076502683678/web_wom_mdme_20220216_newbanner-6widget.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h57/hca/27050112647198/web_wom_levis_price%20drops_po5_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbf/h96/27207038730270/web--wom-2022-03-07_mot-carl-6widget.jpg">
+    </div>
+</div>
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h90/hcd/27050117234718/web_wom_no-stress%20dressing_20220210.jpg"> 
+<!-- <div> 
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>-->
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h82/h69/27050127032350/web_wom_new%20for%20you_20220210.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hcb/hcd/27050125393950/web_wom_vastranand_new%20launchs_po1_20220210.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h01/h3c/27054750400542/web_wom_refresh%20your%20routine_20220210.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hb3/27054749646878/web_wom_enamor-athleisure_refresh-your-routine_po4_20220211.jpg">
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hde/hdb/27050117693470/web_wom_the%20denim%20directory_20220210.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/he0/he8/27063828709406/web_wom_revisedbanner_ds_20220214.jpg">
+ <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hb6/h28/27063825694750/web_wom_the-brand-block_20220214.jpg">
+<div id ="secondDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h59/27050135617566/web_wom_janasya_top%20brands_po1_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hce/hff/27112038989854/Biba---4-Widgets-web-.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb6/hac/27243209392158/Kami-Kubi--4-Widgets-web.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbf/hfc/27287356702750/globaldesi---4-Widgets-Web.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h45/h11/27050136666142/web_wom_sera_top%20brands_po1_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h8e/h69/27050137124894/web_wom_dolce-crudo_top%20brands_po2_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb4/h73/27050137419806/web_wom_latin-quarter_top%20brands_po3_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb3/haf/27243209457694/web_wom_vero-moda_top-brand_20220315.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h62/27076505501726/web_wom_rare-sutra_top%20brands_po1_20220211.jpg">
+    </div>
+   
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h5e/27076505632798/web_wom_cover-story-crudo_top%20brands_po2_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h14/hc9/27050141450270/web_wom_i.s.u_top%20brands_po3_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hd6/27050141876254/web_wom_clovia_top%20brands_po4_20220211.jpg">
+    </div>
+</div>
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h73/hc5/27057672355870/web_wom_2022%20trend%20alert_20220210.jpg">
+
+
+
+<div id="secondDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/he5/h21/27063825891358/web_wom_ruffles_whats-trending%20in_po1_20220214.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h94/hc7/27252820312094/florals_4-widget_Web.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hd1/hd9/27057672945694/web_wom_mandarin-collars_whats-trending%20in_po3_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h6d/h8c/27063829331998/web_wom_st%26ct_20220214_revised.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb4/hd4/27057673207838/web_wom_a-line-dress_whats-trending%20in_po1_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf5/hd0/27057673338910/web_wom_solid-color-dress_whats-trending%20in_po2_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/he4/hcd/27057673404446/web_wom_bodycon-dress_whats-trending%20in_po3_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h25/hca/27057673535518/web_wom_shift-dresses_whats-trending%20in_po4_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/hc7/27057673601054/web_wom_gota-patti_whats-trending%20in_po1_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h66/hc6/27057673666590/web_wom_bandhani-print_whats-trending%20in_po2_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h54/hc3/27057673732126/web_wom_kalamkari_whats-trending%20in_po3_20220212.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha6/hc2/27057673797662/web_wom_block-print_whats-trending%20in_po4_20220212.jpg">
+    </div>
+</div>
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h4d/hde/27108347707422/Everyday-Wardrobe-BFFs-Web.jpg">
+
+
+<div id="thirdDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h62/27050127228958/web_wom_kurtas_workwear%20style_po1_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h04/h62/27050127294494/web_wom_tops%20%26%20tees_workwear%20style_po2_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf5/h5b/27050127425566/web_wom_comfort%20bottom_workwear%20style_po3_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h36/h58/27050127556638/web_wom_activewear_workwear%20style_po4_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h24/h55/27050127622174/web_wom_sleepwear_workwear%20style_po5_20220211.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h65/h51/27050127753246/web_wom_flip-flops_workwear%20style_po6_20220211.jpg">
+    </div>
+</div>
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h60/hd4/27050117431326/web_wom_accessorize%20right_20220210.jpg">
+
+
+
+<div id="secondDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h47/h6f/27050114285598/web_wom_hobo-bags_best%20of%20accessories_po1_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h49/27300364124190/Sunglasses-4-Widgets-Web.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h67/h62/27050114613278/web_wom_embellished-cultches_best%20of%20accessories_po3_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hab/h5b/27050114809886/web_wom_heels_best%20of%20accessories_po4_20220210.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha2/h59/27279434711070/web_wom_acessories-right_20220322-part2-img.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h20/h61/27279434973214/web_wom_rings_acessories-right_20220322-part2-img.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h59/hb6/27279435366430/web_wom_neckles-%26-chains_acessories-right_20220322-part2.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h18/hba/27279435497502/web_wom_baslets-%26-bangals_acessories-right_20220322-part2-img.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/h98/27309553451038/web_wom_catwalk_best-of-accessories_20220325.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/ha2/27309553713182/web_wom_inc5_best-of-accessories_20220325.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h74/ha3/27309553778718/web_wom_lemon-%26-pepper_best-of-accessories_20220325.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h26/hff/27309554335774/web_wom_estatos_best-of-accessories_20220325.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf2/h1e/27309556793374/Elliza-donatein-4-Widgets-web--25-03-2022new.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/he3/h18/27309556924446/web_wom_hidesigen_handbag_25032022-img.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hed/h38/27309557219358/web_wom_lino-paror_handbag_25032022-img.jpg">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hae/h39/27309557284894/web_wom_baggit_handbag_25032022-img.jpg">
+    </div>
+</div>
+
+<p id="heading1"><i>You May Also Like</i></p>
+<div id="shop">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/hb9/hc3/17237402091550/A21INFDU09_MAROON.jpg_136Wx204H">
+   <p>Infuse</p>
+   <p>Woven Poly Silk Dupatta</p>
+   <p>Rs 500</p>
+   <button>add to cart</button>
+   
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/hb1/h65/17446943162398/A21INFTRLINN_NAVY.jpg_136Wx204H">
+   <p>Infuse</p>
+   <p>Solid Regular Fit Cotten Blend Women Casual Pants</p>
+   <p>Rs 500</p>
+   <button>add to cart</button>
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/h3c/h9d/17020665593886/S21LGTBPJSET01_MINT.jpg_136Wx204H">
+    <p>Insense</p>
+    <p>Printed Regular Fit Cotten Womens Pyjama Sets</p>
+    <p>Rs 500</p>
+    <button>add to cart</button>
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/h7a/h4c/17435531444254/A21STDU29F_PEACH.jpg_136Wx204H">
+        <p>Stop</p>
+        <p>Full Length Polystar Woven Womens Dupatta</p>
+        <p>Rs 500</p>
+        <button>add to cart</button>
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/hd3/h9a/17427692486686/A219655OA_BROWN.jpg_136Wx204H">
+        <p>Stop</p>
+        <p>Printed Rayon Mandarin Womens Knee Length Kurta</p>
+        <p>Rs 559</p>
+        <button>add to cart</button>
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/images/h72/hd5/15583256379422/A20STDU36F_AQUA.jpg_136Wx204H">
+        <p>Juniper</p>
+        <p>Stop Regular Length Net Woven Women Dupatta</p>
+        <p>RS 382</p>
+        <button>add to cart</button>
+    </div>
+</div>
+<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h91/27312092381214/Style-Tips-to-Get-Back-to-25mrchOffice-Strip-Web.jpg">
+<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h25/h27/27309569114142/Workwear-Women-buyingGuide_website25mrchh.jpg">
+<p id="para1">BEST BRANDS</p>
+<div id="fourthDiv">
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hdf/h8d/8856749047838/BrandBiba.png">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h3a/h3d/15087373746206/ZINk.png">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h90/h98/9519789342750">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h83/13761579843614/l_stop-2019.png">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf3/hff/15087376728094/life-logo.png">
+    </div>
+    <div>
+        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h37/15087379578910/AND.png">
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+    </html>
