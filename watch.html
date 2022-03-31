@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    #top-section {
+      z-index: 5;
+      position: fixed;
+      top: 0;
+      margin: auto;
+      height: 80px;
+      display: flex;
+      padding-bottom: 10px;
+      align-items: center;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      background-color: white;
+    }
+
+    #search {
+      border: none;
+      border-bottom: 1px solid grey;
+    }
+
+    #search+img {
+      height: 20px;
+    }
+
+    #top-section>img {
+      height: 45px;
+    }
+
+    #top-left>a>img {
+      color: #777;
+      height: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    #top-left {
+      display: flex;
+      gap: 10px;
+      margin-left: 30px;
+    }
+
+    #top-right {
+
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    #top-right>input {
+      width: 400px;
+      height: 50px;
+
+    }
+
+    #top-section>img {
+      margin-left: 410px;
+      margin-right: 45px;
+    }
+
+    #search+img {
+      margin-top: 5px;
+      margin-right: 8px;
+    }
+
+    #bottom-section {
+
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      margin-top: 80px;
+
+    }
+
+    #bottom-section>div {
+
+      display: flex;
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+      justify-content: space-around;
+    }
+
+    #bottom-section>div>div>a {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .top-img {
+      width: 100%;
+    }
+
+    #main {
+      margin-top: 10px;
+    }
+
+    .topSelling {
+      display: flex;
+      justify-content: center;
+      font-size: 45px;
+      margin-top: 40px;
+      font-style: italic;
+      font-family: Cormorant-Italic, serif, sans-serif;
+      font-weight: 50;
+
+    }
+
+    #Watches {
+      width: 85%;
+      height: 500px;
+      margin-top: 20px;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .list {
+      margin-top: 20px;
+      width: 18%;
+      height: 480px;
+      padding: 15px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    #Watches>div>img {
+      width: 100%;
+      height: 70%;
+      margin: auto;
+    }
+
+    #Watches>div>h7 {
+      font-weight: bold;
+      text-decoration: underline;
+      display: flex;
+      justify-content: center;
+    }
+
+    #Watches>div>p {
+      color: gray;
+    }
+
+    #Watches+img {
+      margin-top: 50px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    #trends {
+      display: flex;
+      height: 500px;
+      margin-bottom: 30px;
+    }
+
+    #trends>div>a>img {
+      height: 100%;
+    }
+
+    .special {
+      display: flex;
+      height: 400px;
+      justify-content: space-between;
+
+    }
+
+    .special>div {
+      width: 49%;
+      border: 3px solid hsl(38, 69%, 55%);
+      border-radius: 10px;
+      text-align: center;
+
+    }
+
+    .special>div>h1 {
+      margin-top: 250px;
+      color: white;
+      font-size: 40px;
+
+    }
+
+    .special>div>button {
+      padding: 20px;
+      font-size: 25px;
+      font-weight: 400;
+      background-color: white;
+      border-radius: 10px;
+      border: none;
+
+    }
+
+    .special>div:nth-child(1) {
+      background-image: url("https://tse2.mm.bing.net/th?id=OIP.dlPbdAj5wKsajGwaVDTv8wHaEm&pid=Api&P=0&w=280&h=174");
+      background-size: 100%;
+
+
+    }
+
+    .special>div:nth-child(2) {
+      background-image: url("https://tse1.mm.bing.net/th?id=OIP.zzeiBZ708ux5dgx91shzowHaE7&pid=Api&P=0&w=254&h=169");
+      background-size: 100%;
+
+    }
+
+    #brands {
+      margin: auto;
+      display: flex;
+      width: 90%;
+      height: auto;
+      justify-content: space-evenly;
+      margin-top: 80px;
+      margin-bottom: 60px;
+
+    }
+
+    #category {
+      display: flex;
+      width: 100%;
+      height: auto;
+
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+
+    #category>div {
+      width: 49%;
+
+    }
+
+    #fossils>img {
+      width: 100%;
+    }
+
+    #types {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    #types>div {
+      width: 49%;
+      height: 85%;
+
+
+    }
+
+    #types>div>div>img {
+      width: 100%;
+      height: 40%;
+    }
+
+    #child {
+      margin-top: 30px;
+    }
+
+    .celeb {
+      width: 100%;
+    }
+
+    #topselling {
+      display: flex;
+      width: 98%;
+      margin: auto;
+    }
+
+    #topselling>div>img {
+      width: 100%;
+    }
+
+    #newarrival {
+      width: 100%;
+    }
+
+    #newarrival>div {
+      width: 100%;
+    }
+
+    #exploreMore {
+      display: flex;
+      width: 85%;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+
+    #exploreMore>div {
+      width: 23%;
+
+    }
+
+    #gifting>div:nth-child(1) {
+      background-image: url("https://tse2.mm.bing.net/th?id=OIP.NPxL2uAmk1bzjyvo-5-OHQHaEK&pid=Api&P=0&w=280&h=157");
+    }
+
+    #gifting>div:nth-child(2) {
+      background-image: url("https://tse2.mm.bing.net/th?id=OIP.IimTxDVsnMbcICs2t0XFzgHaEK&pid=Api&P=0&w=275&h=154");
+      background-size: 100%;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="top-section">
+    <div id="top-left">
+      <a><img src="https://cdn-icons-png.flaticon.com/512/4091/4091547.png" />All Stores</a>
+      <a><img
+          src="https://cdn-icons.flaticon.com/png/512/4449/premium/4449424.png?token=exp=1648535243~hmac=61e6bb910ee2cb792fccb522f19528a7" />Contact
+        Us</a>
+    </div>
+
+
+    <img src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" />
+    <div id="top-right">
+      <input id="search" type="text" placeholder="Search Products & Brands" />
+      <img src="https://cdn-icons-png.flaticon.com/512/107/107122.png" />
+      <a href="wishlist.html"><img
+          src="https://www.shoppersstop.com/_ui/responsive/common/assets/images/iconwishlist.png" alt=""></a>
+      <a href="cart.html"><img src="https://www.shoppersstop.com/_ui/responsive/common/assets/images/iconaddtobag.png"
+          alt=""></a>
+      <a href="login"><img src="https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/iconuser.png"
+          alt=""></a>
+    </div>
+
+
+  </div>
+
+
+  <div id="bottom-section">
+
+    <div>
+      <div><a href="mens.html">MEN</a></div>
+      <div><a href="womens.html">WOMEN</a></div>
+      <div><a href="kids.html">KIDS</a></div>
+      <div><a href="watch.html">WATCHES</a></div>
+      <div><a href="beauty.html">BEAUTY</a></div>
+      <div><a href="homestop.html">HOMESTOP</a></div>
+      <div><a href="luxe.html">LUXE</a> </div>
+      <div><a href="gifts.html">GIFTS</a></div>
+      <div><a href="brands.html">BRANDS</a></div>
+      <div><a href="bargains.html">BARGAINS</a></div>
+    </div>
+
+  </div>
+
+  <div id="main">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h2a/hbf/27210299211806/Watches-Carousal-Fossil-Web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/he9/hc2/27210299342878/Watches-Carousal-Tommy-Hifiger-Web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h30/hec/27210305044510/Watches-Carousal-Police-Web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="topSelling">Top Selling Watches</div>
+
+    <div id="Watches"></div>
+
+
+    <img
+      src="https://sslimages.shoppersstop.com/sys-master/root/hdc/hc5/26952666513438/Shop-By-Trend-Strip-Web_20220131.jpg" />
+
+    <div id="trends">
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h9b/hc9/26952666644510/Shop-By-Trend-3x3-Widgets-Work-Watches_20220131.jpg" /></a>
+      </div>
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/had/hcc/26952666710046/Shop-By-Trend-3x3-Widgets-Party-Watches_20220131.jpg" /></a>
+      </div>
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h6c/hd0/26952666841118/Shop-By-Trend-3x3-Widgets-Couple-watch_20220131.jpg" /></a>
+      </div>
+    </div>
+
+
+    <div id="trends">
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h6a/hd3/26952666906654/Shop-By-Trend-3x3-Widgets-Luxury_20220131.jpg" /></a>
+      </div>
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h2b/he1/26952667037726/Shop-By-Trend-3x3-Widgets-Casual-Watches_20220131.jpg" /></a>
+      </div>
+      <div><a><img
+            src="https://sslimages.shoppersstop.com/sys-master/root/hb1/hda/26952667201566/Shop-By-Trend-3x3-Widgets-Sports-Watches_20220131.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="special">
+      <div>
+        <h1>WATCHES FOR HIM</h1>
+        <button>SHOP NOW</button>
+      </div>
+      <div>
+        <h1>WATCHES FOR HER</h1>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+
+    <div id="brands">
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/ha7/hc9/27210299539486/Watches-4-Widgets-Casio-Web.jpg"
+          alt=""></div>
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/h79/hcd/27210299670558/Watches-4-Widgets-Emporio-Armani-Web.jpg"
+          alt=""></div>
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/h88/hd3/27210299801630/Watches-4-Widgets-Tissot-Web.jpg"
+          alt=""></div>
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/h36/hd4/27210299867166/Watches-4-Widgets-giordano-Web.jpg"
+          alt=""></div>
+    </div>
+
+    <div id="category">
+      <div id="fossils"><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/hf3/h69/26952668413982/smartwatches_web_20220131.jpg"
+          alt=""></div>
+      <div id="types">
+        <div>
+          <div><img
+              src="https://sslimages.shoppersstop.com/sys-master/root/h65/h5c/26952668807198/analog-digital_web_20220131.jpg"
+              alt=""></div>
+          <div><img
+              src="https://sslimages.shoppersstop.com/sys-master/root/h8b/h07/26952669691934/Chronograph_web_20220131.jpg"
+              alt=""></div>
+        </div>
+        <div id="child">
+          <div><img
+              src="https://sslimages.shoppersstop.com/sys-master/root/h64/h00/26952669462558/analog-watch__web_20220131.jpg"
+              alt=""></div>
+          <div><img
+              src="https://sslimages.shoppersstop.com/sys-master/root/h89/h0a/26952669757470/digital-watch_web_20220131.jpg"
+              alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div><img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h47/h1f/26962394906654/Celeb-Brands-Strip-Web_20220131.jpg"
+        alt=""></div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/h69/hdb/27210300063774/diesel_web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/h28/hdf/27210300194846/armani-exchange_Web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/h69/hdb/27210300063774/diesel_web.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div><img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h75/hf5/26952670085150/Top-Selling-Brands-Strip-Web_20220131.jpg"
+        alt=""></div>
+    <div id="topselling">
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/ha0/he8/27210300424222/police_6-widget.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/hb6/hec/27210300588062/anne-klein_6-widget.jpg"
+          alt=""></div>
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/hc5/hf2/27210300719134/armani-exchange_6-widget.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h86/hf3/27210300784670/versus_6-widget.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h97/hf6/27210300850206/garmin_6-widget.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h95/hf9/27210300915742/diesel_6-widget.jpg"
+          alt=""></div>
+    </div>
+    <div>
+      <img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hbc/h15/26958152138782/New-Arrivals-Strip-Web_20220131.jpg"
+        alt="">
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/h94/h0e/26958152368158/amazefit_web_20220131.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/hb3/h04/26958152630302/fossil_web_20220131.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sslimages.shoppersstop.com/sys-master/root/h33/h06/26958152990750/titan_web_20220131.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div>
+      <img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h6a/h5e/26958153449502/Explore-More-brands-Strip-Web_20220131.jpg"
+        alt="">
+    </div>
+
+    <div id="exploreMore">
+      <div><img
+          src="https://sslimages.shoppersstop.com/sys-master/root/h3a/hb2/27210309959710/Kenneth-cole----web_2022013120.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h43/h55/27210310025246/Fastrack-web--20.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h82/h54/27210310090782/UST-CAVALLI---web20.jpg"
+          alt=""></div>
+      <div><img src="https://sslimages.shoppersstop.com/sys-master/root/h84/h51/27210310156318/SLAZENGER--web20.jpg"
+          alt=""></div>
+    </div>
+
+    <div>
+      <img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h81/hde/26962396315678/Watches-for-gifting-Strip-Web_20220131.jpg"
+        alt="">
+    </div>
+
+    <div id="gifting" class="special">
+      <div>
+        <h1>GIFTING WATCHES</h1>
+        <button>SHOP NOW</button>
+      </div>
+      <div>
+        <h1>KIDS WATCHES</h1>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+
+    <div>
+      <img class="celeb"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hed/hc0/26958154203166/Explore-More-Strip-Web_20220131.jpg"
+        alt="">
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h66/h32/27131772207134/web_ex_wa_rayben-sunglasss_2022-02-24.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/h25/h36/27131772338206/web_ex_wa_idee_sunglasess_2022-02-24.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://sslimages.shoppersstop.com/sys-master/root/he4/h39/27131772469278/web_ex_wa_tommy-hif-sunglasss_2022-02-24.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script>
+
+
+  watchList = [
+    {
+      imgUrl: "https://sslimages.shoppersstop.com/sys-master/images/hdb/hfd/26908964061214/WFT38072AP02_NoColour.jpg_136Wx204H",
+      name: "Fastrack Wearables",
+      details: "Unisex 37.25 mm Reflex Vox Blazing Blue Dial",
+      price: "₹4995"
+    },
+    {
+      imgUrl: "https://sslimages.shoppersstop.com/sys-master/images/h53/h33/17554217795614/WCBIGNITEBLACK_NoColour.jpg_136Wx204H",
+      name: "Crossbeats",
+      details: "Unisex 45 mm Reflex Black Dial Silicon",
+      price: "₹9999"
+    },
+    {
+      imgUrl: "https://sslimages.shoppersstop.com/sys-master/images/h14/h84/26908957507614/WFT38072AP03_NoColour.jpg_136Wx204H",
+      name: "Fastrack Wearables",
+      details: "Unisex 37.25 mm Reflex Vox Champagne Blue",
+      price: "₹4995"
+    },
+    {
+      imgUrl: "https://sslimages.shoppersstop.com/sys-master/images/h27/h28/26908966223902/WFT38072AP01_NoColour.jpg_136Wx204H",
+      name: "Fastrack Wearables",
+      details: "Unisex 37.25 mm Reflex Vox Carbon Black Dial",
+      price: "₹4995"
+    },
+    {
+      imgUrl: "https://sslimages.shoppersstop.com/sys-master/images/h81/h8f/26856672034846/WFI-DZ1475I_NoColour.jpg_136Wx204H",
+      name: "Diesel",
+      details: "Men 45 mm Master Cheif Black Dial",
+      price: "₹9995"
+    }
+
+  ]
+
+  watchList.map(function (elem, index) {
+
+    var div1 = document.createElement("div");
+    div1.setAttribute("class", "list");
+
+    var img = document.createElement("img");
+    img.src = elem.imgUrl;
+
+    var ProductName = document.createElement("h6");
+    ProductName.innerText = elem.name;
+
+    var detailsOfProduct = document.createElement("p");
+    detailsOfProduct.innerText = elem.details;
+
+    var priceOfProduct = document.createElement("h6");
+    priceOfProduct.innerText = elem.price;
+
+    var bag = document.createElement("h7");
+    bag.innerText = "Add To Bag";
+    bag.style.cursor = "pointer";
+
+    bag.addEventListener("click", function () {
+
+      MyCart(elem);
+    })
+
+    div1.append(img, ProductName, detailsOfProduct, priceOfProduct, bag);
+    document.querySelector("#Watches").append(div1);
+
+  })
+
+  var Cart = JSON.parse(localStorage.getItem("CartList")) || [];
+
+  function MyCart(elem) {
+
+    Cart.push(elem);
+
+    localStorage.setItem("CartList", JSON.stringify(Cart));
+
+  }
+</script>
