@@ -168,6 +168,7 @@ body{
       width:100%;
       display:flex;
       flex-direction: row;
+      justify-content: space-between;
   }
   #catelog1-l{
       width:25%;
@@ -178,8 +179,7 @@ body{
       padding:10px 0;
   }
   #catelog1-r{
-      width:70%;
-      flex-grow: 1;
+      width:80%;
   }
   #heading2{
     margin:0;
@@ -307,3 +307,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
+.sticky {
+    position: fixed;
+    top: 70px;
+  }

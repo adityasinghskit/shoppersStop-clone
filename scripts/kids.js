@@ -53,6 +53,17 @@ if(otp1=="1234"){
     }
 }else{
     alert("Enter a valid OTP");
+    let div1=document.createElement("div");
+    div1.setAttribute("class","alert");
+    div1.setAttribute("class","alert-dark");
+    div1.style.padding="20px";
+    div1.role="alert";
+    div1.innerText="Please enter a valid OTP";
+    document.querySelector("#fc-2").append(div1);
+
+    // <div class="alert alert-dark" role="alert">
+    //             A simple dark alert—check it out!
+    // </div>
 }
 
   }

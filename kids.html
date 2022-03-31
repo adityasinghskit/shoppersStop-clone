@@ -43,21 +43,72 @@
 
     </div>
     <div id="navbar-2">
-        <div>
+        <!-- <div>
             <p><a href="#">MEN</a></p>
-        </div>
-        <div>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">MEN</a></button>
+            <div class="dropdown-content">
+              <a href="#">Clothing</a>
+              <a href="#">Footwear</a>
+              <a href="#">Watches</a>
+              <a href="#">Fragnances</a>
+              <a href="#">Clothing for Men</a>
+              <a href="#">Sunglasses & Frames</a>
+            </div>
+          </div>
+        <!-- <div>
             <p><a href="#">WOMEN</a></p>
-        </div>
-        <div>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">WOMEN</a></button>
+            <div class="dropdown-content">
+              <a href="#">Indian Wear</a>
+              <a href="#">Western Wear</a>
+              <a href="#">Lingerie & Night Wear</a>
+              <a href="#">Fragnances</a>
+              <a href="#">Footwear</a>
+              <a href="#">Watches</a>
+            </div>
+          </div>
+        <!-- <div>
             <p><a href="kids.html">KIDS</a></p>
-        </div>
-        <div>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">KIDS</a></button>
+            <div class="dropdown-content">
+              <a href="#">Boys</a>
+              <a href="#">Girls</a>
+              <a href="#">Infants</a>
+              <a href="#">Toys</a>
+              <a href="#">School Essentials</a>
+              <a href="#">Footwear</a>
+            </div>
+          </div>
+        <!-- <div>
             <p><a href="#">WATCHES</a></p>
-        </div>
-        <div>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">WATCHES</a></button>
+            <div class="dropdown-content">
+              <a href="#">Mens Watches</a>
+              <a href="#">Womens Watches</a>
+              <a href="#">Kids Watches</a>
+            </div>
+          </div>
+        <!-- <div>
             <p><a href="#">BEAUTY</a></p>
-        </div>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">BEAUTY</a></button>
+            <div class="dropdown-content">
+              <a href="#">MakeUp</a>
+              <a href="#">Beauty</a>
+              <a href="#">Bath & Body</a>
+              <a href="#">Nails</a>
+              <a href="#">Hair Care</a>
+            </div>
+          </div>
         <div>
             <p><a href="#">HOMESTOP</a></p>
         </div>
@@ -382,7 +433,7 @@
             </div>
 
         </div>
-        <div class="form-container">
+        <div class="form-container" id="fc-2">  
             <form id="pop-form2">
                 <input id="otp" type="number" placeholder="" required>
                 <button type="submit" class="btn gray back-gray" onclick="openForm3()">SUBMIT</button>
@@ -397,8 +448,8 @@
     <div class="form-popup" id="myForm3">
         <div class="form-container0">
             <div class="fc0-flex">
-                <p class="unpop" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></p>
-                <p class="unpop" onclick="closeForm3b()">Skip</p>
+                <div><p class="open-button" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left"></i></p></div>
+                <div><p class="open-button" onclick="closeForm3b()">Skip</p></div>
             </div>
             <div>
                 <p class="fc0-para2">Welcome to Shoppers Stop</p>
