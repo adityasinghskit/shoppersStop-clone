@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            color: white;
+            background-color: black;
+            height: 40px;
+            width: 400px;
+            text-align: center;
+            margin-left: 600px;
+        }
+
+        #two {
+            height: 50px;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #two>p:nth-child(1) {
+            margin-left: 20px;
+        }
+
+        #two>p:nth-child(2) {
+            margin-right: 20px;
+        }
+
+        #first {
+            height: 1000px;
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #para1 {
+            font-size: 20px;
+            height: 50px;
+            width: 80%;
+            padding-top: 20px;
+            border: 1px solid red;
+            margin-top: 0%;
+            padding-left: 40px;
+        }
+
+        #three {
+            height: 40px;
+            width: 80%;
+            margin-left: 20px;
+            margin-top: 0%;
+
+        }
+
+        #ek {
+            height: 50px;
+            font-size: 15px;
+            width: 40%;
+
+
+        }
+
+        #form {
+            margin-left: 20px;
+        }
+
+        #name {
+            height: 50px;
+        }
+
+        #name1 {
+            height: 32px;
+            width: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <h1>SHOPPERS STOP</h1>
+    </div>
+    <div id="two">
+        <p> CHECKOUT </p>
+        <p>VIEW BAG</p>
+    </div>
+
+
+    <div id="first">
+        <div>
+
+
+            <p id="para1"> 1. DELIVERY METHOD</p>
+
+            <div id="three">
+                <input id="ek" type="submit" value="Delivary Address">
+                <input id="ek" type="submit" value="Express Store Pick Up">
+            </div>
+
+
+            <p> ADD NEW ADDRESS</p>
+            <form id="form">
+                <div id="name">
+
+                    <!-- name -->
+                    <input id="name1" type="text" placeholder="First Name">
+                    <input id="name1" type="text" placeholder="Last Name">
+                </div>
+
+                <!-- mobile -->
+                <div>
+                    <input type="number">
+                    <input type="number" placeholder="Mobile Number">
+                </div>
+                <!-- number -->
+                <input type="number" placeholder="Pincode">
+                <!-- city & name -->
+                <div>
+                    <div>
+                        City
+                    </div>
+                    <div>
+                        State
+                    </div>
+                </div>
+                <!-- addres1 -->
+                <div>
+                    <input type="text" placeholder="Address Line 1">
+                </div>
+                <!-- add2 -->
+                <div>
+                    <input type="text" placeholder="Address Line 2 (Optional)">
+                </div>
+                <!-- checkbox -->
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">Use this as my default delivery address</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I agree to the Terms and Conditions</label><br>
+                <!-- last -->
+                <input type="submit" value="SAVE AND PROCEED">
+            </form>
+
+
+
+
+
+
+
+
+        </div>
+        <div>
+            <p> OEDER SUMMARY</p>
+            <input type="text" placeholder="Enter promo/ coupon code">
+            <input type="submit" value="APPLY">
+
+            <tbody>
+                <tr>
+                    <td>sub total</td>
+                    <td>Rs 1999</td>
+                </tr>
+                <tr>
+                    <td>delivery charges</td>
+                    <td>FREE</td>
+                </tr>
+            </tbody>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
