@@ -1,98 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="form-popup" id="myForm1">
-        <div class="form-container0">
-            <div>
-                <p class="unpop" onclick="closeForm1()">Skip</p>
-            </div>
-            <div>
-                <p class="fc0-para2">Login/Signup</p>
-                <p class="fc0-para3">for a tailored</p>
-            </div>
-
+<div class="form-popup" id="myForm1">
+    <div class="form-container0">
+        <div>
+            <p class="unpop" onclick="closeForm1()">Skip</p>
         </div>
-        <div class="form-container">
-            <form id="pop-form1">
-                <input id="mobile" type="number" placeholder="Mobile Number" required>
-                <button type="submit" class="btn" onclick="openForm2()">CONTINUE</button>
-            </form>
-            <p class="fc-p1">Login Using <span>Email</span></p>
-            <div class="fc-p2">
-                <p><i class="fa-brands fa-facebook fa-2x"> </i><i class="fa-brands fa-google fa-2x"></i></p>
-            </div>
-            <div class="fc-p3">
-                <div>
-                    <p>By signing up you agree to our <span>Terms of Service & Privacy Policy</span></p>
-                </div>
-            </div>
+        <div>
+            <p class="fc0-para2">Login/Signup</p>
+            <p class="fc0-para3">for a tailored</p>
+        </div>
 
+    </div>
+    <div class="form-container">
+        <form id="pop-form1">
+            <input id="mobile" type="number" placeholder="Mobile Number" required>
+            <button type="submit" class="btn" onclick="openForm2()">CONTINUE</button>
+        </form>
+        <p class="fc-p1">Login Using <span>Email</span></p>
+        <div class="fc-p2">
+            <p><i class="fa-brands fa-facebook fa-2x"> </i><i class="fa-brands fa-google fa-2x"></i></p>
+        </div>
+        <div class="fc-p3">
+            <div>
+                <p>By signing up you agree to our <span>Terms of Service & Privacy Policy</span></p>
+            </div>
         </div>
 
     </div>
 
-    <div class="form-popup" id="myForm2">
-        <div class="form-container0">
-            <div>
-                <p class="unpop justleft" onclick="closeForm2()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></p>
-            </div>
-            <div>
-                <p class="fc0-para2">Verify OTP</p>
-                <p class="fc0-para3">Enter the 6-digit OTP sent to mobile no.</p>
-            </div>
+</div>
 
+<div class="form-popup" id="myForm2">
+    <div class="form-container0">
+        <div>
+            <p class="unpop justleft" onclick="closeForm2()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></p>
         </div>
-        <div class="form-container" id="fc-2">
-            <form id="pop-form2">
-                <input id="otp" type="number" placeholder="" required>
-                <button type="submit" class="btn gray back-gray" onclick="openForm3()">SUBMIT</button>
-            </form>
-            <p class="fc-p1 open-button" onclick="openForm2()"><span>Resend OTP</span></p>
-
-
+        <div>
+            <p class="fc0-para2">Verify OTP</p>
+            <p class="fc0-para3">Enter the 6-digit OTP sent to mobile no.</p>
         </div>
 
     </div>
+    <div class="form-container" id="fc-2">
+        <form id="pop-form2">
+            <input id="otp" type="number" placeholder="" required>
+            <button type="submit" class="btn gray back-gray" onclick="openForm3()">SUBMIT</button>
+        </form>
+        <p class="fc-p1 open-button" onclick="openForm2()"><span>Resend OTP</span></p>
 
-    <div class="form-popup" id="myForm3">
-        <div class="form-container0">
-            <div class="fc0-flex">
-                <div>
-                    <p class="open-button" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left"></i></p>
-                </div>
-                <div>
-                    <p class="open-button" onclick="closeForm3b()">Skip</p>
-                </div>
+
+    </div>
+
+</div>
+
+<div class="form-popup" id="myForm3">
+    <div class="form-container0">
+        <div class="fc0-flex">
+            <div>
+                <p class="open-button" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left"></i></p>
             </div>
             <div>
-                <p class="fc0-para2">Welcome to Shoppers Stop</p>
-                <p class="fc0-para3">Let's get you registered!</p>
+                <p class="open-button" onclick="closeForm3b()">Skip</p>
             </div>
-
         </div>
-        <div class="form-container">
-            <form id="pop-form3">
-                <input id="name" type="text" placeholder="Full Name" required>
-                <input id="mobile" type="number" placeholder="Mobile Number" required>
-                <input id="email" type="email" placeholder="Email ID" required>
-                <select id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <button onclick="addDetail()" type="submit" class="btn gray back-gray">SUBMIT</button>
-            </form>
-
-
+        <div>
+            <p class="fc0-para2">Welcome to Shoppers Stop</p>
+            <p class="fc0-para3">Let's get you registered!</p>
         </div>
 
     </div>
-</body>
-</html>
-<script src="signup.js"></script>
+    <div class="form-container">
+        <form id="pop-form3">
+            <input id="name" type="text" placeholder="Full Name" required>
+            <input id="mobile" type="number" placeholder="Mobile Number" required>
+            <input id="email" type="email" placeholder="Email ID" required>
+            <select id="gender" required>
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button onclick="addDetail()" type="submit" class="btn gray back-gray">SUBMIT</button>
+        </form>
+
+
+    </div>
+
+</div>

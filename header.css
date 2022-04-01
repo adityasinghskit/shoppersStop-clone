@@ -1,0 +1,115 @@
+/******** CSS for header ***********/
+#navbar{
+    z-index: 5;
+    position: fixed;
+    top:0;
+    background-color: white;
+    color: rgb(22, 22, 22);
+    font-size:15px;
+    width:100%;
+    height:auto;
+    padding:10px;
+    margin:auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#navbar-l{
+    width:20%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar-l i{
+    margin-right: 10px;
+    color: rgb(32, 32, 32);
+}
+#navbar-r{
+    width:60%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar-r>div:nth-child(2)>input{
+    width:300px;
+    border:0;
+    border-bottom: 1px solid black;
+}
+#navbar-r img{
+    width: 250px;
+    cursor: pointer;
+}
+#navbar-2{
+    color: rgb(32, 32, 32);
+    font-size:15px;
+    font-weight:600;
+    width:90%;
+    height:auto;
+    padding:10px;
+    margin-top:65px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+#navbar-2 a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+#navbar-2 a{
+    padding:12px 24px;
+}
+#navbar-2 a:hover{
+    border-bottom: 2px solid #ff5d3b;
+    color:#ff5d3b;
+}
+/********* Style The Dropdown Button *******/
+.dropbtn {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      /* margin-top: 10px; */
+    font-weight: 400;
+    display: none;
+    color:gray;
+
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/********* Style The Dropdown Button *******/
+/******** CSS for header ***********/
