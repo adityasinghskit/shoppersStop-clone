@@ -119,6 +119,7 @@ body{
   }
 /********* Style The Dropdown Button *******/
 /******** CSS for header ***********/
+/********CSS for footer ********/
 #footer{
     width:100%;
     margin:20px auto;
@@ -168,17 +169,19 @@ body{
 #footer1 i,p{
     color:gray;
 }
-#footer2{
+/************ CSS FOR FOOTER******/
+/* #footer2{
     width:100%;
     height:auto;
     background-color: white;
-}
-#footer2>div:nth-child(1){
+} */
+/* #footer2>div:nth-child(1){
     width:100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
+
 .content-div{
     margin:40px auto;
     width:100%;
