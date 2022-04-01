@@ -133,6 +133,7 @@
     margin:20px auto;
 }
 #footer1{
+   
     width:100%;
     margin:auto;
     padding:20px;
@@ -234,10 +235,11 @@ width: 200px;
     display: grid;
     grid-template-columns: repeat(6,200px);
     background-color: #f6f6f6;
+    margin-bottom: 120px;
 }
 #fourthDiv>div{
         margin-left: 100px;
-        /* margin-left: px; */
+       
     
     }
     
@@ -474,13 +476,7 @@ width: 200px;
     </div>
 </div>
 <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h90/hcd/27050117234718/web_wom_no-stress%20dressing_20220210.jpg"> 
-<!-- <div> 
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>-->
+
 <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h82/h69/27050127032350/web_wom_new%20for%20you_20220210.jpg">
 <img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hcb/hcd/27050125393950/web_wom_vastranand_new%20launchs_po1_20220210.jpg">
 <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h01/h3c/27054750400542/web_wom_refresh%20your%20routine_20220210.jpg">
@@ -745,9 +741,9 @@ width: 200px;
             <p class="footer1-p">FOLLOW US</p>
         </div>
         <div class="flexb">
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fa-brands fa-instagram"></i></div>
+            <div id="fb"><i class="fa-brands fa-facebook-f"></i></div>
+            <div id="twitter"><i class="fa-brands fa-twitter"></i></div>
+            <div id="insta"><i class="fa-brands fa-instagram"></i></div>
         </div>
     </div>
 </div>
@@ -939,3 +935,23 @@ width: 200px;
 </body>
 
     </html>
+
+    <script>
+         document.querySelector("#fb").addEventListener("click",Myfb);
+
+function Myfb(){
+    window.location.href="https://www.facebook.com/shoppersstopindia";
+}
+
+document.querySelector("#twitter").addEventListener("click",Mytwitter);
+
+function Mytwitter(){
+window.location.href="https://twitter.com/shoppersstop";
+}
+
+document.querySelector("#insta").addEventListener("click",Myinsta);
+
+function Myinsta(){
+window.location.href="https://www.instagram.com/shoppers_stop/";
+}
+    </script>

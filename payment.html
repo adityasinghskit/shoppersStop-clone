@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         #container {
             display: flex;
             justify-content: space-between;
-            height: 800px;
+            height:fit-content;
             width: 80%;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             margin: auto;
 
         }
@@ -24,10 +24,9 @@
 
         }
 
-        #right {
-            height: 600px;
+        #right {         
             width: 25%;
-
+            height: fit-content;
         }
 
         #heading1 {
@@ -39,29 +38,42 @@
             text-align: center;
             margin-left: 600px;
         }
-        #do1{
+
+        #do1 {
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #do2 {
+            margin-right: 20px;
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #do3 {
+            margin-left: 20px;
+
+        }
+
+        #do5 {
             margin-left: 20px;
         }
-        #do2{
+
+        #do6 {
+
             margin-right: 20px;
         }
-        #do3{
-            margin-left: 20px;
-            
-        }
-        #do5{
-            margin-left: 20px;
-        }
-        #do6{
-           
-            margin-right: 20px;
-        }
-        #do4{
+
+        #do4 {
             margin-right: 20px;
             height: 30px;
             margin-top: 15px;
             width: 100px;
-            color: #ef1840 ;
+            color: #ef1840;
             border: 0px;
         }
 
@@ -69,40 +81,44 @@
             display: flex;
             height: 60px;
             width: 100%;
-           
+
             justify-content: space-between;
             margin-bottom: 20px;
             background-color: #cecece;
             font-size: 20x;
         }
 
-        
+
 
         #three {
             height: 100px;
             width: 100%;
 
         }
-        #three img{
+
+        #three img {
             width: 100%;
         }
-        #four{
+
+        #four {
             margin-top: 20px;
             width: 100%;
             height: 50px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border: 0px;
         }
-        #two{
+
+        #two {
             display: flex;
             justify-content: space-between;
             font-size: 20px;
             height: 60px;
             width: 100%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background-color: #cecece;  
+            background-color: #cecece;
         }
-        #para1{
+
+        #para1 {
             height: 40px;
             width: 100%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -113,169 +129,309 @@
             font-size: 15px;
             color: grey;
         }
-#row{
-    border: 3px solid #ff6600;
-    background-color: #ff6600;
-}
-#oneDiv{
+
+        #row {
+            border: 3px solid #ff6600;
+            background-color: #ff6600;
+        }
+
+        #oneDiv {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #num {
+            margin-left: 300px;
+            height: 40px;
+            width: 200px;
+        }
+
+        #para2 {
+            font-size: 15px;
+        }
+
+        #para3 {
+            font-size: 15px;
+        }
+
+        #para4 {
+            font-size: 15px;
+        }
+
+        #para5 {
+            font-size: 15px;
+        }
+
+        #para6 {
+            font-size: 15px;
+        }
+
+        #para7 {
+            font-size: 15px;
+        }
+
+        #para8 {
+            font-size: 15px;
+        }
+
+        #form {
+            margin-left: 40px;
+            margin-right: 200px;
+            font-size: 15px;
+
+        }
+
+        #twoDiv {
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 200px;
+
+        }
+
+        #vehicle1 {
+            margin-top: 20px;
+            margin-left: 250px;
+        }
+
+        #button {
+            height: 50px;
+            width: 200px;
+            border: 0px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 250px;
+            background-color: #ef1840;
+            color: white;
+            font-size: 15px;
+        }
+
+        #threeDiv {
+            display: flex;
+            margin-left: 200px;
+        }
+
+        #date {
+            margin-left: 50px;
+            height: 40px;
+            width: 300px;
+
+        }
+
+        #cvv {
+            margin-left: 50px;
+            height: 40px;
+            width: 190px;
+        }
+
+        #sec2 {
+            padding: 20px;
+            height: fit-content;
+            width: 250px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: #f8f8f8;
+        }
+
+        #hea1 {
+            text-align: center;
+        }
+
+        #text {
+            height: 25px;
+            border: 1px solid lightgray;
+        }
+
+        #btn {
+            height: 30px;
+            width: 70px;
+            background-color: #e8c1a8;
+            border: 0px;
+            border-radius: 2px;
+            color: #ff6600;
+        }
+
+        #abc {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc1 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc2 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc3 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #abc4 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc5 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc6 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #abc7 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #second {
+            background-color: #f8f8f8;
+        }
+        /******** CSS for header ***********/
+#navbar{
+    z-index: 5;
+    position: fixed;
+    top:0;
+    background-color: white;
+    color: rgb(22, 22, 22);
+    font-size:15px;
+    width:100%;
+    height:auto;
+    padding:10px;
+    margin:auto;
     display: flex;
+    flex-direction:row;
     justify-content: space-between;
-
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-#num{
-    margin-left: 300px;
-    height: 40px;
-    width: 200px;
-}
- #para2{ 
-    font-size: 15px;
-}
-#para3{
-    font-size: 15px;
-}
-#para4{
-    font-size: 15px;  
-}
-#para5{
-    font-size: 15px; 
-}
-#para6{
-    font-size: 15px;
-}
-#para7{
-    font-size: 15px; 
-}
-
-#para8{
-    font-size: 15px;  
-}
-#form{
-    margin-left: 40px;
-    margin-right: 200px;
-    font-size: 15px;
-}
-#twoDiv{
+#navbar-l{
+    width:20%;
     display: flex;
-    justify-content:space-evenly;
-    margin-left: 200px;
-    
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-#vehicle1{
-    margin-top: 20px;
-    margin-left: 250px;
+#navbar-l i{
+    margin-right: 10px;
+    color: rgb(32, 32, 32);
 }
-#button{
-    height:  50px;
-    width: 200px;
-    border:0px;
-    border-radius: 5px;
-    margin-top:20px ;
-    margin-left: 250px;
-    background-color: #ef1840;
-    color: white;
-    font-size: 15px;
+#navbar-r{
+    width:60%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-#threeDiv{
-   display: flex;
-    margin-left: 200px;
+#navbar-r>div:nth-child(2)>input{
+    width:300px;
+    border:0;
+    border-bottom: 1px solid black;
 }
-#date{
-    margin-left: 50px;
-    height: 40px;
-    width: 300px;
-
-}
-#cvv{
-    margin-left: 50px;
-    height: 40px;
-    width: 190px;
-}
-#sec2{
-    height: 400px;
+#navbar-r img{
     width: 250px;
-    margin: auto;
-    border: 1px solid lightgray;
+    cursor: pointer;
 }
-#hea1{
-text-align: center;
-}
-#text{
-    height: 25px;
-    border:1px solid lightgray;
-}
-#btn{
-    height: 30px;
-    width: 70px;
-    background-color:  #e8c1a8;
-    border: 0px;
-    border-radius: 2px;
-    color: #ff6600;
-}
-#abc{
+#navbar-2{
+    color: rgb(32, 32, 32);
+    font-size:15px;
+    font-weight:600;
+    width:90%;
+    height:auto;
+    padding:10px;
+    margin-top:65px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex-direction:row;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+#navbar-2 a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+#navbar-2 a{
+    padding:12px 24px;
+}
+#navbar-2 a:hover{
+    border-bottom: 2px solid #ff5d3b;
+    color:#ff5d3b;
+}
+/********* Style The Dropdown Button *******/
+.dropbtn {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }
   
-}
-#abc1{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    
-}
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      /* margin-top: 10px; */
+    font-weight: 400;
+    display: none;
+    color:gray;
 
-#abc2{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-   
-}
-
-#abc3{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#abc4{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-     
-}
-
-#abc5{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    
-}
-#abc6{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    
-}
-#abc7{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    
-}
-#second{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   
-background-color: #eeeeee;
-}
-
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/********* Style The Dropdown Button *******/
+/******** CSS for header ***********/
     </style>
 </head>
 
@@ -288,22 +444,23 @@ background-color: #eeeeee;
     <div id="container">
 
         <div id="left">
-            <p id="para1">During COVID-19 we are accepting prepaid orders but might run slightly late on the delivery.</p>
+            <p id="para1">During COVID-19 we are accepting prepaid orders but might run slightly late on the delivery.
+            </p>
             <div id="one">
                 <p id="do3"> 1. DELIVERY METHOD</p>
                 <button id="do4">CHANGE</button>
             </div>
             <div id="two">
                 <p id="do5">2. MAKE PAYMENT</p>
-                <p id="do6">Payable Amount</p>
+                <p id="do6">t</p>
             </div>
             <div id="three">
                 <img src="https://sslimages.shoppersstop.com/sys-master/root/hff/heb/16687090991134/Cart-Pg-strip.jpg">
             </div>
             <select id="four">
-               <option value="">PAY USING CARDS / NET BANKING, WALLETS</option>
+                <option value="">PAY USING CARDS / NET BANKING, WALLETS</option>
             </select>
-<hr id="row">
+            <hr id="row">
             <form id="form">
                 <div id="oneDiv">
                     <p id="para2">Credit / Debit Card</p>
@@ -318,20 +475,20 @@ background-color: #eeeeee;
                     <input id="para7" style="width: 300px;" type="number" placeholder="Enter card number here">
                 </div>
 
-               
+
                 <P id="para8">Wallets</P>
                 <div id="twoDiv">
                     <p id="para9"> Expiry</p>
                     <p id="para10">CVV</p>
                 </div>
                 <div id="threeDiv">
-                    <input  id="date" type="date" placeholder="MM/YY">
+                    <input id="date" type="date" placeholder="MM/YY">
                     <input id="cvv" type="number" placeholder="CVV">
                 </div>
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                 <label for="vehicle1"> Save this card for faster payments</label><br>
                 <input id="button" type="submit" value="Proceed to pay">
-            </form> 
+            </form>
 
 
 
@@ -339,63 +496,266 @@ background-color: #eeeeee;
 
         <div id="right">
             <div id="sec2">
-            <h3 id="hea1"> ORDER SUMMARY</h3>
-<input id="text" type="text" placeholder="Enter promo/coupan code">
-<button id="btn">APPLY</button>
-<div id="second">
-<div id="abc">
-    <p>Sub Total</p>
-    <p>Rs 199</p>
-</div>
-<div id="abc1">
-    <p>Delivary Charges</p>
-    <p>Rs 100</p>
-</div>
-<div id="abc3">
-    <p>Gift Packing</p>
-    <p>FREE</p>
-</div>
-<div id="abc4">
-    <p>Offer Discount</p>
-    <p>NA</p>
-</div>
-<div id="abc5">
-    <p>Coupan  Discount</p>
-    <p>NA</p>
-</div>
-<div id="abc6">
-    <p>Payable Amount</p>
-    <p>Rs 299</p>
-</div>
-<div id="abc7">
-    <p>You Have Saved</p>
-    <p>0</p>
-</div>
+                <h3 id="hea1"> ORDER SUMMARY</h3>
+                <input id="text" type="text" placeholder="Enter promo/coupan code">
+                <button id="btn">APPLY</button>
+                <div id="second">
+                    <div id="abc">
+                        <p>Sub Total</p>
+                        <p id="sbt"></p>
+                    </div>
+                    <div id="abc1">
+                        <p>Delivary Charges*</p>
+                        <p>FREE</p>
+                    </div>
+                    <div id="abc3">
+                        <p>Gift Packing</p>
+                        <p>FREE</p>
+                    </div>
+                    <div id="abc4">
+                        <p>Offer Discount</p>
+                        <p>-20%</p>
+                    </div>
+                    <div id="abc5">
+                        <p>Coupan Discount</p>
+                        <p>NA</p>
+                    </div>
+                    <div id="abc6">
+                        <p>Payable Amount</p>
+                        <p id="PAmt"></p>
+                    </div>
+                    <div id="abc7">
+                        <p>You Have Saved</p>
+                        <p id="yhs"></p>
+                    </div>
+                </div>
+
             </div>
-         
-            </div>    
-          
+
         </div>
 
     </div>
+
+    <div id="footer1">
+        <div>
+            <div>
+                <p class="footer1-p">DOWNLOAD THE APP ON</p>
+            </div>
+            <div>
+                <img src="images/app1.jpg" alt="">
+            </div>
+        </div>
+        <div class="flexb margin-top">
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
+    
+                <p class="footer1-p">Authentic Products</p>
+            </div>
+            <div>
+                <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
+    
+                <p class="footer1-p">Free Delivery*</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
+    
+                <p class="footer1-p">Easy Exchange and Return</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-truck-pickup fa-2x"></i></p>
+                <p class="footer1-p">Express Store Pickup</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="footer1-p">FOLLOW US</p>
+            </div>
+            <div class="flexb">
+                <div id="fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div id="twitter"><i class="fa-brands fa-twitter"></i></div>
+                <div id="insta"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div style="height:130px;width:100%;">
+            <div style="width:100%;display:flex;justify-content: space-between; margin:20px auto">
+                <div style="display:inline-block;height:130px;width:25%;border:1px soli;">
+                    <div
+                        style="height:40px;width:90px;border:1px soli;margin-left:40%;display:inline-block;color:gray">
+                        <h5>QUESTIONS?</h5>
+                    </div>
+                    <div style="height:18px;width:208px;border:1px soli;margin-left: 25%">
+                        <p1 style="color:red;text-decoration:underline">customercare@shopersstop.com</p1>
+                    </div>
+    
+                </div>
+    
+                <div style="height:130px;width:25%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:200px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">PAY SECURELY BY</h5>
+                    </div>
+                    <div style="height:88px;width:200px;border:1px soli">
+                        <img style="height: 30px;width:200px;" src="https://www.aviyoggroup.in/Pay%201.png">
+                    </div>
+    
+                </div>
+    
+                <div style="height:130px;width:28%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:170px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">VERIFIED BY</h5>
+                    </div>
+                    <div style="height:88px;width:170px;border:1px soli">
+                        <img style="height:40px;width:40px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT8y4qzvWRx4y4qhafV_cEaI8ThrBUA-T1w&usqp=CAU">
+                        <img style="height:40px;width:80px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp16IhxuHCrag-7t5t3mBsi_m4GhogySb45Q&usqp=CAU">
+                        <img style="height:35px;width:38px;display:inline-block" src="image1.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:500px;width:100%;border:1px soli">
+            <div style="display:flex;justify-content:space-evenly">
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin-left: 3%">
+                    <h3>WOMEN</h3>
+                    <h5 style="color:gray">Indian Wear</h5>
+                    <h5 style="color:gray">Western Wear</h5>
+                    <h5 style="color:gray">Lingerie & Night Wear</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Bags &Wallets</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Jawellery</h5>
+                    <h5 style="color:gray">Travel</h5>
+    
+                </div>
+                <div
+                    style="height:500px;width:15%;border:1px soli;display:inline-block;margin:auto;text-align:top">
+                    <h3>MEN</h3>
+                    <h5 style="color:gray">Clothing</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Accessories</h5>
+                    <h5 style="color:gray">Jewellery</h5>
+    
+    
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>KIDS</h3>
+                    <h5 style="color:gray">Boys</h5>
+                    <h5 style="color:gray">Girls</h5>
+                    <h5 style="color:gray">Infants</h5>
+                    <h5 style="color:gray">Toys</h5>
+                    <h5 style="color:gray">School Essential</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h4 style="color:gray">Accessories</h5>
+    
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>BEAUTY</h3>
+                    <h5 style="color:gray">Make Up</h5>
+                    <h5 style="color:gray">Skincare</h5>
+                    <h5 style="color:gray">Bath & Body</h5>
+                    <h5 style="color:gray">Nails</h5>
+                    <h5 style="color:gray">Haircare</h5>
+                    <h5 style="color:gray">Tools & Accessories</h5>
+                    <h5 style="color:gray">Women's Fragrances</h5>
+                    <h5 style="color:gray">Men's Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Personal Hygiene</h5>
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>HOMESTOP</h3>
+                    <h5 style="color:gray">Kitchen & Dining</h5>
+                    <h5 style="color:gray">Decor</h5>
+                    <h5 style="color:gray">Home Furnishing</h5>
+                    <h5 style="color:gray">Storage & Organization</h5>
+                    <h5 style="color:gray">Smart Home and Appliances</h5>
+                    <h5 style="color:gray">Bath</h5>
+                    <h5 style="color:gray">Bedding</h5>
+    
+    
+                </div>
+                <div style="height:200px;width:15%;border:1px soli;display:inline-block;margin-bottom: 10%;">
+                    <h3>WATCHES</h3>
+                    <h5 style="color:gray">Mens Watches</h5>
+                    <h5 style="color:gray">Women Watches</h5>
+                    <h5 style="color:gray">Kids Watches</h5>
+    
+    
+    
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
 
 
 <script>
-    document.querySelector("#form").addEventListener("submit", paymentFun)
-    function paymentFun(){
-        event.preventDefault();
-        var arr=[];
-        var card=document.querySelector("#para7").value
-        var CVV= document.querySelector("#cvv").value
-var obj={
-    cardNUm:para7,
-    CVVs:cvv,
-}
-arr.push(obj);
-localStorage.setItem("addingkey", JSON.stringify(arr))
-alert("Payment Sucessfull")
+    document.querySelector("#do2").addEventListener("click",Mycart);
+
+    function Mycart(){
+        window.location.href="cart.html";
     }
+
+    document.querySelector("#do1").addEventListener("click",Mycheckout);
+
+    function Mycheckout(){
+    window.location.href="checkout.html";
+}
+    
+    document.querySelector("#sbt").innerHTML = JSON.parse(localStorage.getItem("SubTotal"));
+    document.querySelector("#yhs").innerHTML = JSON.parse(localStorage.getItem("Usave"));
+    document.querySelector("#PAmt").innerHTML = JSON.parse(localStorage.getItem("payableAmt"));
+
+
+    document.querySelector("#do6").innerHTML="Payable Amount: ₹" + JSON.parse(localStorage.getItem("payableAmt"));
+
+    document.querySelector("#fb").addEventListener("click",Myfb);
+
+function Myfb(){
+    window.location.href="https://www.facebook.com/shoppersstopindia";
+}
+
+document.querySelector("#twitter").addEventListener("click",Mytwitter);
+
+function Mytwitter(){
+window.location.href="https://twitter.com/shoppersstop";
+}
+
+document.querySelector("#insta").addEventListener("click",Myinsta);
+
+function Myinsta(){
+window.location.href="https://www.instagram.com/shoppers_stop/";
+}
+
+    document.querySelector("#form").addEventListener("submit", paymentFun)
+    function paymentFun() {
+        event.preventDefault();
+        var arr = [];
+        var card = document.querySelector("#para7").value
+        var CVV = document.querySelector("#cvv").value
+        var obj = {
+            cardNUm: para7,
+            CVVs: cvv,
+        }
+        arr.push(obj);
+        localStorage.setItem("addingkey", JSON.stringify(arr));
+
+        window.location.href="confirmation.html";
+
+    }
+
+    var onetimeP =12345;
+    localStorage.setItem("OTP",JSON.stringify(onetimeP));
 </script>
