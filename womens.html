@@ -1,963 +1,1151 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>Document</title>
+<!DOCTYPE html>
+<html lang="en">
 
-        <style>
-/******** CSS for header ***********/
-#navbar{
-    z-index: 5;
-    position: fixed;
-    top:0;
-    background-color: white;
-    color: rgb(22, 22, 22);
-    font-size:15px;
-    width:100%;
-    height:auto;
-    padding:10px;
-    margin:auto;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-#navbar-l{
-    width:20%;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#navbar-l i{
-    margin-right: 10px;
-    color: rgb(32, 32, 32);
-}
-#navbar-r{
-    width:60%;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#navbar-r>div:nth-child(2)>input{
-    width:300px;
-    border:0;
-    border-bottom: 1px solid black;
-}
-#navbar-r>div:nth-child(4),#navbar-r>div:nth-child(5){
-  cursor: pointer;
-}
-#navbar-r img{
-    width: 250px;
-    cursor: pointer;
-}
-#navbar-2{
-    color: rgb(32, 32, 32);
-    font-size:15px;
-    font-weight:600;
-    width:90%;
-    height:auto;
-    padding:10px;
-    margin-top:65px;
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: baseline;
-    
-}
-#navbar-2 a{
-    text-decoration: none;
-    color: rgb(32, 32, 32);
-}
-#navbar-2 a{
-    padding:12px 24px;
-}
-#navbar-2 a:hover{
-    border-bottom: 2px solid #ff5d3b;
-    color:#ff5d3b;
-}
-/********* Style The Dropdown Button *******/
-.dropbtn {
-    background-color: white;
-    color: black;
-    border: none;
-    font-weight: bold;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-      /* margin-top: 10px; */
-    font-weight: 400;
-    display: none;
-    color:gray;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
 
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-/********* Style The Dropdown Button *******/
-/******** CSS for header ***********/
-/********CSS for footer ********/
-#footer{
-    width:100%;
-    margin:20px auto;
-}
-#footer1{
-    width:100%;
-    margin:auto;
-    padding:20px;
-    color:rgb(22, 22, 22);
-    background-color: #f5f5f5;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-    align-items: center;
+    <style>
+        /******** CSS for header ***********/
+        #navbar {
+            z-index: 5;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            color: rgb(22, 22, 22);
+            font-size: 15px;
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
 
-}
-#footer1>div:nth-child(1) {
-    width:18%;
-}
-#footer1>div:nth-child(1) img{
-    color: #f5f5f5;
-}
-#footer1>div:nth-child(2) {
-    width:33%;
-}
-#footer1>div:nth-child(3) {
-    width:10%;
-}
-#footer1>div:nth-child(2)>div{
-    width:19%;
+        #navbar-l {
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
-}
-#footer1 img{
-    width:100%;
-}
-.flexb{
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-}
-.footer1-p{
-    text-align:center;
-    color:rgb(22, 22, 22);
-    font-size:13px;
-}
-#footer1 i,p{
-    color:gray;
-}
-/************ CSS FOR FOOTER******/
-#first{
-    height: 400px;
-    width: 1500px;
-    margin-bottom: 40px;
-}
-#secDiv{
-    display: grid;
-    grid-template-columns: repeat(6,250px);
-    grid-template-rows: auto;
-    margin-bottom: 40px;
-}
-#second{
-   width: 1500px;
-}
-#secondDiv{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows:auto;
-    margin-left: 150px;
-    margin-right: 100px;
-   
-}
-#secondDiv>div{
-    margin-bottom: 100px;
-}
-#thirdDiv{
-display: grid;
-grid-template-columns: repeat(6,250px);
-grid-template-rows: auto;
-}
-#heading1{
-    text-align: center;
-    font-family: italic;
-    font-size: 40px;
-}
-#shop{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto;
-    margin-left:160px ;
-    margin-right: 160px;
-    
-}
+        #navbar-l i {
+            margin-right: 10px;
+            color: rgb(32, 32, 32);
+        }
 
-#shop>div>img{
-    height: 300px;
-width: 200px;
-}
-#para1{
-    font-size: 30px;
-    text-align: center;
-}
-#fourthDiv{
-    display: grid;
-    grid-template-columns: repeat(6,200px);
-    background-color: #f6f6f6;
-}
-#fourthDiv>div{
-        margin-left: 100px;
-        /* margin-left: px; */
-    
-    }
-    
-        </style>
-    </head>
-    <body>
-        <div id="navbar">
-            <div id="navbar-l">
-                <div>
-                    <p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p>
-                </div>
-                <div>
-                    <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
-                </div>
+        #navbar-r {
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #navbar-r>div:nth-child(2)>input {
+            width: 300px;
+            border: 0;
+            border-bottom: 1px solid black;
+        }
+
+        #navbar-r>div:nth-child(4),
+        #navbar-r>div:nth-child(5) {
+            cursor: pointer;
+        }
+
+        #navbar-r img {
+            width: 250px;
+            cursor: pointer;
+        }
+
+        #navbar-2 {
+            color: rgb(32, 32, 32);
+            font-size: 15px;
+            font-weight: 600;
+            width: 90%;
+            height: auto;
+            padding: 10px;
+            margin-top: 65px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+
+        }
+
+        #navbar-2 a {
+            text-decoration: none;
+            color: rgb(32, 32, 32);
+        }
+
+        #navbar-2 a {
+            padding: 12px 24px;
+        }
+
+        #navbar-2 a:hover {
+            border-bottom: 2px solid #ff5d3b;
+            color: #ff5d3b;
+        }
+
+        /********* Style The Dropdown Button *******/
+        .dropbtn {
+            background-color: white;
+            color: black;
+            border: none;
+            font-weight: bold;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            /* margin-top: 10px; */
+            font-weight: 400;
+            display: none;
+            color: gray;
+
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /********* Style The Dropdown Button *******/
+        /******** CSS for header ***********/
+        /********CSS for footer ********/
+        #footer {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        #footer1 {
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            color: rgb(22, 22, 22);
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        #footer1>div:nth-child(1) {
+            width: 18%;
+        }
+
+        #footer1>div:nth-child(1) img {
+            color: #f5f5f5;
+        }
+
+        #footer1>div:nth-child(2) {
+            width: 33%;
+        }
+
+        #footer1>div:nth-child(3) {
+            width: 10%;
+        }
+
+        #footer1>div:nth-child(2)>div {
+            width: 19%;
+
+        }
+
+        #footer1 img {
+            width: 100%;
+        }
+
+        .flexb {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .footer1-p {
+            text-align: center;
+            color: rgb(22, 22, 22);
+            font-size: 13px;
+        }
+
+        #footer1 i,
+        p {
+            color: gray;
+        }
+
+        /************ CSS FOR FOOTER******/
+        #first {
+            height: 400px;
+            width: 1500px;
+            margin-bottom: 40px;
+        }
+
+        #secDiv {
+            display: grid;
+            grid-template-columns: repeat(6, 250px);
+            grid-template-rows: auto;
+            margin-bottom: 40px;
+        }
+
+        #second {
+            width: 1500px;
+        }
+
+        #secondDiv {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            margin-left: 150px;
+            margin-right: 100px;
+
+        }
+
+        #secondDiv>div {
+            margin-bottom: 100px;
+        }
+
+        #thirdDiv {
+            display: grid;
+            grid-template-columns: repeat(6, 250px);
+            grid-template-rows: auto;
+        }
+
+        #heading1 {
+            text-align: center;
+            font-family: italic;
+            font-size: 40px;
+        }
+
+        #shop {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            margin-left: 160px;
+            margin-right: 160px;
+
+        }
+
+        #shop>div>img {
+            height: 300px;
+            width: 200px;
+        }
+
+        #para1 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #fourthDiv {
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            background-color: #f6f6f6;
+        }
+
+        #fourthDiv>div {
+            margin-left: 100px;
+            /* margin-left: px; */
+
+        }
+
+        /* CSS FOR ICON BAGDE */
+        .notification {
+            /* background-color: #555;
+    color: white; */
+            text-decoration: none;
+            color: black;
+            /* padding: 15px 26px; */
+            /* position: relative; */
+            /* display: inline-block; */
+            /* border-radius: 2px; */
+        }
+
+        /* .notification:hover {
+    background: red;
+  } */
+
+        .badge {
+            position: relative;
+            top: -10px;
+            right: -10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+        }
+
+        .icon-hover:hover {
+            color: #ff5d3b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="navbar-l">
+            <div>
+                <p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p>
             </div>
-            <div id="navbar-r">
-                <div><img onclick="window.location.href='index.html'"
-                        src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
-                <div><input type="text" placeholder="Search Products & Brands"></div>
-                <div><i class="fa-regular fa-heart fa-2x"></i></div>
-                <div><i class="fa-solid fa-bag-shopping fa-2x open-button"onclick="window.location.href='cart.html'"></i></div>
-                <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="window.location.href='signup.html'"></i></div>
-        
+            <div>
+                <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
             </div>
-        
         </div>
-        <div id="navbar-2">
-            <!-- <div>
+        <div id="navbar-r">
+            <div><img onclick="window.location.href='index.html'"
+                    src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
+            <div><input type="text" placeholder="Search Products & Brands"></div>
+            <div><i class="fa-regular fa-heart fa-2x"></i></div>
+
+            <!-- <div><i class="fa-solid fa-bag-shopping fa-2x open-button" id="cartIcon" onclick="window.location.href='cart.html'"></i></div> -->
+            <div>
+                <a href="#" class="notification">
+                    <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon"
+                            onclick="window.location.href='cart.html'"></i></span>
+                    <span id="cartIcon-no" class="badge"></span>
+                </a>
+            </div>
+
+
+
+            <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
+            <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
+                    onclick="window.location.href='signup.html'"></i></div>
+
+        </div>
+
+    </div>
+    <div id="navbar-2">
+        <!-- <div>
                 <p><a href="#">MEN</a></p>
             </div> -->
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">MEN</a></button>
-                <div class="dropdown-content">
-                    <a href="#">Clothing</a>
-                    <a href="#">Footwear</a>
-                    <a href="#">Watches</a>
-                    <a href="#">Fragnances</a>
-                    <a href="#">Clothing for Men</a>
-                    <a href="#">Sunglasses & Frames</a>
-                </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">MEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Clothing</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Clothing for Men</a>
+                <a href="#">Sunglasses & Frames</a>
             </div>
-            <!-- <div>
+        </div>
+        <!-- <div>
                 <p><a href="#">WOMEN</a></p>
             </div> -->
-            <div class="dropdown">
-                <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
-                <div class="dropdown-content">
-                    <a href="#">Indian Wear</a>
-                    <a href="#">Western Wear</a>
-                    <a href="#">Lingerie & Night Wear</a>
-                    <a href="#">Fragnances</a>
-                    <a href="#">Footwear</a>
-                    <a href="#">Watches</a>
-                </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Indian Wear</a>
+                <a href="#">Western Wear</a>
+                <a href="#">Lingerie & Night Wear</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
             </div>
-            <!-- <div>
+        </div>
+        <!-- <div>
                 <p><a href="kids.html">KIDS</a></p>
             </div> -->
-            <div class="dropdown">
-                <button class="dropbtn"><a href="kids.html">KIDS</a></button>
-                <div class="dropdown-content">
-                    <a href="#">Boys</a>
-                    <a href="#">Girls</a>
-                    <a href="#">Infants</a>
-                    <a href="#">Toys</a>
-                    <a href="#">School Essentials</a>
-                    <a href="#">Footwear</a>
-                </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="kids.html">KIDS</a></button>
+            <div class="dropdown-content">
+                <a href="#">Boys</a>
+                <a href="#">Girls</a>
+                <a href="#">Infants</a>
+                <a href="#">Toys</a>
+                <a href="#">School Essentials</a>
+                <a href="#">Footwear</a>
             </div>
-            <!-- <div>
+        </div>
+        <!-- <div>
                 <p><a href="#">WATCHES</a></p>
             </div> -->
-            <div class="dropdown">
-                <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
-                <div class="dropdown-content">
-                    <a href="menwatches.html">Mens Watches</a>
-                    <a href="#">Womens Watches</a>
-                    <a href="#">Kids Watches</a>
-                </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
+            <div class="dropdown-content">
+                <a href="menwatches.html">Mens Watches</a>
+                <a href="#">Womens Watches</a>
+                <a href="#">Kids Watches</a>
             </div>
-            <!-- <div>
+        </div>
+        <!-- <div>
                 <p><a href="#">BEAUTY</a></p>
             </div> -->
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">BEAUTY</a></button>
-                <div class="dropdown-content">
-                    <a href="#">MakeUp</a>
-                    <a href="#">Beauty</a>
-                    <a href="#">Bath & Body</a>
-                    <a href="#">Nails</a>
-                    <a href="#">Hair Care</a>
-                </div>
-            </div>
-            <div>
-                <p><a href="#">HOMESTOP</a></p>
-            </div>
-            <div>
-                <p><a href="#">LUXE</a></p>
-            </div>
-            <div>
-                <p><a href="#">GIFTS</a></p>
-            </div>
-            <div>
-                <p><a href="#">BRANDS</a></p>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">BEAUTY</a></button>
+            <div class="dropdown-content">
+                <a href="#">MakeUp</a>
+                <a href="#">Beauty</a>
+                <a href="#">Bath & Body</a>
+                <a href="#">Nails</a>
+                <a href="#">Hair Care</a>
             </div>
         </div>
-        <!-- HTML FOR HEADER -->
-      
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div>
+            <p><a href="#">HOMESTOP</a></p>
+        </div>
+        <div>
+            <p><a href="#">LUXE</a></p>
+        </div>
+        <div>
+            <p><a href="#">GIFTS</a></p>
+        </div>
+        <div>
+            <p><a href="#">BRANDS</a></p>
+        </div>
+    </div>
+    <!-- HTML FOR HEADER -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/h70/hd3/27330037612574/web_wom_kraus_main-carousel_29032022.jpg"
+                    class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/h70/hd3/27330037612574/web_wom_kraus_main-carousel_29032022.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hd3/hbb/27131778695198/Top-Carousal-Dresses-Web.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/he7/hdc/27330037383198/Top-Carousal-AND-Web--29032022revisewom.jpg" class="d-block w-100" alt="...">
-              </div>
+            <div class="carousel-item">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hd3/hbb/27131778695198/Top-Carousal-Dresses-Web.jpg"
+                    class="d-block w-100" alt="...">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-            <h1>Shop By Category</h1> 
-        <div id="secDiv">
-            
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hef/hd8/27300386996254/app_wom_kurta_shop-by-categories_24032022.jpg">
-           
-            </div>
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/hce/27300387455006/app_wom_top-%26-tees_shop-by-categories_24032022.jpg">
-            
-            </div>
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hcb/27300387520542/app_wom_dresess_shop-by-categories_24032022.jpg">
-            
-            </div>
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hf6/hc7/27300387651614/app_wom_denim_shop-by-categories_24032022.jpg">
-          
-            </div>
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hc4/27300387717150/app_wom_handbag_shop-by-categories_24032022.jpg">
-           
-            </div>
-            <div>
-                <img src="https://sslimages.shoppersstop.com/sys-master/root/h37/hc4/27300387782686/app_wom_lingeris_shop-by-categories_24032022.jpg">
-           
+            <div class="carousel-item">
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/he7/hdc/27330037383198/Top-Carousal-AND-Web--29032022revisewom.jpg"
+                    class="d-block w-100" alt="...">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h1>Shop By Category</h1>
+    <div id="secDiv">
 
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h41/hef/27309538607134/2000x500--padlakwpm.jpg">
-<img id="first" src ="https://sslimages.shoppersstop.com/sys-master/root/h06/h6d/27303475380254/web_wom_pg_jewellery__office-reboot_carousel_20220324.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h95/hc7/27300373823518/office-24-03-22new-brands_hom-greboot_strip_web.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h33/h69/27303475249182/web_wom_pg_trausel__office-reboot_carousel_20220324.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb2/27089609424926/web_wom_shoppers-stop-select_20220217.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/he2/h2b/27045880922142/web_wom_insense_shoppersstop-selects_po2_20220210.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h10/hfd/27197980868638/web_wom-excl_launch_strips_20220307.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hf3/h5b/27200288227358/web_wom-pg_zink-lon_ss22_2022-03-07.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h85/hc1/27252820181022/Ready-Your-Brand-Wishlist-Strip-Web.jpg">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hef/hd8/27300386996254/app_wom_kurta_shop-by-categories_24032022.jpg">
 
-<div id="secondDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hf9/27287356637214/AND---4-Widgets-WEb.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hc6/hce/27300387455006/app_wom_top-%26-tees_shop-by-categories_24032022.jpg">
+
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hcb/27300387520542/app_wom_dresess_shop-by-categories_24032022.jpg">
+
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf6/hc7/27300387651614/app_wom_denim_shop-by-categories_24032022.jpg">
+
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hc4/27300387717150/app_wom_handbag_shop-by-categories_24032022.jpg">
+
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h37/hc4/27300387782686/app_wom_lingeris_shop-by-categories_24032022.jpg">
+
+        </div>
     </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h9c/27045883772958/web_wom_kraus_unbelievable%20deals_po2_20220210.jpg">
+
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h41/hef/27309538607134/2000x500--padlakwpm.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h06/h6d/27303475380254/web_wom_pg_jewellery__office-reboot_carousel_20220324.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h95/hc7/27300373823518/office-24-03-22new-brands_hom-greboot_strip_web.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h33/h69/27303475249182/web_wom_pg_trausel__office-reboot_carousel_20220324.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb2/27089609424926/web_wom_shoppers-stop-select_20220217.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/he2/h2b/27045880922142/web_wom_insense_shoppersstop-selects_po2_20220210.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h10/hfd/27197980868638/web_wom-excl_launch_strips_20220307.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hf3/h5b/27200288227358/web_wom-pg_zink-lon_ss22_2022-03-07.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h85/hc1/27252820181022/Ready-Your-Brand-Wishlist-Strip-Web.jpg">
+
+    <div id="secondDiv">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/haf/hf9/27287356637214/AND---4-Widgets-WEb.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h9c/27045883772958/web_wom_kraus_unbelievable%20deals_po2_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h7e/hf5/27232554156062/web_wom-pg_foerver-new-2022-311_without-offe.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h2d/hc6/27050142662686/web_wom_indya-womens_20220201_unbilav.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h01/h2d/27045884919838/web_wom_handbags_unbelievable%20deals_po3_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h42/hba/27252839055390/Erotissch--4-Widgets-web.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h50/h64/27269485395998/web_wom_rayben_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.s3-ap-southeast-1.amazonaws.com/sys-master/root/h3e/h61/27269485461534/web_wom_idee_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h40/h5e/27269485527070/web_wom_shaya_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h7f/h5d/27269485592606/web_wom_jewelz_wom_ready-to-wishlist_sunglasess_20220321.jpg">
+        </div>
     </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h7e/hf5/27232554156062/web_wom-pg_foerver-new-2022-311_without-offe.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/haf/hb4/27063827955742/web_wom_flats_unbelievable%20deals_po4_20220214.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h2d/hc6/27050142662686/web_wom_indya-womens_20220201_unbilav.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h01/h2d/27045884919838/web_wom_handbags_unbelievable%20deals_po3_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h42/hba/27252839055390/Erotissch--4-Widgets-web.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h64/27269485395998/web_wom_rayben_wom_ready-to-wishlist_sunglasess_20220321.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.s3-ap-southeast-1.amazonaws.com/sys-master/root/h3e/h61/27269485461534/web_wom_idee_wom_ready-to-wishlist_sunglasess_20220321.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h40/h5e/27269485527070/web_wom_shaya_wom_ready-to-wishlist_sunglasess_20220321.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h7f/h5d/27269485592606/web_wom_jewelz_wom_ready-to-wishlist_sunglasess_20220321.jpg">
-    </div>
-</div>
 
 
 
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/he8/ha3/27232553238558/WEB_WOM-BRAND-TO-BAG-STRIPS_20220311.jpg">
-<div id="thirdDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha4/hc3/27112042201118/Juniper------WEB--01.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/he8/ha3/27232553238558/WEB_WOM-BRAND-TO-BAG-STRIPS_20220311.jpg">
+    <div id="thirdDiv">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/ha4/hc3/27112042201118/Juniper------WEB--01.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hc7/hbf/27050112319518/web_wom_yuris_price%20drops_po2_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb8/h04/27076501995550/web_wom_au_6widget_20220216.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h29/h64/27076502683678/web_wom_mdme_20220216_newbanner-6widget.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h57/hca/27050112647198/web_wom_levis_price%20drops_po5_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hbf/h96/27207038730270/web--wom-2022-03-07_mot-carl-6widget.jpg">
+        </div>
     </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc7/hbf/27050112319518/web_wom_yuris_price%20drops_po2_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb8/h04/27076501995550/web_wom_au_6widget_20220216.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h29/h64/27076502683678/web_wom_mdme_20220216_newbanner-6widget.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h57/hca/27050112647198/web_wom_levis_price%20drops_po5_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbf/h96/27207038730270/web--wom-2022-03-07_mot-carl-6widget.jpg">
-    </div>
-</div>
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h90/hcd/27050117234718/web_wom_no-stress%20dressing_20220210.jpg"> 
-<!-- <div> 
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h90/hcd/27050117234718/web_wom_no-stress%20dressing_20220210.jpg">
+    <!-- <div> 
     <div></div>
     <div></div>
     <div></div>
     <div></div>
     <div></div>
 </div>-->
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h82/h69/27050127032350/web_wom_new%20for%20you_20220210.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hcb/hcd/27050125393950/web_wom_vastranand_new%20launchs_po1_20220210.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h01/h3c/27054750400542/web_wom_refresh%20your%20routine_20220210.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hb3/27054749646878/web_wom_enamor-athleisure_refresh-your-routine_po4_20220211.jpg">
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hde/hdb/27050117693470/web_wom_the%20denim%20directory_20220210.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/he0/he8/27063828709406/web_wom_revisedbanner_ds_20220214.jpg">
- <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hb6/h28/27063825694750/web_wom_the-brand-block_20220214.jpg">
-<div id ="secondDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h59/27050135617566/web_wom_janasya_top%20brands_po1_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hce/hff/27112038989854/Biba---4-Widgets-web-.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb6/hac/27243209392158/Kami-Kubi--4-Widgets-web.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbf/hfc/27287356702750/globaldesi---4-Widgets-Web.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h45/h11/27050136666142/web_wom_sera_top%20brands_po1_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h8e/h69/27050137124894/web_wom_dolce-crudo_top%20brands_po2_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb4/h73/27050137419806/web_wom_latin-quarter_top%20brands_po3_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb3/haf/27243209457694/web_wom_vero-moda_top-brand_20220315.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h62/27076505501726/web_wom_rare-sutra_top%20brands_po1_20220211.jpg">
-    </div>
-   
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h5e/27076505632798/web_wom_cover-story-crudo_top%20brands_po2_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h14/hc9/27050141450270/web_wom_i.s.u_top%20brands_po3_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hd6/27050141876254/web_wom_clovia_top%20brands_po4_20220211.jpg">
-    </div>
-</div>
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h73/hc5/27057672355870/web_wom_2022%20trend%20alert_20220210.jpg">
-
-
-
-<div id="secondDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/he5/h21/27063825891358/web_wom_ruffles_whats-trending%20in_po1_20220214.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h94/hc7/27252820312094/florals_4-widget_Web.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hd1/hd9/27057672945694/web_wom_mandarin-collars_whats-trending%20in_po3_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h6d/h8c/27063829331998/web_wom_st%26ct_20220214_revised.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hb4/hd4/27057673207838/web_wom_a-line-dress_whats-trending%20in_po1_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf5/hd0/27057673338910/web_wom_solid-color-dress_whats-trending%20in_po2_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/he4/hcd/27057673404446/web_wom_bodycon-dress_whats-trending%20in_po3_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h25/hca/27057673535518/web_wom_shift-dresses_whats-trending%20in_po4_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/hc7/27057673601054/web_wom_gota-patti_whats-trending%20in_po1_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h66/hc6/27057673666590/web_wom_bandhani-print_whats-trending%20in_po2_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h54/hc3/27057673732126/web_wom_kalamkari_whats-trending%20in_po3_20220212.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha6/hc2/27057673797662/web_wom_block-print_whats-trending%20in_po4_20220212.jpg">
-    </div>
-</div>
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h4d/hde/27108347707422/Everyday-Wardrobe-BFFs-Web.jpg">
-
-
-<div id="thirdDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h62/27050127228958/web_wom_kurtas_workwear%20style_po1_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h04/h62/27050127294494/web_wom_tops%20%26%20tees_workwear%20style_po2_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf5/h5b/27050127425566/web_wom_comfort%20bottom_workwear%20style_po3_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h36/h58/27050127556638/web_wom_activewear_workwear%20style_po4_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h24/h55/27050127622174/web_wom_sleepwear_workwear%20style_po5_20220211.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h65/h51/27050127753246/web_wom_flip-flops_workwear%20style_po6_20220211.jpg">
-    </div>
-</div>
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/h60/hd4/27050117431326/web_wom_accessorize%20right_20220210.jpg">
-
-
-
-<div id="secondDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h47/h6f/27050114285598/web_wom_hobo-bags_best%20of%20accessories_po1_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h49/27300364124190/Sunglasses-4-Widgets-Web.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h67/h62/27050114613278/web_wom_embellished-cultches_best%20of%20accessories_po3_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hab/h5b/27050114809886/web_wom_heels_best%20of%20accessories_po4_20220210.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/ha2/h59/27279434711070/web_wom_acessories-right_20220322-part2-img.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h20/h61/27279434973214/web_wom_rings_acessories-right_20220322-part2-img.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h59/hb6/27279435366430/web_wom_neckles-%26-chains_acessories-right_20220322-part2.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h18/hba/27279435497502/web_wom_baslets-%26-bangals_acessories-right_20220322-part2-img.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf8/h98/27309553451038/web_wom_catwalk_best-of-accessories_20220325.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hc6/ha2/27309553713182/web_wom_inc5_best-of-accessories_20220325.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h74/ha3/27309553778718/web_wom_lemon-%26-pepper_best-of-accessories_20220325.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h26/hff/27309554335774/web_wom_estatos_best-of-accessories_20220325.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf2/h1e/27309556793374/Elliza-donatein-4-Widgets-web--25-03-2022new.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/he3/h18/27309556924446/web_wom_hidesigen_handbag_25032022-img.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hed/h38/27309557219358/web_wom_lino-paror_handbag_25032022-img.jpg">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hae/h39/27309557284894/web_wom_baggit_handbag_25032022-img.jpg">
-    </div>
-</div>
-
-<p id="heading1"><i>You May Also Like</i></p>
-<div id="shop">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/hb9/hc3/17237402091550/A21INFDU09_MAROON.jpg_136Wx204H">
-   <p>Infuse</p>
-   <p>Woven Poly Silk Dupatta</p>
-   <p>Rs 500</p>
-   <button>add to cart</button>
-   
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/hb1/h65/17446943162398/A21INFTRLINN_NAVY.jpg_136Wx204H">
-   <p>Infuse</p>
-   <p>Solid Regular Fit Cotten Blend Women Casual Pants</p>
-   <p>Rs 500</p>
-   <button>add to cart</button>
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/h3c/h9d/17020665593886/S21LGTBPJSET01_MINT.jpg_136Wx204H">
-    <p>Insense</p>
-    <p>Printed Regular Fit Cotten Womens Pyjama Sets</p>
-    <p>Rs 500</p>
-    <button>add to cart</button>
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/h7a/h4c/17435531444254/A21STDU29F_PEACH.jpg_136Wx204H">
-        <p>Stop</p>
-        <p>Full Length Polystar Woven Womens Dupatta</p>
-        <p>Rs 500</p>
-        <button>add to cart</button>
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/hd3/h9a/17427692486686/A219655OA_BROWN.jpg_136Wx204H">
-        <p>Stop</p>
-        <p>Printed Rayon Mandarin Womens Knee Length Kurta</p>
-        <p>Rs 559</p>
-        <button>add to cart</button>
-    </div>
-   
-</div>
-<img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h91/27312092381214/Style-Tips-to-Get-Back-to-25mrchOffice-Strip-Web.jpg">
-<img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h25/h27/27309569114142/Workwear-Women-buyingGuide_website25mrchh.jpg">
-<p id="para1">BEST BRANDS</p>
-<div id="fourthDiv">
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hdf/h8d/8856749047838/BrandBiba.png">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h3a/h3d/15087373746206/ZINk.png">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h90/h98/9519789342750">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h83/13761579843614/l_stop-2019.png">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/hf3/hff/15087376728094/life-logo.png">
-    </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h37/15087379578910/AND.png">
-    </div>
-</div>
-<div id="footer1">
-    <div>
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h82/h69/27050127032350/web_wom_new%20for%20you_20220210.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hcb/hcd/27050125393950/web_wom_vastranand_new%20launchs_po1_20220210.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h01/h3c/27054750400542/web_wom_refresh%20your%20routine_20220210.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hb5/hb3/27054749646878/web_wom_enamor-athleisure_refresh-your-routine_po4_20220211.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hde/hdb/27050117693470/web_wom_the%20denim%20directory_20220210.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/he0/he8/27063828709406/web_wom_revisedbanner_ds_20220214.jpg">
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hb6/h28/27063825694750/web_wom_the-brand-block_20220214.jpg">
+    <div id="secondDiv">
         <div>
-            <p class="footer1-p">DOWNLOAD THE APP ON</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h13/h59/27050135617566/web_wom_janasya_top%20brands_po1_20220211.jpg">
         </div>
         <div>
-            <img src="images/app1.jpg" alt="">
-        </div>
-    </div>
-    <div class="flexb margin-top">
-        <div>
-            <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
-
-            <p class="footer1-p">Authentic Products</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hce/hff/27112038989854/Biba---4-Widgets-web-.jpg">
         </div>
         <div>
-            <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
-
-            <p class="footer1-p">Free Delivery*</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb6/hac/27243209392158/Kami-Kubi--4-Widgets-web.jpg">
         </div>
         <div>
-            <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
-
-            <p class="footer1-p">Easy Exchange and Return</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hbf/hfc/27287356702750/globaldesi---4-Widgets-Web.jpg">
         </div>
         <div>
-            <p class="footer1-p"><i class="fa-solid fa-truck-pickup fa-2x"></i></p>
-            <p class="footer1-p">Express Store Pickup</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h45/h11/27050136666142/web_wom_sera_top%20brands_po1_20220211.jpg">
         </div>
-    </div>
-    <div>
         <div>
-            <p class="footer1-p">FOLLOW US</p>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h8e/h69/27050137124894/web_wom_dolce-crudo_top%20brands_po2_20220211.jpg">
         </div>
-        <div class="flexb">
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fa-brands fa-instagram"></i></div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb4/h73/27050137419806/web_wom_latin-quarter_top%20brands_po3_20220211.jpg">
         </div>
-    </div>
-</div>
-<div id="footer2">
-    <div style="height:130px;width:100%;">
-        <div style="width:100%;display:flex;justify-content: space-between; margin:20px auto">
-            <div style="display:inline-block;height:130px;width:25%;border:1px soli;">
-                <div
-                    style="height:40px;width:90px;border:1px soli;margin-left:40%;display:inline-block;color:gray">
-                    <h5>QUESTIONS?</h5>
-                </div>
-                <div style="height:18px;width:208px;border:1px soli;margin-left: 25%">
-                    <p1 style="color:red;text-decoration:underline">customercare@shopersstop.com</p1>
-                </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb3/haf/27243209457694/web_wom_vero-moda_top-brand_20220315.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h62/27076505501726/web_wom_rare-sutra_top%20brands_po1_20220211.jpg">
+        </div>
 
-            </div>
-
-            <div style="height:130px;width:25%;border:1px soli;display:inline-block;">
-                <div style="height:40px;width:200px;border:1px soli">
-                    <h5 style="color:gray;text-align:center">PAY SECURELY BY</h5>
-                </div>
-                <div style="height:88px;width:200px;border:1px soli">
-                    <img style="height: 30px;width:200px;" src="https://www.aviyoggroup.in/Pay%201.png">
-                </div>
-
-            </div>
-
-            <div style="height:130px;width:28%;border:1px soli;display:inline-block;">
-                <div style="height:40px;width:170px;border:1px soli">
-                    <h5 style="color:gray;text-align:center">VERIFIED BY</h5>
-                </div>
-                <div style="height:88px;width:170px;border:1px soli">
-                    <img style="height:40px;width:40px;display:inline-block"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT8y4qzvWRx4y4qhafV_cEaI8ThrBUA-T1w&usqp=CAU">
-                    <img style="height:40px;width:80px;display:inline-block"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp16IhxuHCrag-7t5t3mBsi_m4GhogySb45Q&usqp=CAU">
-                    <img style="height:35px;width:38px;display:inline-block" src="image1.jpeg">
-                </div>
-            </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hfe/h5e/27076505632798/web_wom_cover-story-crudo_top%20brands_po2_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h14/hc9/27050141450270/web_wom_i.s.u_top%20brands_po3_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf8/hd6/27050141876254/web_wom_clovia_top%20brands_po4_20220211.jpg">
         </div>
     </div>
-    <div style="height:500px;width:100%;border:1px soli">
-        <div style="display:flex;justify-content:space-evenly">
-            <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin-left: 3%">
-                <h3>WOMEN</h3>
-                <h5 style="color:gray">Indian Wear</h5>
-                <h5 style="color:gray">Western Wear</h5>
-                <h5 style="color:gray">Lingerie & Night Wear</h5>
-                <h5 style="color:gray">Footwear</h5>
-                <h5 style="color:gray">Watches</h5>
-                <h5 style="color:gray">Fragrances</h5>
-                <h5 style="color:gray">Bags &Wallets</h5>
-                <h5 style="color:gray">Sunglasses & Frames</h5>
-                <h5 style="color:gray">Jawellery</h5>
-                <h5 style="color:gray">Travel</h5>
-
-            </div>
-            <div
-                style="height:500px;width:15%;border:1px soli;display:inline-block;margin:auto;text-align:top">
-                <h3>MEN</h3>
-                <h5 style="color:gray">Clothing</h5>
-                <h5 style="color:gray">Footwear</h5>
-                <h5 style="color:gray">Watches</h5>
-                <h5 style="color:gray">Fragrances</h5>
-                <h5 style="color:gray">Grooming For Men</h5>
-                <h5 style="color:gray">Sunglasses & Frames</h5>
-                <h5 style="color:gray">Accessories</h5>
-                <h5 style="color:gray">Jewellery</h5>
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h73/hc5/27057672355870/web_wom_2022%20trend%20alert_20220210.jpg">
 
 
 
-            </div>
-            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
-                <h3>KIDS</h3>
-                <h5 style="color:gray">Boys</h5>
-                <h5 style="color:gray">Girls</h5>
-                <h5 style="color:gray">Infants</h5>
-                <h5 style="color:gray">Toys</h5>
-                <h5 style="color:gray">School Essential</h5>
-                <h5 style="color:gray">Footwear</h5>
-                <h5 style="color:gray">Watches</h5>
-                <h4 style="color:gray">Accessories</h5>
+    <div id="secondDiv">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/he5/h21/27063825891358/web_wom_ruffles_whats-trending%20in_po1_20220214.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h94/hc7/27252820312094/florals_4-widget_Web.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hd1/hd9/27057672945694/web_wom_mandarin-collars_whats-trending%20in_po3_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h6d/h8c/27063829331998/web_wom_st%26ct_20220214_revised.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hb4/hd4/27057673207838/web_wom_a-line-dress_whats-trending%20in_po1_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf5/hd0/27057673338910/web_wom_solid-color-dress_whats-trending%20in_po2_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/he4/hcd/27057673404446/web_wom_bodycon-dress_whats-trending%20in_po3_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h25/hca/27057673535518/web_wom_shift-dresses_whats-trending%20in_po4_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h13/hc7/27057673601054/web_wom_gota-patti_whats-trending%20in_po1_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h66/hc6/27057673666590/web_wom_bandhani-print_whats-trending%20in_po2_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h54/hc3/27057673732126/web_wom_kalamkari_whats-trending%20in_po3_20220212.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/ha6/hc2/27057673797662/web_wom_block-print_whats-trending%20in_po4_20220212.jpg">
+        </div>
+    </div>
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h4d/hde/27108347707422/Everyday-Wardrobe-BFFs-Web.jpg">
 
 
-            </div>
-            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
-                <h3>BEAUTY</h3>
-                <h5 style="color:gray">Make Up</h5>
-                <h5 style="color:gray">Skincare</h5>
-                <h5 style="color:gray">Bath & Body</h5>
-                <h5 style="color:gray">Nails</h5>
-                <h5 style="color:gray">Haircare</h5>
-                <h5 style="color:gray">Tools & Accessories</h5>
-                <h5 style="color:gray">Women's Fragrances</h5>
-                <h5 style="color:gray">Men's Fragrances</h5>
-                <h5 style="color:gray">Grooming For Men</h5>
-                <h5 style="color:gray">Personal Hygiene</h5>
-
-            </div>
-            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
-                <h3>HOMESTOP</h3>
-                <h5 style="color:gray">Kitchen & Dining</h5>
-                <h5 style="color:gray">Decor</h5>
-                <h5 style="color:gray">Home Furnishing</h5>
-                <h5 style="color:gray">Storage & Organization</h5>
-                <h5 style="color:gray">Smart Home and Appliances</h5>
-                <h5 style="color:gray">Bath</h5>
-                <h5 style="color:gray">Bedding</h5>
-
-
-            </div>
-            <div style="height:200px;width:15%;border:1px soli;display:inline-block;margin-bottom: 10%;">
-                <h3>WATCHES</h3>
-                <h5 style="color:gray">Mens Watches</h5>
-                <h5 style="color:gray">Women Watches</h5>
-                <h5 style="color:gray">Kids Watches</h5>
+    <div id="thirdDiv">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h62/27050127228958/web_wom_kurtas_workwear%20style_po1_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h04/h62/27050127294494/web_wom_tops%20%26%20tees_workwear%20style_po2_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf5/h5b/27050127425566/web_wom_comfort%20bottom_workwear%20style_po3_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h36/h58/27050127556638/web_wom_activewear_workwear%20style_po4_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h24/h55/27050127622174/web_wom_sleepwear_workwear%20style_po5_20220211.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h65/h51/27050127753246/web_wom_flip-flops_workwear%20style_po6_20220211.jpg">
+        </div>
+    </div>
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h60/hd4/27050117431326/web_wom_accessorize%20right_20220210.jpg">
 
 
 
-            </div>
+    <div id="secondDiv">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h47/h6f/27050114285598/web_wom_hobo-bags_best%20of%20accessories_po1_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hbd/h49/27300364124190/Sunglasses-4-Widgets-Web.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h67/h62/27050114613278/web_wom_embellished-cultches_best%20of%20accessories_po3_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hab/h5b/27050114809886/web_wom_heels_best%20of%20accessories_po4_20220210.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/ha2/h59/27279434711070/web_wom_acessories-right_20220322-part2-img.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h20/h61/27279434973214/web_wom_rings_acessories-right_20220322-part2-img.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h59/hb6/27279435366430/web_wom_neckles-%26-chains_acessories-right_20220322-part2.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h18/hba/27279435497502/web_wom_baslets-%26-bangals_acessories-right_20220322-part2-img.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf8/h98/27309553451038/web_wom_catwalk_best-of-accessories_20220325.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hc6/ha2/27309553713182/web_wom_inc5_best-of-accessories_20220325.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h74/ha3/27309553778718/web_wom_lemon-%26-pepper_best-of-accessories_20220325.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/h26/hff/27309554335774/web_wom_estatos_best-of-accessories_20220325.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hf2/h1e/27309556793374/Elliza-donatein-4-Widgets-web--25-03-2022new.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/he3/h18/27309556924446/web_wom_hidesigen_handbag_25032022-img.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hed/h38/27309557219358/web_wom_lino-paror_handbag_25032022-img.jpg">
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/root/hae/h39/27309557284894/web_wom_baggit_handbag_25032022-img.jpg">
         </div>
     </div>
 
-    <div style="background-color:black;color:white">
-        <div style="height:320px;width:95%;">
-            <div style="display:flex;justify-content: space-evenly;">
-                <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin-left:3%">
-                    <h3>CUSTOMER</h5>
-                        <h5>HELP/FAQS</h5>
-                        <h5>TRACK ORDER</h5>
-                        <h5>SIZE GUIDE</h5>
-                        <h5>BUYING GUIDE</h5>
-                        <h5>HOW DO I PAY?</h5>
-                        <h5>FIND PLACES WE DELIVER</h5>
-                        <h5>STYLE HUB</h4>
-                </div>
-                <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin:auto">
-                    <h3>POLICIES</h3>
-                    <h5>TERMS OF USE</h5>
-                    <h5>PRIVACY</h5>
-                    <h5>DELIVERY POLICY</h5>
-                    <h5>EXCHANGES & RETURNS</h5>
-                </div>
-                <div style="height:320px;width:15%;border:1px soli;display:inline-block">
-                    <h3>STORES AND SITES</h3>
-                    <h5>ABOUT US </h5>
-                    <h5>CONTACT US</h5>
-                    <h5>CORPORATE SITE</h5>
-                    <h5>STORE LOCATOR</h5>
-                    <h5>CAREERS</h5>
-                    <h5>SITEMAP</h5>
-                </div>
-                <div style="height:320px;width:15%;border:1px soli;display:inline-block">
-                    <h3>DELIGHTFUL PROGRAMS</h3>
-                    <h5>INSTANT GIFTING</h5>
-                    <h5>EXPRESS STORE PICK UP</h5>
-                </div>
-                <div style="width:30%">
-                    <div style="width:95%;display:flex;justify-content:space-evenly">
-                        <div style="height:135px;width:46%;border:1px soli;display:inline-block">
-                            <h3>FIRST CITIZEN</h3>
-                            <h5>FIRST CITIZEN</h5>
-                        </div>
-                        <div style="height:135px;width:46%;border:1px soli;display:inline-block">
-                            <h3>REACH US</h3>
-                            <h5>FOR ANY QUERY PLEASE EMAIL US</h5>
-                            <p1>customercare@shopperstop.com</p1>
-                        </div>
+    <p id="heading1"><i>You May Also Like</i></p>
+    <div id="shop">
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/images/hb9/hc3/17237402091550/A21INFDU09_MAROON.jpg_136Wx204H">
+            <p>Infuse</p>
+            <p>Woven Poly Silk Dupatta</p>
+            <p>Rs 500</p>
+            <button>add to cart</button>
 
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/images/hb1/h65/17446943162398/A21INFTRLINN_NAVY.jpg_136Wx204H">
+            <p>Infuse</p>
+            <p>Solid Regular Fit Cotten Blend Women Casual Pants</p>
+            <p>Rs 500</p>
+            <button>add to cart</button>
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/images/h3c/h9d/17020665593886/S21LGTBPJSET01_MINT.jpg_136Wx204H">
+            <p>Insense</p>
+            <p>Printed Regular Fit Cotten Womens Pyjama Sets</p>
+            <p>Rs 500</p>
+            <button>add to cart</button>
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/images/h7a/h4c/17435531444254/A21STDU29F_PEACH.jpg_136Wx204H">
+            <p>Stop</p>
+            <p>Full Length Polystar Woven Womens Dupatta</p>
+            <p>Rs 500</p>
+            <button>add to cart</button>
+        </div>
+        <div>
+            <img
+                src="https://sslimages.shoppersstop.com/sys-master/images/hd3/h9a/17427692486686/A219655OA_BROWN.jpg_136Wx204H">
+            <p>Stop</p>
+            <p>Printed Rayon Mandarin Womens Knee Length Kurta</p>
+            <p>Rs 559</p>
+            <button>add to cart</button>
+        </div>
+
+    </div>
+    <img id="second"
+        src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h91/27312092381214/Style-Tips-to-Get-Back-to-25mrchOffice-Strip-Web.jpg">
+    <img id="first"
+        src="https://sslimages.shoppersstop.com/sys-master/root/h25/h27/27309569114142/Workwear-Women-buyingGuide_website25mrchh.jpg">
+    <p id="para1">BEST BRANDS</p>
+    <div id="fourthDiv">
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/hdf/h8d/8856749047838/BrandBiba.png">
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h3a/h3d/15087373746206/ZINk.png">
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h90/h98/9519789342750">
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h83/13761579843614/l_stop-2019.png">
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/hf3/hff/15087376728094/life-logo.png">
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h37/15087379578910/AND.png">
+        </div>
+    </div>
+    <div id="footer1">
+        <div>
+            <div>
+                <p class="footer1-p">DOWNLOAD THE APP ON</p>
+            </div>
+            <div>
+                <img src="images/app1.jpg" alt="">
+            </div>
+        </div>
+        <div class="flexb margin-top">
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
+
+                <p class="footer1-p">Authentic Products</p>
+            </div>
+            <div>
+                <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
+
+                <p class="footer1-p">Free Delivery*</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
+
+                <p class="footer1-p">Easy Exchange and Return</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-truck-pickup fa-2x"></i></p>
+                <p class="footer1-p">Express Store Pickup</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="footer1-p">FOLLOW US</p>
+            </div>
+            <div class="flexb">
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+                <div><i class="fa-brands fa-twitter"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div style="height:130px;width:100%;">
+            <div style="width:100%;display:flex;justify-content: space-between; margin:20px auto">
+                <div style="display:inline-block;height:130px;width:25%;border:1px soli;">
+                    <div style="height:40px;width:90px;border:1px soli;margin-left:40%;display:inline-block;color:gray">
+                        <h5>QUESTIONS?</h5>
                     </div>
-                    <div>
-                        <select style="width:90%;padding:10px 20px;margin:80px auto">
-                            <option value="">BRANDS</option>
-                            <option>AJMAL</option>
-                            <option>ADIGAM</option>
-                            <option>ADIRA</option>
-                            <option>3M</option>
-                            <option>109F</option>
-                            <option>PARIS</option>
-                        </select>
+                    <div style="height:18px;width:208px;border:1px soli;margin-left: 25%">
+                        <p1 style="color:red;text-decoration:underline">customercare@shopersstop.com</p1>
+                    </div>
+
+                </div>
+
+                <div style="height:130px;width:25%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:200px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">PAY SECURELY BY</h5>
+                    </div>
+                    <div style="height:88px;width:200px;border:1px soli">
+                        <img style="height: 30px;width:200px;" src="https://www.aviyoggroup.in/Pay%201.png">
+                    </div>
+
+                </div>
+
+                <div style="height:130px;width:28%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:170px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">VERIFIED BY</h5>
+                    </div>
+                    <div style="height:88px;width:170px;border:1px soli">
+                        <img style="height:40px;width:40px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT8y4qzvWRx4y4qhafV_cEaI8ThrBUA-T1w&usqp=CAU">
+                        <img style="height:40px;width:80px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp16IhxuHCrag-7t5t3mBsi_m4GhogySb45Q&usqp=CAU">
+                        <img style="height:35px;width:38px;display:inline-block" src="image1.jpeg">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div style="height:500px;width:100%;border:1px soli">
+            <div style="display:flex;justify-content:space-evenly">
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin-left: 3%">
+                    <h3>WOMEN</h3>
+                    <h5 style="color:gray">Indian Wear</h5>
+                    <h5 style="color:gray">Western Wear</h5>
+                    <h5 style="color:gray">Lingerie & Night Wear</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Bags &Wallets</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Jawellery</h5>
+                    <h5 style="color:gray">Travel</h5>
 
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin:auto;text-align:top">
+                    <h3>MEN</h3>
+                    <h5 style="color:gray">Clothing</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Accessories</h5>
+                    <h5 style="color:gray">Jewellery</h5>
+
+
+
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>KIDS</h3>
+                    <h5 style="color:gray">Boys</h5>
+                    <h5 style="color:gray">Girls</h5>
+                    <h5 style="color:gray">Infants</h5>
+                    <h5 style="color:gray">Toys</h5>
+                    <h5 style="color:gray">School Essential</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h4 style="color:gray">Accessories</h5>
+
+
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>BEAUTY</h3>
+                    <h5 style="color:gray">Make Up</h5>
+                    <h5 style="color:gray">Skincare</h5>
+                    <h5 style="color:gray">Bath & Body</h5>
+                    <h5 style="color:gray">Nails</h5>
+                    <h5 style="color:gray">Haircare</h5>
+                    <h5 style="color:gray">Tools & Accessories</h5>
+                    <h5 style="color:gray">Women's Fragrances</h5>
+                    <h5 style="color:gray">Men's Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Personal Hygiene</h5>
+
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>HOMESTOP</h3>
+                    <h5 style="color:gray">Kitchen & Dining</h5>
+                    <h5 style="color:gray">Decor</h5>
+                    <h5 style="color:gray">Home Furnishing</h5>
+                    <h5 style="color:gray">Storage & Organization</h5>
+                    <h5 style="color:gray">Smart Home and Appliances</h5>
+                    <h5 style="color:gray">Bath</h5>
+                    <h5 style="color:gray">Bedding</h5>
+
+
+                </div>
+                <div style="height:200px;width:15%;border:1px soli;display:inline-block;margin-bottom: 10%;">
+                    <h3>WATCHES</h3>
+                    <h5 style="color:gray">Mens Watches</h5>
+                    <h5 style="color:gray">Women Watches</h5>
+                    <h5 style="color:gray">Kids Watches</h5>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div style="background-color:black;color:white">
+            <div style="height:320px;width:95%;">
+                <div style="display:flex;justify-content: space-evenly;">
+                    <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin-left:3%">
+                        <h3>CUSTOMER</h5>
+                            <h5>HELP/FAQS</h5>
+                            <h5>TRACK ORDER</h5>
+                            <h5>SIZE GUIDE</h5>
+                            <h5>BUYING GUIDE</h5>
+                            <h5>HOW DO I PAY?</h5>
+                            <h5>FIND PLACES WE DELIVER</h5>
+                            <h5>STYLE HUB</h4>
+                    </div>
+                    <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin:auto">
+                        <h3>POLICIES</h3>
+                        <h5>TERMS OF USE</h5>
+                        <h5>PRIVACY</h5>
+                        <h5>DELIVERY POLICY</h5>
+                        <h5>EXCHANGES & RETURNS</h5>
+                    </div>
+                    <div style="height:320px;width:15%;border:1px soli;display:inline-block">
+                        <h3>STORES AND SITES</h3>
+                        <h5>ABOUT US </h5>
+                        <h5>CONTACT US</h5>
+                        <h5>CORPORATE SITE</h5>
+                        <h5>STORE LOCATOR</h5>
+                        <h5>CAREERS</h5>
+                        <h5>SITEMAP</h5>
+                    </div>
+                    <div style="height:320px;width:15%;border:1px soli;display:inline-block">
+                        <h3>DELIGHTFUL PROGRAMS</h3>
+                        <h5>INSTANT GIFTING</h5>
+                        <h5>EXPRESS STORE PICK UP</h5>
+                    </div>
+                    <div style="width:30%">
+                        <div style="width:95%;display:flex;justify-content:space-evenly">
+                            <div style="height:135px;width:46%;border:1px soli;display:inline-block">
+                                <h3>FIRST CITIZEN</h3>
+                                <h5>FIRST CITIZEN</h5>
+                            </div>
+                            <div style="height:135px;width:46%;border:1px soli;display:inline-block">
+                                <h3>REACH US</h3>
+                                <h5>FOR ANY QUERY PLEASE EMAIL US</h5>
+                                <p1>customercare@shopperstop.com</p1>
+                            </div>
+
+                        </div>
+                        <div>
+                            <select style="width:90%;padding:10px 20px;margin:80px auto">
+                                <option value="">BRANDS</option>
+                                <option>AJMAL</option>
+                                <option>ADIGAM</option>
+                                <option>ADIRA</option>
+                                <option>3M</option>
+                                <option>109F</option>
+                                <option>PARIS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
-    </html>
-    <script>
-cartindi();
-loginindi();
-// CART ICON FUNCTION
+</html>
+<script>
+    cartindi();
+    loginindi();
+    // CART ICON FUNCTION
 
-function cartindi(){
-  let icon=document.querySelector("#cartIcon-no");
-  let cartarr=JSON.parse(localStorage.getItem("cartkey"));
-  let l=cartarr.length;
-  if(l>0){
-    icon.innerText=l;
-  }
-}
-// LOGIN ICON FUNCTION
-function loginindi() {
-let signuparr=JSON.parse(localStorage.getItem("signupkey"));
-let icon=document.querySelector("#loginIcon");
-if(signuparr!=null){
-  icon.style.color="#34eb37";
-}
-}
-    </script>
+    function cartindi() {
+        let icon = document.querySelector("#cartIcon-no");
+        let cartarr = JSON.parse(localStorage.getItem("cartkey"));
+        let l = cartarr.length;
+        if (l > 0) {
+            icon.innerText = l;
+        }
+    }
+    // LOGIN ICON FUNCTION
+    function loginindi() {
+        let signuparr = JSON.parse(localStorage.getItem("signupkey"));
+        let icon = document.querySelector("#loginIcon");
+        if (signuparr != null) {
+            icon.style.color = "#34eb37";
+        }
+    }
+</script>
