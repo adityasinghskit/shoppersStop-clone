@@ -4,25 +4,180 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <title>Document</title>
 
         <style>
-#one{
-    height: 40px;
-    width: 300px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin-left:600px;
-}
-#firstDiv{
+/******** CSS for header ***********/
+#navbar{
+    z-index: 5;
+    position: fixed;
+    top:0;
+    background-color: white;
+    color: rgb(22, 22, 22);
+    font-size:15px;
+    width:100%;
+    height:auto;
+    padding:10px;
+    margin:auto;
     display: flex;
-    width: 1200px;
+    flex-direction:row;
     justify-content: space-between;
-    margin-left:150px ;
-    margin-bottom: 40px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+#navbar-l{
+    width:20%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar-l i{
+    margin-right: 10px;
+    color: rgb(32, 32, 32);
+}
+#navbar-r{
+    width:60%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar-r>div:nth-child(2)>input{
+    width:300px;
+    border:0;
+    border-bottom: 1px solid black;
+}
+#navbar-r>div:nth-child(4),#navbar-r>div:nth-child(5){
+  cursor: pointer;
+}
+#navbar-r img{
+    width: 250px;
+    cursor: pointer;
+}
+#navbar-2{
+    color: rgb(32, 32, 32);
+    font-size:15px;
+    font-weight:600;
+    width:90%;
+    height:auto;
+    padding:10px;
+    margin-top:65px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+#navbar-2 a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+#navbar-2 a{
+    padding:12px 24px;
+}
+#navbar-2 a:hover{
+    border-bottom: 2px solid #ff5d3b;
+    color:#ff5d3b;
+}
+/********* Style The Dropdown Button *******/
+.dropbtn {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      /* margin-top: 10px; */
+    font-weight: 400;
+    display: none;
+    color:gray;
+
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/********* Style The Dropdown Button *******/
+/******** CSS for header ***********/
+/********CSS for footer ********/
+#footer{
+    width:100%;
+    margin:20px auto;
+}
+#footer1{
+    width:100%;
+    margin:auto;
+    padding:20px;
+    color:rgb(22, 22, 22);
+    background-color: #f5f5f5;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#footer1>div:nth-child(1) {
+    width:18%;
+}
+#footer1>div:nth-child(1) img{
+    color: #f5f5f5;
+}
+#footer1>div:nth-child(2) {
+    width:33%;
+}
+#footer1>div:nth-child(3) {
+    width:10%;
+}
+#footer1>div:nth-child(2)>div{
+    width:19%;
+
+}
+#footer1 img{
+    width:100%;
+}
+.flexb{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+.footer1-p{
+    text-align:center;
+    color:rgb(22, 22, 22);
+    font-size:13px;
+}
+#footer1 i,p{
+    color:gray;
+}
+/************ CSS FOR FOOTER******/
 #first{
     height: 400px;
     width: 1500px;
@@ -64,7 +219,9 @@ grid-template-rows: auto;
     grid-template-rows: auto;
     margin-left:160px ;
     margin-right: 160px;
+    
 }
+
 #shop>div>img{
     height: 300px;
 width: 200px;
@@ -87,21 +244,108 @@ width: 200px;
         </style>
     </head>
     <body>
-        <h1 id="one">
-            SHOPPERS STOP
-        </h1>
-        <div id="firstDiv">
-            <div>BARGINS</div>
-            <div>MEN</div>
-            <div>WOMEN</div>
-            <div>KIDS</div>
-            <div>WATCHES</div>
-            <div>BEAUTY</div>
-            <div>HOMESTOP</div>
-            <div>LUXE</div>
-            <div>GIFTS</div>
-            <div>BRANDS</div>
+        <div id="navbar">
+            <div id="navbar-l">
+                <div>
+                    <p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p>
+                </div>
+                <div>
+                    <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
+                </div>
+            </div>
+            <div id="navbar-r">
+                <div><img onclick="window.location.href='index.html'"
+                        src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
+                <div><input type="text" placeholder="Search Products & Brands"></div>
+                <div><i class="fa-regular fa-heart fa-2x"></i></div>
+                <div><i class="fa-solid fa-bag-shopping fa-2x open-button"onclick="window.location.href='cart.html'"></i></div>
+                <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="window.location.href='signup.html'"></i></div>
+        
+            </div>
+        
         </div>
+        <div id="navbar-2">
+            <!-- <div>
+                <p><a href="#">MEN</a></p>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="#">MEN</a></button>
+                <div class="dropdown-content">
+                    <a href="#">Clothing</a>
+                    <a href="#">Footwear</a>
+                    <a href="#">Watches</a>
+                    <a href="#">Fragnances</a>
+                    <a href="#">Clothing for Men</a>
+                    <a href="#">Sunglasses & Frames</a>
+                </div>
+            </div>
+            <!-- <div>
+                <p><a href="#">WOMEN</a></p>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
+                <div class="dropdown-content">
+                    <a href="#">Indian Wear</a>
+                    <a href="#">Western Wear</a>
+                    <a href="#">Lingerie & Night Wear</a>
+                    <a href="#">Fragnances</a>
+                    <a href="#">Footwear</a>
+                    <a href="#">Watches</a>
+                </div>
+            </div>
+            <!-- <div>
+                <p><a href="kids.html">KIDS</a></p>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="kids.html">KIDS</a></button>
+                <div class="dropdown-content">
+                    <a href="#">Boys</a>
+                    <a href="#">Girls</a>
+                    <a href="#">Infants</a>
+                    <a href="#">Toys</a>
+                    <a href="#">School Essentials</a>
+                    <a href="#">Footwear</a>
+                </div>
+            </div>
+            <!-- <div>
+                <p><a href="#">WATCHES</a></p>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
+                <div class="dropdown-content">
+                    <a href="menwatches.html">Mens Watches</a>
+                    <a href="#">Womens Watches</a>
+                    <a href="#">Kids Watches</a>
+                </div>
+            </div>
+            <!-- <div>
+                <p><a href="#">BEAUTY</a></p>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="#">BEAUTY</a></button>
+                <div class="dropdown-content">
+                    <a href="#">MakeUp</a>
+                    <a href="#">Beauty</a>
+                    <a href="#">Bath & Body</a>
+                    <a href="#">Nails</a>
+                    <a href="#">Hair Care</a>
+                </div>
+            </div>
+            <div>
+                <p><a href="#">HOMESTOP</a></p>
+            </div>
+            <div>
+                <p><a href="#">LUXE</a></p>
+            </div>
+            <div>
+                <p><a href="#">GIFTS</a></p>
+            </div>
+            <div>
+                <p><a href="#">BRANDS</a></p>
+            </div>
+        </div>
+        <!-- HTML FOR HEADER -->
+      
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -441,13 +685,7 @@ width: 200px;
         <p>Rs 559</p>
         <button>add to cart</button>
     </div>
-    <div>
-        <img src="https://sslimages.shoppersstop.com/sys-master/images/h72/hd5/15583256379422/A20STDU36F_AQUA.jpg_136Wx204H">
-        <p>Juniper</p>
-        <p>Stop Regular Length Net Woven Women Dupatta</p>
-        <p>RS 382</p>
-        <button>add to cart</button>
-    </div>
+   
 </div>
 <img id="second" src="https://sslimages.shoppersstop.com/sys-master/root/hc6/h91/27312092381214/Style-Tips-to-Get-Back-to-25mrchOffice-Strip-Web.jpg">
 <img id="first" src="https://sslimages.shoppersstop.com/sys-master/root/h25/h27/27309569114142/Workwear-Women-buyingGuide_website25mrchh.jpg">
@@ -470,6 +708,231 @@ width: 200px;
     </div>
     <div>
         <img src="https://sslimages.shoppersstop.com/sys-master/root/h13/h37/15087379578910/AND.png">
+    </div>
+</div>
+<div id="footer1">
+    <div>
+        <div>
+            <p class="footer1-p">DOWNLOAD THE APP ON</p>
+        </div>
+        <div>
+            <img src="images/app1.jpg" alt="">
+        </div>
+    </div>
+    <div class="flexb margin-top">
+        <div>
+            <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
+
+            <p class="footer1-p">Authentic Products</p>
+        </div>
+        <div>
+            <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
+
+            <p class="footer1-p">Free Delivery*</p>
+        </div>
+        <div>
+            <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
+
+            <p class="footer1-p">Easy Exchange and Return</p>
+        </div>
+        <div>
+            <p class="footer1-p"><i class="fa-solid fa-truck-pickup fa-2x"></i></p>
+            <p class="footer1-p">Express Store Pickup</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p class="footer1-p">FOLLOW US</p>
+        </div>
+        <div class="flexb">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+        </div>
+    </div>
+</div>
+<div id="footer2">
+    <div style="height:130px;width:100%;">
+        <div style="width:100%;display:flex;justify-content: space-between; margin:20px auto">
+            <div style="display:inline-block;height:130px;width:25%;border:1px soli;">
+                <div
+                    style="height:40px;width:90px;border:1px soli;margin-left:40%;display:inline-block;color:gray">
+                    <h5>QUESTIONS?</h5>
+                </div>
+                <div style="height:18px;width:208px;border:1px soli;margin-left: 25%">
+                    <p1 style="color:red;text-decoration:underline">customercare@shopersstop.com</p1>
+                </div>
+
+            </div>
+
+            <div style="height:130px;width:25%;border:1px soli;display:inline-block;">
+                <div style="height:40px;width:200px;border:1px soli">
+                    <h5 style="color:gray;text-align:center">PAY SECURELY BY</h5>
+                </div>
+                <div style="height:88px;width:200px;border:1px soli">
+                    <img style="height: 30px;width:200px;" src="https://www.aviyoggroup.in/Pay%201.png">
+                </div>
+
+            </div>
+
+            <div style="height:130px;width:28%;border:1px soli;display:inline-block;">
+                <div style="height:40px;width:170px;border:1px soli">
+                    <h5 style="color:gray;text-align:center">VERIFIED BY</h5>
+                </div>
+                <div style="height:88px;width:170px;border:1px soli">
+                    <img style="height:40px;width:40px;display:inline-block"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT8y4qzvWRx4y4qhafV_cEaI8ThrBUA-T1w&usqp=CAU">
+                    <img style="height:40px;width:80px;display:inline-block"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp16IhxuHCrag-7t5t3mBsi_m4GhogySb45Q&usqp=CAU">
+                    <img style="height:35px;width:38px;display:inline-block" src="image1.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height:500px;width:100%;border:1px soli">
+        <div style="display:flex;justify-content:space-evenly">
+            <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin-left: 3%">
+                <h3>WOMEN</h3>
+                <h5 style="color:gray">Indian Wear</h5>
+                <h5 style="color:gray">Western Wear</h5>
+                <h5 style="color:gray">Lingerie & Night Wear</h5>
+                <h5 style="color:gray">Footwear</h5>
+                <h5 style="color:gray">Watches</h5>
+                <h5 style="color:gray">Fragrances</h5>
+                <h5 style="color:gray">Bags &Wallets</h5>
+                <h5 style="color:gray">Sunglasses & Frames</h5>
+                <h5 style="color:gray">Jawellery</h5>
+                <h5 style="color:gray">Travel</h5>
+
+            </div>
+            <div
+                style="height:500px;width:15%;border:1px soli;display:inline-block;margin:auto;text-align:top">
+                <h3>MEN</h3>
+                <h5 style="color:gray">Clothing</h5>
+                <h5 style="color:gray">Footwear</h5>
+                <h5 style="color:gray">Watches</h5>
+                <h5 style="color:gray">Fragrances</h5>
+                <h5 style="color:gray">Grooming For Men</h5>
+                <h5 style="color:gray">Sunglasses & Frames</h5>
+                <h5 style="color:gray">Accessories</h5>
+                <h5 style="color:gray">Jewellery</h5>
+
+
+
+            </div>
+            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                <h3>KIDS</h3>
+                <h5 style="color:gray">Boys</h5>
+                <h5 style="color:gray">Girls</h5>
+                <h5 style="color:gray">Infants</h5>
+                <h5 style="color:gray">Toys</h5>
+                <h5 style="color:gray">School Essential</h5>
+                <h5 style="color:gray">Footwear</h5>
+                <h5 style="color:gray">Watches</h5>
+                <h4 style="color:gray">Accessories</h5>
+
+
+            </div>
+            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                <h3>BEAUTY</h3>
+                <h5 style="color:gray">Make Up</h5>
+                <h5 style="color:gray">Skincare</h5>
+                <h5 style="color:gray">Bath & Body</h5>
+                <h5 style="color:gray">Nails</h5>
+                <h5 style="color:gray">Haircare</h5>
+                <h5 style="color:gray">Tools & Accessories</h5>
+                <h5 style="color:gray">Women's Fragrances</h5>
+                <h5 style="color:gray">Men's Fragrances</h5>
+                <h5 style="color:gray">Grooming For Men</h5>
+                <h5 style="color:gray">Personal Hygiene</h5>
+
+            </div>
+            <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                <h3>HOMESTOP</h3>
+                <h5 style="color:gray">Kitchen & Dining</h5>
+                <h5 style="color:gray">Decor</h5>
+                <h5 style="color:gray">Home Furnishing</h5>
+                <h5 style="color:gray">Storage & Organization</h5>
+                <h5 style="color:gray">Smart Home and Appliances</h5>
+                <h5 style="color:gray">Bath</h5>
+                <h5 style="color:gray">Bedding</h5>
+
+
+            </div>
+            <div style="height:200px;width:15%;border:1px soli;display:inline-block;margin-bottom: 10%;">
+                <h3>WATCHES</h3>
+                <h5 style="color:gray">Mens Watches</h5>
+                <h5 style="color:gray">Women Watches</h5>
+                <h5 style="color:gray">Kids Watches</h5>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:black;color:white">
+        <div style="height:320px;width:95%;">
+            <div style="display:flex;justify-content: space-evenly;">
+                <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin-left:3%">
+                    <h3>CUSTOMER</h5>
+                        <h5>HELP/FAQS</h5>
+                        <h5>TRACK ORDER</h5>
+                        <h5>SIZE GUIDE</h5>
+                        <h5>BUYING GUIDE</h5>
+                        <h5>HOW DO I PAY?</h5>
+                        <h5>FIND PLACES WE DELIVER</h5>
+                        <h5>STYLE HUB</h4>
+                </div>
+                <div style="height:320px;width:15%;border:1px soli;display:inline-block;margin:auto">
+                    <h3>POLICIES</h3>
+                    <h5>TERMS OF USE</h5>
+                    <h5>PRIVACY</h5>
+                    <h5>DELIVERY POLICY</h5>
+                    <h5>EXCHANGES & RETURNS</h5>
+                </div>
+                <div style="height:320px;width:15%;border:1px soli;display:inline-block">
+                    <h3>STORES AND SITES</h3>
+                    <h5>ABOUT US </h5>
+                    <h5>CONTACT US</h5>
+                    <h5>CORPORATE SITE</h5>
+                    <h5>STORE LOCATOR</h5>
+                    <h5>CAREERS</h5>
+                    <h5>SITEMAP</h5>
+                </div>
+                <div style="height:320px;width:15%;border:1px soli;display:inline-block">
+                    <h3>DELIGHTFUL PROGRAMS</h3>
+                    <h5>INSTANT GIFTING</h5>
+                    <h5>EXPRESS STORE PICK UP</h5>
+                </div>
+                <div style="width:30%">
+                    <div style="width:95%;display:flex;justify-content:space-evenly">
+                        <div style="height:135px;width:46%;border:1px soli;display:inline-block">
+                            <h3>FIRST CITIZEN</h3>
+                            <h5>FIRST CITIZEN</h5>
+                        </div>
+                        <div style="height:135px;width:46%;border:1px soli;display:inline-block">
+                            <h3>REACH US</h3>
+                            <h5>FOR ANY QUERY PLEASE EMAIL US</h5>
+                            <p1>customercare@shopperstop.com</p1>
+                        </div>
+
+                    </div>
+                    <div>
+                        <select style="width:90%;padding:10px 20px;margin:80px auto">
+                            <option value="">BRANDS</option>
+                            <option>AJMAL</option>
+                            <option>ADIGAM</option>
+                            <option>ADIRA</option>
+                            <option>3M</option>
+                            <option>109F</option>
+                            <option>PARIS</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
