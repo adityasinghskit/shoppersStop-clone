@@ -1,6 +1,6 @@
 //******** JS FOR SIGNIN FORM ********
 let exist=false;
-
+openForm1();
 function openForm1() {
     document.getElementById("myForm1").style.display = "block";
   }
@@ -46,8 +46,9 @@ function openForm1() {
 let otp1=document.querySelector("#otp").value;
 if(otp1=="1234"){
     if(exist){
-        //alert("You are already registered!");
-        closeForm3b();
+        alert("You are Signed In!");
+        document.getElementById("myForm2").style.display = "none";
+        history.back();
     }else{
         document.getElementById("myForm2").style.display = "none";
         document.getElementById("myForm3").style.display = "block";
@@ -83,6 +84,8 @@ if(otp1=="1234"){
      let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
      signuparr.push(obj);
      localStorage.setItem("signupkey",JSON.stringify(signuparr));
-     alert("You have been registered!");
-     closeForm3b();
+     alert("You have been registered & Signed In!");
+     //closeForm3b();
+     history.back();
+     
  }
