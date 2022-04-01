@@ -36,24 +36,31 @@
         #first {
             height: 1000px;
             width: 100%;
-            border: 1px solid black;
+
             display: flex;
             justify-content: space-between;
+
+        }
+
+        #first1 {
+            width: 70%;
+            height: 100%;
+            border: 1px solid lightgray;
         }
 
         #para1 {
             font-size: 20px;
-            height: 50px;
+            height: 40px;
             width: 80%;
             padding-top: 20px;
-            border: 1px solid red;
             margin-top: 0%;
             padding-left: 40px;
+            background-color: lightgray;
         }
 
         #three {
             height: 40px;
-            width: 80%;
+            width: 85%;
             margin-left: 20px;
             margin-top: 0%;
 
@@ -62,22 +69,159 @@
         #ek {
             height: 50px;
             font-size: 15px;
-            width: 40%;
+            width: 26.5%;
+            border: 1px solid lightgray;
 
 
         }
 
         #form {
             margin-left: 20px;
+
+            width: 100%;
+            height: 600px;
         }
 
         #name {
             height: 50px;
+            width: 55%;
+
         }
 
-        #name1 {
+        .name1 {
             height: 32px;
-            width: 35%;
+            width: 40%;
+            border: 1px solid lightgray;
+        }
+
+        #four {
+            height: 50px;
+            width: 55%;
+        }
+
+        #do1 {
+            height: 38px;
+            width: 15%;
+            font-size: 15px;
+            border: 1px solid lightgray;
+        }
+
+        #do2 {
+            height: 32px;
+            width: 65%;
+            font-size: 15px;
+            border: 1px solid lightgray;
+        }
+
+        #pin {
+            height: 35px;
+            width: 45%;
+            border: 1px solid lightgray;
+        }
+
+        #five {
+            height: 38px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+
+            margin-top: 15px;
+            width: 46%;
+        }
+
+        #state {
+            height: auto;
+            width: 48%;
+            border: 1px solid lightgray;
+        }
+
+        #city {
+            height: auto;
+            width: 48%;
+            margin-left: 0px;
+            border: 1px solid lightgray;
+        }
+
+        #add1 {
+            height: 38px;
+            width: 45%;
+            margin-top: 15px;
+            border: 1px solid lightgray;
+        }
+
+        #add2 {
+            height: 38px;
+            width: 45%;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            border: 1px solid lightgray;
+        }
+
+        #vehicle1 {
+            margin-bottom: 15px;
+        }
+
+        #vehicle2 {
+            margin-bottom: 15px;
+        }
+
+        #button {
+            font-size: 15px;
+            height: 40px;
+            width: 25%;
+            margin-left: 570px;
+            margin-top: 50px;
+            background-color: #f74364;
+            border-radius: 5px;
+            color: white;
+            border: 0px;
+        }
+
+        #first2 {
+            height: 100%;
+            width: 30%;
+            border: 1px solid lightgray;
+
+        }
+
+        #second {
+            height: 400px;
+            width: 65%;
+            border: 1px solid red;
+            margin-left: 40px;
+            border: 1px solid lightgray;
+            background-color: #eeeeee;
+
+        }
+
+        #div1 {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #div1>p {
+            margin-top: 10px;
+        }
+
+        #sub1 {
+            height: 25px;
+            width: 70%;
+            border: 1px solid lightgray;
+        }
+
+        #sub2 {
+            height: 30px;
+            width: 25%;
+            color: #ff7b6d;
+            background-color: #fff2f0;
+            border: 1px solid #ff7b6d;
+        }
+
+        #para3 {
+            text-align: center;
+
+
         }
     </style>
 </head>
@@ -92,8 +236,10 @@
     </div>
 
 
+
     <div id="first">
-        <div>
+
+        <div id="first1">
 
 
             <p id="para1"> 1. DELIVERY METHOD</p>
@@ -104,46 +250,50 @@
             </div>
 
 
-            <p> ADD NEW ADDRESS</p>
+
             <form id="form">
+                <p> ADD NEW ADDRESS</p>
                 <div id="name">
 
                     <!-- name -->
-                    <input id="name1" type="text" placeholder="First Name">
-                    <input id="name1" type="text" placeholder="Last Name">
+                    <input id="fname" class="name1" type="text" placeholder="First Name">
+                    <input id="lname" class="name1" type="text" placeholder="Last Name">
                 </div>
 
                 <!-- mobile -->
-                <div>
-                    <input type="number">
-                    <input type="number" placeholder="Mobile Number">
+                <div id="four">
+                    <input id="do1" type="submit" value="+91">
+                    <input id="do2" type="number" placeholder="Mobile Number">
                 </div>
-                <!-- number -->
-                <input type="number" placeholder="Pincode">
+                <!--Pin number -->
+                <input id="pin" type="number" placeholder="Pincode">
                 <!-- city & name -->
-                <div>
-                    <div>
-                        City
-                    </div>
-                    <div>
-                        State
-                    </div>
+                <div id="five">
+
+                    <input id="city" type="text" placeholder="city">
+                    <input id="state" type="text" placeholder="State">
+
+
+
                 </div>
                 <!-- addres1 -->
                 <div>
-                    <input type="text" placeholder="Address Line 1">
+                    <input id="add1" type="text" placeholder="Address Line 1">
                 </div>
                 <!-- add2 -->
                 <div>
-                    <input type="text" placeholder="Address Line 2 (Optional)">
+                    <input id="add2" type="text" placeholder="Address Line 2 (Optional)">
                 </div>
-                <!-- checkbox -->
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">Use this as my default delivery address</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2"> I agree to the Terms and Conditions</label><br>
+                <div id="checkbox">
+                    <!-- checkbox -->
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">Use this as my default delivery address</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I agree to the Terms and Conditions</label><br>
+
+                </div>
                 <!-- last -->
-                <input type="submit" value="SAVE AND PROCEED">
+                <input onclick="myFunction()" id="button" type="submit" value="SAVE AND PROCEED">
             </form>
 
 
@@ -154,25 +304,96 @@
 
 
         </div>
-        <div>
-            <p> OEDER SUMMARY</p>
-            <input type="text" placeholder="Enter promo/ coupon code">
-            <input type="submit" value="APPLY">
+        <div id="first2">
+            <div id="second">
 
-            <tbody>
-                <tr>
-                    <td>sub total</td>
-                    <td>Rs 1999</td>
-                </tr>
-                <tr>
-                    <td>delivery charges</td>
-                    <td>FREE</td>
-                </tr>
-            </tbody>
 
-        </div>
-    </div>
+                <p id="para3"> <b>ORDER SUMMARY</b></p>
+                <input id="sub1" type="text" placeholder="Enter promo/coupan code">
+                <input id="sub2" type="submit" value="APPLY">
+                <div id="sec">
+                    <form>
+
+                        <div id="div1">
+                            <p>Sub total</p>
+                            <p>Rs 20000</p>
+                        </div>
+
+                        <div id="div1">
+                            <p>Delivary charges</p>
+                            <p>FREE</p>
+                        </div>
+
+
+
+
+                        <div id="div1">
+                            <p>Gift Packing</p>
+                            <p>FREE</p>
+                        </div>
+
+                        <div id="div1">
+                            <p>Offer Discount</p>
+                            <p>NA</p>
+                        </div>
+
+                        <div id="div1">
+                            <p>Coupon Discount</p>
+                            <p>NA</p>
+                        </div>
+
+                        <div id="div1">
+                            <p>Payable Amount</p>
+                            <p>NA</p>
+                        </div>
+
+                        <div id="div1">
+                            <p> you have saved</p>
+                            <p> NA </p>
+                        </div>
+
+
+                </div>
+
+                </form>
+
+            </div>
 
 </body>
 
 </html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", myFunction)
+    function myFunction() {
+        event.preventDefault();
+        var arr = [];
+        var lname1 = document.querySelector("#lname").value;
+        var fname1 = document.querySelector("#fname").value;
+        var mobile1 = document.querySelector("#do2").value;
+        var pin1 = document.querySelector("#pin").value;
+        var city1 = document.querySelector("#city").value;
+        var state1 = document.querySelector("#state").value;
+        var addr1 = document.querySelector("#add1").value;
+        var addr2 = document.querySelector("#add2").value;
+        var obj = {
+            lname: lname1,
+            fname: fname1,
+            mobile: mobile1,
+            pin: pin1,
+            city: city1,
+            state: state1,
+            add1: addr1,
+            add2: addr2
+        }
+        arr.push(obj);
+        localStorage.setItem("addkey", JSON.stringify(arr))
+        alert("your details has been submmited")
+
+      
+          
+            window.location.href = "payment.html";
+       
+
+    }
+</script>
