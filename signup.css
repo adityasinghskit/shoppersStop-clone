@@ -1,11 +1,16 @@
 /******** CSS FOR SIGNIN FORM *********/
 /* Button used to open the contact form - fixed at the bottom of the page */
+body{
+    background-color: coral;
+}
+
 .open-button {
     cursor: pointer;
   
   }
   
   /* The popup form - hidden by default */
+
   .form-popup {
     display: none;
     position: fixed;
@@ -113,8 +118,12 @@
       color:#ff5d3b;
       font-weight: bold;
   }
-  .fc0-flex{
-      width:100%;
+  #fc0-flex{
+      width:95%;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
+  }
+  #fc0-flex>div{
+      width:30%;
   }
