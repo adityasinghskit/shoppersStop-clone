@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
     <!-- For CSS -->
     <link rel="stylesheet" href="styles/profile.css">
 </head>
+
 <body>
     <!-- HTML FOR HEADER -->
     <div id="navbar">
@@ -30,7 +32,7 @@
                 <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
             </div>
         </div>
-        
+
         <div id="navbar-r">
             <div><img onclick="window.location.href='index.html'"
                     src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
@@ -39,20 +41,22 @@
             <!-- <div><i class="fa-solid fa-bag-shopping fa-2x open-button" id="cartIcon" onclick="window.location.href='cart.html'"></i></div> -->
             <div>
                 <a href="#" class="notification">
-                    <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon" onclick="window.location.href='cart.html'"></i></span>
+                    <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon"
+                            onclick="window.location.href='cart.html'"></i></span>
                     <span id="cartIcon-no" class="badge"></span>
-                  </a>
+                </a>
             </div>
-            
+
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="window.location.href='signup.html'"></i></div> -->
             <div class="dropdown2" id="loginIcon-id">
-                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="window.location.href='signup.html'"></i>
+                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
+                    onclick="window.location.href='signup.html'"></i>
                 <div class="dropdown-content2 modify-drop2" id="login-drop-id">
                     <a href="#">MY ACCOUNT</a>
                     <a href="cart.html">ORDERS</a>
                     <a href="profile.html">PROFILE</a>
-                    <a class="pointer-1" onclick="signOutfunc()" >SIGN OUT</a>
+                    <a class="pointer-1" onclick="signOutfunc()">SIGN OUT</a>
                 </div>
             </div>
         </div>
@@ -138,5 +142,37 @@
         </div>
     </div>
     <!-- HTML FOR HEADER -->
+    <div id="content-pro">
+        <div>
+
+        </div>
+        <div>
+            <p class="heading-pro">PERSONAL INFORMATION</p>
+            <table>
+                <tr>
+                    <td>First name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Last name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number(10 digits) </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td></td>
+                </tr>
+            </table>
+            <button class="btn-pro">EDIT PROFILE</button>
+        </div>
+    </div>
 </body>
+
 </html>

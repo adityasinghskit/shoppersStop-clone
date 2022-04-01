@@ -528,3 +528,21 @@ function signOutfunc() {
     localStorage.setItem("signinkey","false");
     window.location.reload();
 }
+//********** */ FUNCTION FOR CART ACCESS
+function tocartfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="true"){
+        window.location.href="cart.html";
+    }else{
+        alert("You need to SignUp/In first!");
+    }
+}
+//********** */ FUNCTION FOR SIGNUP ACCESS
+function tosignfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="false"){
+        window.location.href="signup.html";
+    }else{
+        alert("You are already SignedIn!");
+    }
+}
