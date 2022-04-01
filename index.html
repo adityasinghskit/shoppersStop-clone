@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,106 @@
     <!-- For Fontawesome -->
     <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
     <!-- For Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- For GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <title>Shoppers Stop</title>
     <!-- For CSS -->
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
     <div id="navbar">
         <div id="navbar-l">
-            <div><p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p></div>
-            <div><p><i class="fa-regular fa-address-book"></i>Contact Us</p></div>
+            <div>
+                <p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p>
+            </div>
+            <div>
+                <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
+            </div>
         </div>
         <div id="navbar-r">
-            <div><img onclick="window.location.href='index.html'" src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
+            <div><img onclick="window.location.href='index.html'"
+                    src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
             <div><input type="text" placeholder="Search Products & Brands"></div>
             <div><i class="fa-regular fa-heart fa-2x"></i></div>
-            <div><i class="fa-solid fa-bag-shopping fa-2x"></i></i></div>
-            <div><i class="fa-regular fa-circle-user fa-2x"></i></div>
-            
+            <div><i class="fa-solid fa-bag-shopping fa-2x open-button"onclick="window.location.href='cart.html'"></i></div>
+            <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div>
+
         </div>
 
     </div>
     <div id="navbar-2">
-        <div>
+        <!-- <div>
             <p><a href="#">MEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">MEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Clothing</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Clothing for Men</a>
+                <a href="#">Sunglasses & Frames</a>
+            </div>
         </div>
-        <div>
+        <!-- <div>
             <p><a href="#">WOMEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Indian Wear</a>
+                <a href="#">Western Wear</a>
+                <a href="#">Lingerie & Night Wear</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+            </div>
         </div>
-        <div><p><a href="kids.html">KIDS</a></p></div>
-        <div>
+        <!-- <div>
+            <p><a href="kids.html">KIDS</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="kids.html">KIDS</a></button>
+            <div class="dropdown-content">
+                <a href="#">Boys</a>
+                <a href="#">Girls</a>
+                <a href="#">Infants</a>
+                <a href="#">Toys</a>
+                <a href="#">School Essentials</a>
+                <a href="#">Footwear</a>
+            </div>
+        </div>
+        <!-- <div>
             <p><a href="#">WATCHES</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
+            <div class="dropdown-content">
+                <a href="menwatches.html">Mens Watches</a>
+                <a href="#">Womens Watches</a>
+                <a href="#">Kids Watches</a>
+            </div>
         </div>
-        <div>
+        <!-- <div>
             <p><a href="#">BEAUTY</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">BEAUTY</a></button>
+            <div class="dropdown-content">
+                <a href="#">MakeUp</a>
+                <a href="#">Beauty</a>
+                <a href="#">Bath & Body</a>
+                <a href="#">Nails</a>
+                <a href="#">Hair Care</a>
+            </div>
         </div>
         <div>
             <p><a href="#">HOMESTOP</a></p>
@@ -60,11 +122,208 @@
             <p><a href="#">BRANDS</a></p>
         </div>
     </div>
+    <div id="content-main">
+        <div id="carousel1" class="carousel slide content-div" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h41/hc1/27338279092254/Main-Banner-Static-Web_20220330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/hd3/h52/27338281517086/web_hp_summer-style-edit_main-carousel_20220330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h29/h1f/27319643570206/womenwear_carousal-web28032022hp.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
+        <div class="content-div border">
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/hb5/h60/27269490540574/web_hp_icon-strips_main_20220322.jpg"
+                alt="">
+        </div>
+
+        <div class="heading-div">
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h29/heb/27287372431390/Sponsored-Brands-Strip-Web_20220323.jpg"
+                alt="">
+        </div>
+        <div id="carousel2" class="carousel slide content-div" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h50/h62/27338297540638/Selected-Web-1840x500.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h06/h6d/27330046656542/web_hp_allen-solly_paid-banner_20220329.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h15/h93/27287355719710/web_hp_lakme_paid-banner_20220322.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="content-div">
+            <img src="https://cdn.dynamicyield.com/api/8770829/images/1dee030f3c39d__festival-generic-banner-web.jpg"
+                alt="">
+        </div>
+        <div class="heading-div">
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/he8/hee/27287372562462/Bargains-Of-the-Day-Strip-Web_20220323.jpg"
+                alt="">
+        </div>
+        <div id="carousel3" class="carousel slide content-div" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/hf2/h16/27338285023262/web_hp_dolce-crudos_bargain-of-the-day_20220330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h35/h10/27338285219870/web_hp_life_bargain-of-the-day_20220330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="heading-div">
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/h95/hc7/27300373823518/office-24-03-22new-brands_hom-greboot_strip_web.jpg"
+                alt="">
+        </div>
+        <div id="carousel4" class="carousel slide content-div" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/hc9/h08/27303487111198/web_hp_office-kurtas_office-reboot_20220324.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h88/h0c/27303487242270/web_hp_formal-shoes_office-reboot_20220324.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/root/h48/h10/27303487373342/web_hp_watches_office-reboot_20220324.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="content-div">
+            <img src="images/img7.jpg" alt="">
+        </div>
+        <div class="heading-div">
+            <img src="https://sslimages.shoppersstop.com/sys-master/root/ha7/hf2/27287372693534/Featured-Categories-Strip-Web_20220323.jpg"
+                alt="">
+        </div>
+        <div class="content-flex">
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/h90/h71/27279439921182/kids-wear-4-widget-web--2022-03-22revised-feauture-brands.jpg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/h3e/h72/27279439986718/Frages--web--feauture-brand-revise-202-3-22.jpg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/he0/hef/27287356375070/Sunglasses-4-widget-web.jpg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://sslimages.shoppersstop.com/sys-master/root/hf1/hf2/27287356440606/handbag-4-widget-web.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div>
+            <p class="head2">You May Also Like</p>
+        </div>
+        <div id="carousel5" class="carousel slide content-div" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div id="cf-1" class="content-flex">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div id="cf-2" class="content-flex">
+
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon black" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                <span class="carousel-control-next-icon black" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
     <div id="footer">
         <div id="footer1">
             <div>
-                <div><p class="footer1-p">DOWNLOAD THE APP ON</p></div>
+                <div>
+                    <p class="footer1-p">DOWNLOAD THE APP ON</p>
+                </div>
                 <div>
                     <img src="images/app1.jpg" alt="">
                 </div>
@@ -72,17 +331,17 @@
             <div class="flexb margin-top">
                 <div>
                     <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
-                    
+
                     <p class="footer1-p">Authentic Products</p>
                 </div>
                 <div>
                     <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
-                   
+
                     <p class="footer1-p">Free Delivery*</p>
                 </div>
                 <div>
                     <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
-                    
+
                     <p class="footer1-p">Easy Exchange and Return</p>
                 </div>
                 <div>
@@ -91,7 +350,9 @@
                 </div>
             </div>
             <div>
-                <div><p class="footer1-p">FOLLOW US</p></div>
+                <div>
+                    <p class="footer1-p">FOLLOW US</p>
+                </div>
                 <div class="flexb">
                     <div><i class="fa-brands fa-facebook-f"></i></div>
                     <div><i class="fa-brands fa-twitter"></i></div>
@@ -105,9 +366,99 @@
             </div>
         </div>
     </div>
+<!-- HTML FOR SIGNUP FORM -->
+<div class="form-popup" id="myForm1">
+    <div class="form-container0">
+        <div>
+            <p class="unpop" onclick="closeForm1()">Skip</p>
+        </div>
+        <div>
+            <p class="fc0-para2">Login/Signup</p>
+            <p class="fc0-para3">for a tailored</p>
+        </div>
+
+    </div>
+    <div class="form-container">
+        <form id="pop-form1">
+            <input id="mobile" type="number" placeholder="Mobile Number" required>
+            <button type="submit" class="btn" onclick="openForm2()">CONTINUE</button>
+        </form>
+        <p class="fc-p1">Login Using <span>Email</span></p>
+        <div class="fc-p2">
+            <p><i class="fa-brands fa-facebook fa-2x"> </i><i class="fa-brands fa-google fa-2x"></i></p>
+        </div>
+        <div class="fc-p3">
+            <div>
+                <p>By signing up you agree to our <span>Terms of Service & Privacy Policy</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-popup" id="myForm2">
+    <div class="form-container0">
+        <div>
+            <p class="unpop justleft" onclick="closeForm2()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></p>
+        </div>
+        <div>
+            <p class="fc0-para2">Verify OTP</p>
+            <p class="fc0-para3">Enter the 6-digit OTP sent to mobile no.</p>
+        </div>
+
+    </div>
+    <div class="form-container" id="fc-2">
+        <form id="pop-form2">
+            <input id="otp" type="number" placeholder="" required>
+            <button type="submit" class="btn gray back-gray" onclick="openForm3()">SUBMIT</button>
+        </form>
+        <p class="fc-p1 open-button" onclick="openForm2()"><span>Resend OTP</span></p>
+
+
+    </div>
+
+</div>
+
+<div class="form-popup" id="myForm3">
+    <div class="form-container0">
+        <div class="fc0-flex">
+            <div>
+                <p class="open-button" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left"></i></p>
+            </div>
+            <div>
+                <p class="open-button" onclick="closeForm3b()">Skip</p>
+            </div>
+        </div>
+        <div>
+            <p class="fc0-para2">Welcome to Shoppers Stop</p>
+            <p class="fc0-para3">Let's get you registered!</p>
+        </div>
+
+    </div>
+    <div class="form-container">
+        <form id="pop-form3">
+            <input id="name" type="text" placeholder="Full Name" required>
+            <input id="mobile" type="number" placeholder="Mobile Number" required>
+            <input id="email" type="email" placeholder="Email ID" required>
+            <select id="gender" required>
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button onclick="addDetail()" type="submit" class="btn gray back-gray">SUBMIT</button>
+        </form>
+
+
+    </div>
+
+</div>
 
     <!-- For Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
 <script src="scripts/index.js"></script>

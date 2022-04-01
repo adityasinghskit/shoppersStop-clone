@@ -14,7 +14,7 @@ function openForm1() {
     
     let mobile1=document.querySelector("#mobile").value;
     let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
-    
+    exist=false;
     signuparr.map(function(el){
         if(el.mobile==mobile1){
             //alert("Found no.");
