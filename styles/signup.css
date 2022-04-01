@@ -1,0 +1,120 @@
+/******** CSS FOR SIGNIN FORM *********/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    cursor: pointer;
+  
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    height:100%;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+  }
+  .form-container0 {
+      width: 400px;
+      height:35%;
+      padding:20px 25px;
+      background-color: black;
+    }
+    .form-container0 .unpop{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .justleft{
+        text-align: left;
+    }
+    .form-container0>div:nth-child(1){
+        height:20%;
+        text-decoration: underline;
+        text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .form-container0>div:nth-child(2){
+      height:80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  }
+  .back-gray{
+      background-color: rgb(104, 104, 104);
+  }
+  .fc0-para2{
+      font-weight: bold;
+      font-size: 30px;
+  }
+  .fc0-para3{
+      font-size: 20px;
+  }
+  .form-container0 p{
+      color:white;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    width: 400px;
+    height:65%;
+    padding: 20px 30px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input,select{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  
+  
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin:10px 0;
+  }
+  .fc-p1{
+      color: black;
+      font-size: 16px;
+      text-align: center;
+      margin:10px 0;
+  }
+  .fc-p1>span{
+      font-weight: bold;
+      text-decoration: underline;
+  }
+  .fc-p2{
+      margin:20px 0;
+      text-align: center;
+  }
+  .fc-p2 i{
+      color:black;
+      margin-right:10px;
+  }
+  .fc-p3{
+      height:33%;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  }
+  .fc-p3 span{
+      color:#ff5d3b;
+      font-weight: bold;
+  }
+  .fc0-flex{
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+  }

@@ -235,7 +235,7 @@ body{
     justify-content: space-between;
 }
 
-
+/******** CSS FOR SIGNIN FORM *********/
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   cursor: pointer;
@@ -355,6 +355,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
+/******** CSS FOR DROPDOWWN BUTTONS *********/
 
 /* Style The Dropdown Button */
 .dropbtn {

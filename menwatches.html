@@ -37,24 +37,77 @@
             <div><input type="text" placeholder="Search Products & Brands"></div>
             <div><i class="fa-regular fa-heart fa-2x"></i></div>
             <div><i class="fa-solid fa-bag-shopping fa-2x"></i></i></div>
-            <div><i class="fa-regular fa-circle-user fa-2x"></i></div>
+            <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div>
 
         </div>
 
     </div>
     <div id="navbar-2">
-        <div>
+        <!-- <div>
             <p><a href="#">MEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">MEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Clothing</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Clothing for Men</a>
+                <a href="#">Sunglasses & Frames</a>
+            </div>
         </div>
-        <div>
+        <!-- <div>
             <p><a href="#">WOMEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Indian Wear</a>
+                <a href="#">Western Wear</a>
+                <a href="#">Lingerie & Night Wear</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+            </div>
         </div>
-        <div><p><a href="kids.html">KIDS</a></p></div>
-        <div>
+        <!-- <div>
+            <p><a href="kids.html">KIDS</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="kids.html">KIDS</a></button>
+            <div class="dropdown-content">
+                <a href="#">Boys</a>
+                <a href="#">Girls</a>
+                <a href="#">Infants</a>
+                <a href="#">Toys</a>
+                <a href="#">School Essentials</a>
+                <a href="#">Footwear</a>
+            </div>
+        </div>
+        <!-- <div>
             <p><a href="#">WATCHES</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
+            <div class="dropdown-content">
+                <a href="menwatches.html">Mens Watches</a>
+                <a href="#">Womens Watches</a>
+                <a href="#">Kids Watches</a>
+            </div>
         </div>
-        <div>
+        <!-- <div>
             <p><a href="#">BEAUTY</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">BEAUTY</a></button>
+            <div class="dropdown-content">
+                <a href="#">MakeUp</a>
+                <a href="#">Beauty</a>
+                <a href="#">Bath & Body</a>
+                <a href="#">Nails</a>
+                <a href="#">Hair Care</a>
+            </div>
         </div>
         <div>
             <p><a href="#">HOMESTOP</a></p>
@@ -98,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="catelog1">
                 <!-- Side navigation -->
                 <div id="catelog1-l">
@@ -168,7 +221,7 @@
                         </div>
                     </div>
                     <div id="items">
-                        
+
                     </div>
                 </div>
             </div>
@@ -177,7 +230,9 @@
     <div id="footer">
         <div id="footer1">
             <div>
-                <div><p class="footer1-p">DOWNLOAD THE APP ON</p></div>
+                <div>
+                    <p class="footer1-p">DOWNLOAD THE APP ON</p>
+                </div>
                 <div>
                     <img src="images/app1.jpg" alt="">
                 </div>
@@ -185,17 +240,17 @@
             <div class="flexb margin-top">
                 <div>
                     <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
-                    
+
                     <p class="footer1-p">Authentic Products</p>
                 </div>
                 <div>
                     <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
-                   
+
                     <p class="footer1-p">Free Delivery*</p>
                 </div>
                 <div>
                     <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
-                    
+
                     <p class="footer1-p">Easy Exchange and Return</p>
                 </div>
                 <div>
@@ -204,7 +259,9 @@
                 </div>
             </div>
             <div>
-                <div><p class="footer1-p">FOLLOW US</p></div>
+                <div>
+                    <p class="footer1-p">FOLLOW US</p>
+                </div>
                 <div class="flexb">
                     <div><i class="fa-brands fa-facebook-f"></i></div>
                     <div><i class="fa-brands fa-twitter"></i></div>
@@ -217,6 +274,93 @@
 
             </div>
         </div>
+    </div>
+    <!-- HTML FOR SIGNUP FORM -->
+    <div class="form-popup" id="myForm1">
+        <div class="form-container0">
+            <div>
+                <p class="unpop" onclick="closeForm1()">Skip</p>
+            </div>
+            <div>
+                <p class="fc0-para2">Login/Signup</p>
+                <p class="fc0-para3">for a tailored</p>
+            </div>
+
+        </div>
+        <div class="form-container">
+            <form id="pop-form1">
+                <input id="mobile" type="number" placeholder="Mobile Number" required>
+                <button type="submit" class="btn" onclick="openForm2()">CONTINUE</button>
+            </form>
+            <p class="fc-p1">Login Using <span>Email</span></p>
+            <div class="fc-p2">
+                <p><i class="fa-brands fa-facebook fa-2x"> </i><i class="fa-brands fa-google fa-2x"></i></p>
+            </div>
+            <div class="fc-p3">
+                <div>
+                    <p>By signing up you agree to our <span>Terms of Service & Privacy Policy</span></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="form-popup" id="myForm2">
+        <div class="form-container0">
+            <div>
+                <p class="unpop justleft" onclick="closeForm2()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></p>
+            </div>
+            <div>
+                <p class="fc0-para2">Verify OTP</p>
+                <p class="fc0-para3">Enter the 6-digit OTP sent to mobile no.</p>
+            </div>
+
+        </div>
+        <div class="form-container" id="fc-2">
+            <form id="pop-form2">
+                <input id="otp" type="number" placeholder="" required>
+                <button type="submit" class="btn gray back-gray" onclick="openForm3()">SUBMIT</button>
+            </form>
+            <p class="fc-p1 open-button" onclick="openForm2()"><span>Resend OTP</span></p>
+
+
+        </div>
+
+    </div>
+
+    <div class="form-popup" id="myForm3">
+        <div class="form-container0">
+            <div class="fc0-flex">
+                <div>
+                    <p class="open-button" onclick="closeForm3a()"><i class="fa-solid fa-arrow-left"></i></p>
+                </div>
+                <div>
+                    <p class="open-button" onclick="closeForm3b()">Skip</p>
+                </div>
+            </div>
+            <div>
+                <p class="fc0-para2">Welcome to Shoppers Stop</p>
+                <p class="fc0-para3">Let's get you registered!</p>
+            </div>
+
+        </div>
+        <div class="form-container">
+            <form id="pop-form3">
+                <input id="name" type="text" placeholder="Full Name" required>
+                <input id="mobile" type="number" placeholder="Mobile Number" required>
+                <input id="email" type="email" placeholder="Email ID" required>
+                <select id="gender" required>
+                    <option value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button onclick="addDetail()" type="submit" class="btn gray back-gray">SUBMIT</button>
+            </form>
+
+
+        </div>
+
     </div>
     <!-- For Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
