@@ -81,27 +81,34 @@ body{
     border: none;
     font-weight: bold;
   }
-  
+
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+ 
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
       /* margin-top: 10px; */
     font-weight: 400;
     display: none;
     color:gray;
-
     position: absolute;
     background-color: #f9f9f9;
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+  .modify-drop{
+      min-width:200px;
+      right:-20px;
+  }
+  .modify-drop a:hover{
+    border-bottom: 2px solid #ff5d3b;
+    color:#ff5d3b;
+  }
+
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
@@ -117,6 +124,54 @@ body{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
+  .pointer-1{
+      cursor: pointer;
+      color:black;
+  }
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+  }
+ 
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content2 {
+      /* margin-top: 10px; */
+    font-weight: 400;
+    display: none;
+    color:gray;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .modify-drop2{
+      min-width:200px;
+      right:-20px;
+  }
+  .modify-drop2 a:hover{
+    border-bottom: 2px solid #ff5d3b;
+    color:#ff5d3b;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content2 a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown2:hover .dropdown-content2 {
+    display: block;
+  }
+  /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
+
 /********* Style The Dropdown Button *******/
 /******** CSS for header ***********/
 /********CSS for footer ********/
