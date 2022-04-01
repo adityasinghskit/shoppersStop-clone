@@ -197,7 +197,11 @@
       background-color: white;
       border-radius: 10px;
       border: none;
-
+     
+    }
+    .special>div>button>a{
+      text-decoration: none;
+      color: black;
     }
 
     .special>div:nth-child(1) {
@@ -342,16 +346,16 @@
   <div id="bottom-section">
 
     <div>
-      <div><a href="mens.html">MEN</a></div>
+      <div><a href="#">MEN</a></div>
       <div><a href="womens.html">WOMEN</a></div>
       <div><a href="kids.html">KIDS</a></div>
       <div><a href="watch.html">WATCHES</a></div>
-      <div><a href="beauty.html">BEAUTY</a></div>
-      <div><a href="homestop.html">HOMESTOP</a></div>
-      <div><a href="luxe.html">LUXE</a> </div>
-      <div><a href="gifts.html">GIFTS</a></div>
-      <div><a href="brands.html">BRANDS</a></div>
-      <div><a href="bargains.html">BARGAINS</a></div>
+      <div><a href="#">BEAUTY</a></div>
+      <div><a href="#">HOMESTOP</a></div>
+      <div><a href="#">LUXE</a> </div>
+      <div><a href="#">GIFTS</a></div>
+      <div><a href="#">BRANDS</a></div>
+      <div><a href="#">BARGAINS</a></div>
     </div>
 
   </div>
@@ -432,7 +436,7 @@
     <div class="special">
       <div>
         <h1>WATCHES FOR HIM</h1>
-        <button>SHOP NOW</button>
+        <button><a href="menwatches.html">SHOP NOW</a></button>
       </div>
       <div>
         <h1>WATCHES FOR HER</h1>
@@ -732,13 +736,13 @@
 
   })
 
-  var Cart = JSON.parse(localStorage.getItem("CartList")) || [];
+  var Cart = JSON.parse(localStorage.getItem("cartkey")) || [];
 
   function MyCart(elem) {
 
     Cart.push(elem);
 
-    localStorage.setItem("CartList", JSON.stringify(Cart));
+    localStorage.setItem("cartkey", JSON.stringify(Cart));
 
   }
 </script>

@@ -54,8 +54,8 @@
         .bag {
 
             display: flex;
-            justify-content: space-between;
-            width: 80%;
+            justify-content: space-evenly;
+            width: 85%;
             height: auto;
             margin: auto;
         }
@@ -67,17 +67,26 @@
         }
 
         .bill {
-            width: 25%;
-            height: 400px;
+            width: 20%;
+
             border: 1px solid black;
         }
 
         .top-section {
-            border-bottom: 1px solid gray;
+            border: 1px solid gray;
             height: 60px;
             width: 100%;
             margin: auto;
             display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .top-section>div {
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid black; */
+
         }
 
         .pincode {
@@ -110,18 +119,168 @@
         }
 
         .bottom-section {
-            border-bottom: 1px solid gray;
+
             height: 60px;
             width: 100%;
             margin: auto;
             display: flex;
             align-items: center;
             font-weight: bold;
+            border-bottom: 2px solid grey;
         }
 
         .availability {
-            margin-left: 380px;
-            margin-right: 230px;
+            margin-left: 510px;
+            margin-right: 150px;
+        }
+
+        .Productdetails {
+
+            height: 200px;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .Productdetails>div:nth-child(1) {
+            width: 100px;
+        }
+
+        .Productdetails>div>img {
+            height: 70%;
+
+        }
+
+        .image {
+            width: 30%;
+        }
+
+        .select {
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+        }
+
+        .details {
+            width: 45%;
+
+        }
+
+        .details>div>div {
+
+            display: flex;
+            align-items: center;
+
+        }
+
+        input {
+            width: 40px;
+
+        }
+
+        .bill {
+            margin-top: 30px;
+            height: fit-content;
+        }
+
+        .bill>h3 {
+            text-align: center;
+        }
+
+        .code>input {
+
+            width: 70%;
+            height: 30px;
+        }
+
+        .code {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 0.5px solid grey;
+            padding-bottom: 10px;
+        }
+
+        .code>button {
+            background-color: #fff2f0;
+            color: red;
+            border: 0.5px solid #ffd9d0;
+        }
+
+        .charges {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bill>div:nth-child(7) {
+
+            border-bottom: 1px solid grey;
+        }
+
+        .last {
+
+            width: 90%;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        #button {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        #button>button {
+            margin: auto;
+            width: 90%;
+            color: white;
+            background-color: #ff4e48;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        #TC {
+
+            width: 80%;
+            margin: auto;
+            font-size: 13px;
+            color: grey;
+        }
+
+        #delete {
+            margin-top: 20px;
+            display: flex;
+            height: 20px;
+
+        }
+
+        #delete>img {
+            height: 20px;
+        }
+
+        #delete>button {
+            background-color: white;
+            cursor: pointer;
+        }
+        #Offer{
+            color: red;
+        }
+        .last{
+            display: flex;
+        }
+        #apply{
+            cursor: pointer;
+        }
+        #pinEli{
+            margin-left: 20px ;
         }
     </style>
 </head>
@@ -139,20 +298,62 @@
         </div>
 
         <div id="discount"><img
-                src="https://sslimages.shoppersstop.com/sys-master/root/ha3/h00/27279446835230/Coupon-Code-Strip-Web--revisedmarch-22_2022-03.jpg"
+                src="https://sslimages.shoppersstop.com/sys-master/root/h99/h94/27349040529438/Strip-Web.jpg"
                 alt=""></div>
 
         <div class="bag">
 
             <div class="cart"></div>
-            <div class="bill"></div>
+           
+            <div class="bill">
+                <h3>ORDER SUMMARY</h3>
+                <div class="code">
+                    <input id="CouponCode" type="text" placeholder="Enter Promo/Coupon Code" />
+                    <button id="apply">APPLY</button>
+
+                </div>
+                <div class="charges">
+                    <p>Sub total</p>
+                    <p id="total"></p>
+                </div>
+                <div class="charges">
+                    <p>Delivery Charges*</p>
+                    <p>FREE</p>
+                </div>
+                <div class="charges">
+                    <p>Gift Packing</p>
+                    <p>FREE</p>
+                </div>
+                <div class="charges">
+                    <p>Offer discount</p>
+                    <p  id="Offer"></p>
+                </div>
+                <div class="charges">
+                    <p>Coupon Discount</p>
+                    <p>NA</p>
+                </div>
+
+                <div class="last">
+                    <h4>Payable Amount</h4>
+                    <h4 id="PA"></h4>
+                </div>
+                <div class="last">
+                    <p>You have saved</p>
+                    <p id="dis"></p>
+                </div>
+
+                <div id="button"><button>CHECKOUT</button></div>
+
+                <div id="TC">
+                    <p>No Delivery charges for Express Store Pickup.</p>
+
+                    <p>Do you have a gift card or and electronic gift voucher? Use it at the payment page</p>
+                </div>
+
+
+            </div>
 
         </div>
-
-
-
-
-
 
     </div>
 
@@ -163,8 +364,13 @@
 
 
 <script>
+    
+    document.querySelector("#button").addEventListener("click",checkout);
 
-    var Cart = JSON.parse(localStorage.getItem("CartList"));
+    function checkout(){
+        window.location.href ="checkout.html";
+    }
+    var Cart = JSON.parse(localStorage.getItem("cartkey")) || [];
 
     var div1 = document.createElement("div");
     div1.setAttribute("class", "top-section");
@@ -183,6 +389,15 @@
     var button = document.createElement("button");
     button.innerText = "CHECK";
     button.style.color = "red";
+    button.style.cursor ="pointer";
+    button.addEventListener("click",pcfun);
+
+    function pcfun(){
+        p = document.createElement("p");
+        p.setAttribute("id","pinEli")
+        p.innerText = "Pincode is eligible for delivery";
+        divB1.append(p);
+    }
 
     divB1.append(input1, button);
     divB.append(divB1);
@@ -202,26 +417,188 @@
     divC3.innerText = "Amount";
 
     divC.append(divC1, divC2, divC3);
+    var sum = Cart.reduce(function (sum, elem, index) {
 
-    document.querySelector(".cart").append(div1, divB, divC);
+        return sum + Number(elem.price)
+    }, 0)
 
-    Cart.map((elem, index), function () {
+    var div2 = document.createElement("div");
+    var h4 = document.createElement("h4");
+    h4.style.fontSize="20px";
+    h4.innerText = `SHOPPING BAG (${Cart.length} ITEM)`;
+    div2.append(h4);
+
+    var div3 = document.createElement("div");
+    var total = document.createElement("h4")
+    total.innerText = `TOTAL ₹ ${sum}.`;
+    total.style.fontSize="20px";
+    div3.append(total);
+    div1.append(div2, div3);
+
+    document.querySelector("#total").append(sum);-
 
 
 
-        var div2 = document.createElement("div");
-        var h4 = document.createElement("h4");
-        h4.innerText = `SHOPPING BAG (${count} ITEM)`;
-
-        var div3 = document.createElement("div");
-        var total = document.createElement("h4")
-        total.innerText = `TOTAL ₹ ${amount}`;
+    // console.log(sum, Cart.length);
 
 
 
+   document.querySelector(".cart").append(div1, divB, divC);
+
+   var discounted = document.querySelector("#Offer").innerText;
+   discounted = "-20%";
+   document.querySelector("#Offer").append(discounted);
+
+   var CC = document.querySelector("#PA").innerText;
+   CC = ` ${Math.floor(sum*(100-20)/100)}`;
+   console.log(CC);
+   
+   document.querySelector("#PA").append(CC);
+
+   var dp=document.querySelector("#dis").innerText;
+   dp=`₹ ${sum-CC}`;
+   document.querySelector("#dis").append(dp);
+
+   
+   document.querySelector("#apply").addEventListener("click",mycoupon);
+
+   function mycoupon(){
+     var cd = document.querySelector("#CouponCode").value;
+
+     if(cd == "APRIL22"){
+        CC = document.querySelector("#PA").innerText ="";
+        
+        CC = `${Math.ceil(sum*0.7)}`;
+        document.querySelector("#PA").append(CC);
+        
+        dp=document.querySelector("#dis").innerText="";
+       
+        dp=`₹ ${Math.ceil(sum-CC)}`;
+        document.querySelector("#dis").append(dp);
+        
+     }
+   }
+  
 
 
+
+    Cart.map(function (elem, index) {
+
+
+        console.log("inside the fun");
+
+        // main
+        var divProduct = document.createElement("div");
+        divProduct.setAttribute("class", "Productdetails");
+
+        //img
+        var divImg = document.createElement("div");
+        divImg.setAttribute("class", "image");
+        var img = document.createElement("img");
+        img.src = elem.imgurl;
+        divImg.append(img);
+
+        //details
+        var divDetails = document.createElement("div");
+        divDetails.setAttribute("class", "details");
+        var pD1 = document.createElement("h3");
+        pD1.innerText = elem.brand;
+        pD1.style.fontWeight = "200";
+        pD1.style.lineHeight = "5px";
+        var pD2 = document.createElement("h4");
+        pD2.innerText = elem.name;
+        pD2.style.fontSize = "16px";
+        pD2.style.fontFamily = "PTSans-Bold";
+
+
+
+        //details1
+        var divselect = document.createElement("div");
+        divselect.setAttribute("class", "select");
+
+        //details11
+        var divselect1 = document.createElement("div");
+        var col = document.createElement("p");
+        col.innerText = "color:" + " " + elem.color;
+        divselect1.append(col);
+        //details12
+        var divselect2 = document.createElement("div");
+        var ps = document.createElement("p");
+        ps.innerText = "Size:"
+        var size = document.createElement("select");
+        var option1 = document.createElement("option");
+        option1.innerText = "---"
+        var option2 = document.createElement("option");
+        option2.innerText = "FS";
+        option2.style.fontSizeAdjust = "10px"
+
+
+        size.append(option1, option2);
+        divselect2.append(ps, size);
+        //details13
+        var divselect3 = document.createElement("div");
+        var p = document.createElement("p");
+        p.innerText = "Quantity:"
+     
+        var qty = document.createElement("input");
+        qty.type = "number";
+        qty.value ="1";
+
+        divselect3.append(p, qty);
+
+        console.log(qty.innerText)
+
+
+        var divRemove = document.createElement("div");
+        divRemove.setAttribute("id", "delete");
+
+        var remove = document.createElement("button");
+        remove.innerText = "Remove";
+        remove.style.border = "none";
+        var imgD = document.createElement("img");
+        imgD.src = "https://cdn-icons-png.flaticon.com/512/1214/1214428.png";
+
+        remove.addEventListener("click", function (elem, index) {
+            Myremove(elem, index);
+        })
+        divRemove.append(imgD, remove);
+        divselect.append(divselect1, divselect2, divselect3);
+        divDetails.append(pD1, pD2, divselect, divRemove);
+
+
+
+        var delivery = document.createElement("div");
+
+        var p1 = document.createElement("p");
+        p1.innerText = "Typically delivered in 3-5 working days";
+        var p2 = document.createElement("p");
+        p2.innerText = " Cash On Delivery";
+        var p3 = document.createElement("p");
+        p3.innerText = "Express Store Pick Up";
+
+        delivery.append(p1, p2, p3);
+
+
+
+        var amount = document.createElement("div");
+        amount.innerText = "₹" + elem.price;
+
+        divProduct.append(divImg, divDetails, delivery, amount)
+        document.querySelector(".cart").append(divProduct);
 
     })
+
+    function Myremove(elem, index) {
+        Cart.splice(index, 1);
+        localStorage.setItem("cartkey", JSON.stringify(Cart));
+        window.location.reload();
+
+    }
+
+
+
+
+
+
 
 </script>
