@@ -87,21 +87,68 @@ if(otp1=="1234"){
      alert("You have been registered!");
      closeForm3b();
  }
+
+
+signInfunc();
  // CART ICON FUNCTION
 
 function cartindi(){
-  let icon=document.querySelector("#cartIcon-no");
-  let cartarr=JSON.parse(localStorage.getItem("cartkey"));
-  let l=cartarr.length;
-  if(l>0){
-    icon.innerText=l;
-  }
+    let icon=document.querySelector("#cartIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }else{
+        icon.innerText="";
+    }
+}
+
+function cartindiRem(){
+    let icon=document.querySelector("#cartIcon-no");
+    icon.innerText="";
+    
 }
 // LOGIN ICON FUNCTION
 function loginindi() {
-let signuparr=JSON.parse(localStorage.getItem("signupkey"));
 let icon=document.querySelector("#loginIcon");
-if(signuparr!=null){
-  icon.style.color="#34eb37";
+    icon.style.color="#34eb37";
+
 }
+function loginindiRem() {
+    let icon=document.querySelector("#loginIcon");
+    icon.style.color="black";
+
+    }
+//*********** */ SIGNIN FUNCTION
+function signInfunc(){
+    let signin=localStorage.getItem("signinkey");
+    if(signin=="true"){
+        cartindi();
+        loginindi();
+        let login=document.querySelector("#loginIcon-id");
+        login.addEventListener("mouseover",function(){
+            let login2=document.querySelector("#login-drop-id");
+            login2.style.display="block";
+           
+        })
+        login.addEventListener("mouseleave",function(){
+            let login2=document.querySelector("#login-drop-id");
+            login2.style.display="none";
+           
+        })
+        
+    }else{
+        cartindiRem();
+        loginindiRem();
+        let login=document.querySelector("#loginIcon-id");
+        login.addEventListener("mouseover",function(){
+            let login2=document.querySelector("#login-drop-id");
+            login2.style.display="none";
+    })
+}
+}
+//*********** */ SIGNOUT FUNCTION
+function signOutfunc() {
+    localStorage.setItem("signinkey","false");
+    window.location.reload();
 }

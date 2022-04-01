@@ -19,6 +19,7 @@ function openForm1() {
         if(el.mobile==mobile1){
             //alert("Found no.");
             exist=true;
+            
         }
     })
     if(!exist){
@@ -47,6 +48,7 @@ let otp1=document.querySelector("#otp").value;
 if(otp1=="1234"){
     if(exist){
         alert("You are Signed In!");
+        localStorage.setItem("signinkey","true");
         document.getElementById("myForm2").style.display = "none";
         history.back();
     }else{
@@ -84,6 +86,8 @@ if(otp1=="1234"){
      let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
      signuparr.push(obj);
      localStorage.setItem("signupkey",JSON.stringify(signuparr));
+     //To store true in Signin Key(Indication of person signed-In)
+     localStorage.setItem("signinkey","true");
      alert("You have been registered & Signed In!");
      //closeForm3b();
      history.back();

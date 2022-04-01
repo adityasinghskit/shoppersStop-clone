@@ -49,8 +49,18 @@
 
 
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
-            <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
-                    onclick="window.location.href='signup.html'"></i></div>
+            <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
+                    onclick="window.location.href='signup.html'"></i></div> -->
+                
+            <div class="dropdown2" id="loginIcon-id">
+                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="window.location.href='signup.html'"></i>
+                <div class="dropdown-content2 modify-drop2" id="login-drop-id">
+                    <a href="#">MY ACCOUNT</a>
+                    <a href="cart.html">ORDERS</a>
+                    <a href="profile.html">PROFILE</a>
+                    <a class="pointer-1" onclick="signOutfunc()" >SIGN OUT</a>
+                </div>
+            </div>
 
         </div>
 
