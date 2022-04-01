@@ -243,7 +243,7 @@ body{
     color:black;
     background-color: black;
 }
-/* Style The Dropdown Button */
+/********* Style The Dropdown Button *******/
 .dropbtn {
     background-color: white;
     color: black;
@@ -286,11 +286,7 @@ body{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  /* .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  } */
+  /********* Style The Dropdown Button *******/
 
   /******** CSS FOR SIGNIN FORM *********/
 /* Button used to open the contact form - fixed at the bottom of the page */
