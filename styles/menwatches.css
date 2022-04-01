@@ -44,6 +44,9 @@ body{
     border:0;
     border-bottom: 1px solid black;
 }
+#navbar-r>div:nth-child(4),#navbar-r>div:nth-child(5){
+    cursor: pointer;
+  }
 #navbar-r img{
     width: 250px;
     cursor: pointer;
