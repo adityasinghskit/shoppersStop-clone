@@ -85,6 +85,8 @@ let data2=[
 
 showitems1(data1);
 showitems2(data2);
+cartindi();
+loginindi();
 	function showitems1(arr){
 		document.querySelector("#cf-1").innerHTML="";
 		arr.map(function(el){
@@ -254,3 +256,22 @@ if(otp1=="1234"){
      alert("You have been registered!");
      closeForm3b();
  }
+
+ // CART ICON FUNCTION
+
+function cartindi(){
+    let icon=document.querySelector("#cartIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }
+}
+// LOGIN ICON FUNCTION
+function loginindi() {
+let signuparr=JSON.parse(localStorage.getItem("signupkey"));
+let icon=document.querySelector("#loginIcon");
+if(signuparr!=null){
+    icon.style.color="#34eb37";
+}
+}

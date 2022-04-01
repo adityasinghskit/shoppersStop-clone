@@ -1,6 +1,7 @@
 //******** JS FOR SIGNIN FORM ********
 let exist=false;
-
+cartindi();
+loginindi();
 function openForm1() {
     document.getElementById("myForm1").style.display = "block";
   }
@@ -86,3 +87,21 @@ if(otp1=="1234"){
      alert("You have been registered!");
      closeForm3b();
  }
+ // CART ICON FUNCTION
+
+function cartindi(){
+  let icon=document.querySelector("#cartIcon-no");
+  let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+  let l=cartarr.length;
+  if(l>0){
+    icon.innerText=l;
+  }
+}
+// LOGIN ICON FUNCTION
+function loginindi() {
+let signuparr=JSON.parse(localStorage.getItem("signupkey"));
+let icon=document.querySelector("#loginIcon");
+if(signuparr!=null){
+  icon.style.color="#34eb37";
+}
+}

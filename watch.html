@@ -345,6 +345,36 @@
     img {
       cursor: pointer;
     }
+
+    /* CSS FOR ICON BAGDE */
+  .notification {
+    /* background-color: #555;
+    color: white; */
+    text-decoration: none;
+    color: black;
+    /* padding: 15px 26px; */
+    /* position: relative; */
+    /* display: inline-block; */
+    /* border-radius: 2px; */
+  }
+  
+  /* .notification:hover {
+    background: red;
+  } */
+  
+   .badge {
+    position: relative;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+  }
+  .icon-hover:hover{
+    color:#ff5d3b;
+  }
+
     /********CSS for footer ********/
 #footer{
     width:100%;
@@ -396,6 +426,7 @@
     color:gray;
 }
 /************ CSS FOR FOOTER******/
+
   </style>
 </head>
 
@@ -1075,7 +1106,8 @@
     }
 
   ]
-
+  cartindi();
+	loginindi();
   watchList.map(function (elem, index) {
 
     var div1 = document.createElement("div");
@@ -1116,4 +1148,22 @@
     localStorage.setItem("cartkey", JSON.stringify(Cart));
 
   }
+  // CART ICON FUNCTION
+	
+	function cartindi(){
+		let icon=document.querySelector("#cartIcon-no");
+		let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+		let l=cartarr.length;
+		if(l>0){
+			icon.innerText=l;
+		}
+	}
+// LOGIN ICON FUNCTION
+function loginindi() {
+	let signuparr=JSON.parse(localStorage.getItem("signupkey"));
+	let icon=document.querySelector("#loginIcon");
+	if(signuparr!=null){
+		icon.style.color="#34eb37";
+	}
+}
 </script>

@@ -36,9 +36,19 @@
                     src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
             <div><input type="text" placeholder="Search Products & Brands"></div>
             <div><i class="fa-regular fa-heart fa-2x"></i></div>
-            <div><i class="fa-solid fa-bag-shopping fa-2x"  onclick="window.location.href='cart.html'"></i></div>
+
+            <!-- <div><i class="fa-solid fa-bag-shopping fa-2x open-button" id="cartIcon" onclick="window.location.href='cart.html'"></i></div> -->
+            <div>
+                <a href="#" class="notification">
+                    <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon" onclick="window.location.href='cart.html'"></i></span>
+                    <span id="cartIcon-no" class="badge"></span>
+                  </a>
+            </div>
+            
+            
+
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
-            <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="window.location.href='signup.html'"></i></div>
+            <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="window.location.href='signup.html'"></i></div>
 
         </div>
 

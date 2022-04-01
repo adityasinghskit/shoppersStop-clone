@@ -225,6 +225,8 @@ let wdata=[
 	},
 ]
 	showitems(wdata);
+	cartindi();
+	loginindi();
 	function showitems(arr){
 		document.querySelector("#items").innerHTML="";
 		arr.map(function(el){
@@ -277,9 +279,27 @@ let wdata=[
 		if(!dup){
 		cartarr.push(el);
 		localStorage.setItem("cartkey",JSON.stringify(cartarr));
+		cartindi();
 		}
-		
 	}
+// CART ICON FUNCTION
+	
+	function cartindi(){
+		let icon=document.querySelector("#cartIcon-no");
+		let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+		let l=cartarr.length;
+		if(l>0){
+			icon.innerText=l;
+		}
+	}
+// LOGIN ICON FUNCTION
+function loginindi() {
+	let signuparr=JSON.parse(localStorage.getItem("signupkey"));
+	let icon=document.querySelector("#loginIcon");
+	if(signuparr!=null){
+		icon.style.color="#34eb37";
+	}
+}
 
 	function sortfunc0(){
 		let val=document.querySelector("#pop").value;
