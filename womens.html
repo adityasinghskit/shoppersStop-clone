@@ -376,8 +376,14 @@
             <div><img onclick="window.location.href='index.html'"
                     src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
             <div><input type="text" placeholder="Search Products & Brands"></div>
-            <div><i class="fa-regular fa-heart fa-2x"></i></div>
-
+            <!-- <div><i class="fa-regular fa-heart fa-2x"></i></div> -->
+            <div>
+                <a href="#" class="notification">
+                    <span><i class="fa-regular fa-heart fa-2x open-button icon-hover" id="wishIcon"
+                        onclick="towishfunc()"></i></span>
+                    <span id="wishIcon-no" class="badge"></span>
+                </a>
+            </div>
             <!-- <div><i class="fa-solid fa-bag-shopping fa-2x open-button" id="cartIcon" onclick="window.location.href='cart.html'"></i></div> -->
             <div>
                 <a href="#" class="notification">
@@ -1195,7 +1201,7 @@
 
 function cartindi(){
     let icon=document.querySelector("#cartIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
     let l=cartarr.length;
     if(l>0){
         icon.innerText=l;
@@ -1208,6 +1214,24 @@ function cartindiRem(){
     let icon=document.querySelector("#cartIcon-no");
     icon.innerText="";
     
+}
+// WISH ICON FUNCTION
+
+function wishindi(){
+    let icon=document.querySelector("#wishIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("wishkey")) || [];
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }else{
+        icon.innerText="";
+    }
+}
+
+function wishindiRem(){
+    let icon=document.querySelector("#wishIcon-no");
+    icon.innerText="";
+
 }
 // LOGIN ICON FUNCTION
 function loginindi() {
@@ -1224,6 +1248,7 @@ function loginindiRem() {
 function signInfunc(){
     let signin=localStorage.getItem("signinkey");
     if(signin=="true"){
+        wishindi();
         cartindi();
         loginindi();
         let login=document.querySelector("#loginIcon-id");
@@ -1239,6 +1264,7 @@ function signInfunc(){
         })
         
     }else{
+        wishindiRem();
         cartindiRem();
         loginindiRem();
         let login=document.querySelector("#loginIcon-id");
@@ -1258,6 +1284,15 @@ function tocartfunc(){
     let sign=localStorage.getItem("signinkey");
     if(sign=="true"){
         window.location.href="cart.html";
+    }else{
+        alert("You need to SignUp/In first!");
+    }
+}
+//********** */ FUNCTION FOR WISHLIST ACCESS
+function towishfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="true"){
+        window.location.href="wishlist.html";
     }else{
         alert("You need to SignUp/In first!");
     }
