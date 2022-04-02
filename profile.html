@@ -189,9 +189,32 @@
                     <td id="gender-r"></td>
                 </tr>
             </table>
-            <button class="btn-pro">EDIT PROFILE</button>
+            <button class="btn-pro" onclick="openForm()">EDIT PROFILE</button>
         </div>
     </div>
+<!-- POPUP FORM HTML -->
+    <div class="form-popup-3" id="myForm-3">
+        <form class="form-container-3">
+          <h1>EDIT PROFILE</h1>
+          <label for="name-3"><b>New Name</b></label>
+          <input type="text" placeholder="Enter Name" id="name-3" required>
+          <label for="email-3"><b>New Email</b></label>
+          <input type="email" placeholder="Enter Email" id="email-3" required>
+          <label for="mobile-3"><b>New Mobile</b></label>
+          <input type="number" placeholder="Enter Mobile No" id="mobile-3" required>
+          <button type="submit" class="btn-3" onclick="editfunc()">EDIT</button>
+          <button type="button" class="btn-3 cancel-3" onclick="closeForm()">Close form</button>
+        </form>
+      </div>
+      <div class="form-popup-3" id="myForm-4">
+        <form class="form-container-3">
+          <h1>EDIT PROFILE</h1>
+          <label for="otp-3"><b>Enter OTP</b></label>
+          <input type="number" placeholder="" id="otp-3" required>
+          <button type="submit" class="btn-3" onclick="otpfunc()">SUBMIT OTP</button>
+          <button type="button" class="btn-3 cancel-3" onclick="closeForm2()">Close form</button>
+        </form>
+      </div>
 </body>
 
 </html>
