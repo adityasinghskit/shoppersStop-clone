@@ -939,9 +939,9 @@
             <p class="footer1-p">FOLLOW US</p>
         </div>
         <div class="flexb">
-            <div ><i class="fa-brands fa-facebook-f"></i></div>
-            <div ><i class="fa-brands fa-twitter"></i></div>
-            <div ><i class="fa-brands fa-instagram"></i></div>
+            <div id="fb"><i class="fa-brands fa-facebook-f"></i></div>
+            <div id="twitter"><i class="fa-brands fa-twitter"></i></div>
+            <div id="insta" ><i class="fa-brands fa-instagram"></i></div>
         </div>
     </div>
 </div>
@@ -1301,5 +1301,24 @@ function tosignfunc(){
     }else if(sign=="true"){
         alert("You are already SignedIn!");
     }
+}
+
+
+
+document.querySelector("#fb").addEventListener("click",Myfb);
+function Myfb(){
+    window.location.href="https://www.facebook.com/shoppersstopindia";
+}
+
+document.querySelector("#twitter").addEventListener("click",Mytwitter);
+
+function Mytwitter(){
+window.location.href="https://twitter.com/shoppersstop";
+}
+
+document.querySelector("#insta").addEventListener("click",Myinsta);
+
+function Myinsta(){
+window.location.href="https://www.instagram.com/shoppers_stop/";
 }
 </script>

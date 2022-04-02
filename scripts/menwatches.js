@@ -546,3 +546,22 @@ function tosignfunc(){
         alert("You are already SignedIn!");
     }
 }
+
+
+
+document.querySelector("#fb").addEventListener("click",Myfb);
+function Myfb(){
+    window.location.href="https://www.facebook.com/shoppersstopindia";
+}
+
+document.querySelector("#twitter").addEventListener("click",Mytwitter);
+
+function Mytwitter(){
+window.location.href="https://twitter.com/shoppersstop";
+}
+
+document.querySelector("#insta").addEventListener("click",Myinsta);
+
+function Myinsta(){
+window.location.href="https://www.instagram.com/shoppers_stop/";
+}
