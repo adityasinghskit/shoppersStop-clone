@@ -335,6 +335,10 @@
     color:gray;
 }
 /************ CSS FOR FOOTER******/
+
+.social{
+    cursor: pointer;
+}
     </style>
 </head>
 
@@ -444,9 +448,9 @@
                 <p class="footer1-p">FOLLOW US</p>
             </div>
             <div class="flexb">
-                <div id="fb"><i class="fa-brands fa-facebook-f"></i></div>
-                <div id="twitter"><i class="fa-brands fa-twitter"></i></div>
-                <div id="insta"><i class="fa-brands fa-instagram"></i></div>
+                <div id="fb" class="social"><i class="fa-brands fa-facebook-f"></i></div>
+                <div id="twitter" class="social"><i class="fa-brands fa-twitter"></i></div>
+                <div id="insta" class="social"><i class="fa-brands fa-instagram"></i></div>
             </div>
         </div>
     </div>
@@ -682,7 +686,7 @@
    var CC = document.querySelector("#PA").innerText;
    CC = ` ${Math.floor(sum*(100-20)/100)}`;
    console.log(CC);
-   localStorage.setItem("SubTotal",JSON.stringify(CC));
+   localStorage.setItem("SubTotal",JSON.stringify(sum));
    
    document.querySelector("#PA").append(CC);
 
@@ -699,15 +703,15 @@
      if(cd == "APRIL22"){
         CC = document.querySelector("#PA").innerText ="";
         
-        CC = `${Math.ceil(sum*0.7)}`;
-        document.querySelector("#PA").append(CC);
-        localStorage.setItem("payableAmt",JSON.stringify(CC));
+        CCupd = `${Math.ceil(sum*0.7)}`;
+        document.querySelector("#PA").append(CCupd);
+        localStorage.setItem("payableAmt",JSON.stringify(CCupd));
         
         dp=document.querySelector("#dis").innerText="";
        
-        dp=`₹ ${Math.ceil(sum-CC)}`;
-        document.querySelector("#dis").append(dp);
-        localStorage.setItem("Usave",JSON.stringify(dp));
+        dp1=`₹ ${Math.ceil(sum-CCupd)}`;
+        document.querySelector("#dis").append(dp1);
+        localStorage.setItem("Usave",JSON.stringify(dp1));
         
      }
    }

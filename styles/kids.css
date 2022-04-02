@@ -481,3 +481,6 @@ body{
   display: block;
 }
 /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
+.social{
+    cursor: pointer;
+}
