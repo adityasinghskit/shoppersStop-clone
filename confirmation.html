@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 130px;
+        }
+        div{
+           
+            width: 50%;
+            display: flex;
+            margin: auto;
+            padding:10px;
+            justify-content: space-around;
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+       <img src="https://tse4.mm.bing.net/th?id=OIP.5TiCjmbL4KLabhdr9jC_pgHaC-&pid=Api&P=0&w=394&h=158"/>
+       
+        <form>
+            <h2>Confirmation OTP</h2>
+            <input type="number" placeholder="enter otp" id="Otp"/>
+            <input type="submit"/>
+        </form>
+        
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", func);
+
+   
+    function func(){
+        event.preventDefault();
+        var security = JSON.parse(localStorage.getItem("OTP"));
+        if(document.querySelector("#Otp").value == security ){
+            window.location.href ="successful.html";
+        }
+        else{
+            alert("Wrong OTP");
+        }
+       
+
+    }
+
+</script>

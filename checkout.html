@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
+    
     <title>Document</title>
     <style>
         #one {
@@ -34,28 +36,31 @@
         }
 
         #first {
-            height: 1000px;
-            width: 100%;
-
+            
+            height:fit-content;
+            width: 80%;
+            margin: auto;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 30px;
 
         }
 
         #first1 {
+            margin-top: 30px;
             width: 70%;
-            height: 100%;
+            height:fit-content;
             border: 1px solid lightgray;
         }
 
         #para1 {
             font-size: 20px;
             height: 40px;
-            width: 80%;
             padding-top: 20px;
             margin-top: 0%;
             padding-left: 40px;
             background-color: lightgray;
+            font-weight: bold;
         }
 
         #three {
@@ -63,6 +68,7 @@
             width: 85%;
             margin-left: 20px;
             margin-top: 0%;
+            margin-bottom: 10px;
 
         }
 
@@ -70,16 +76,17 @@
             height: 50px;
             font-size: 15px;
             width: 26.5%;
-            border: 1px solid lightgray;
-
-
+           
         }
-
         #form {
-            margin-left: 20px;
-
+            padding: 20px;
+            margin-top: 10px;
             width: 100%;
-            height: 600px;
+            height: fit-content;
+        }
+        #form>p{
+            font-weight: bold;
+            font-size: 18px;
         }
 
         #name {
@@ -108,7 +115,7 @@
 
         #do2 {
             height: 32px;
-            width: 65%;
+            width: 66%;
             font-size: 15px;
             border: 1px solid lightgray;
         }
@@ -133,6 +140,7 @@
             height: auto;
             width: 48%;
             border: 1px solid lightgray;
+            background-color: #e7e7e7;
         }
 
         #city {
@@ -140,6 +148,7 @@
             width: 48%;
             margin-left: 0px;
             border: 1px solid lightgray;
+            background-color: #e7e7e7;
         }
 
         #add1 {
@@ -180,17 +189,15 @@
         #first2 {
             height: 100%;
             width: 30%;
-            border: 1px solid lightgray;
-
         }
 
         #second {
+            margin-top: 30px;
             height: 400px;
-            width: 65%;
-            border: 1px solid red;
+            width: 65%;          
             margin-left: 40px;
-            border: 1px solid lightgray;
-            background-color: #eeeeee;
+            padding: 20px;
+            background-color: #f8f8f8;
 
         }
 
@@ -220,9 +227,72 @@
 
         #para3 {
             text-align: center;
-
-
         }
+        #checkbox{
+            width: 97.5%;
+            border-bottom: 1px solid grey;
+        }
+        /********CSS for footer ********/
+#footer{
+    width:100%;
+    margin:20px auto;
+}
+#footer1{
+    width:100%;
+    margin:auto;
+    padding:20px;
+    color:rgb(22, 22, 22);
+    background-color: #f5f5f5;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#footer1>div:nth-child(1) {
+    width:18%;
+}
+#footer1>div:nth-child(1) img{
+    color: #f5f5f5;
+}
+#footer1>div:nth-child(2) {
+    width:33%;
+}
+#footer1>div:nth-child(3) {
+    width:10%;
+}
+#footer1>div:nth-child(2)>div{
+    width:19%;
+
+}
+#footer1 img{
+    width:100%;
+}
+.flexb{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+.footer1-p{
+    text-align:center;
+    color:rgb(22, 22, 22);
+    font-size:13px;
+}
+#footer1 i,p{
+    color:gray;
+}
+/************ CSS FOR FOOTER******/
+
+#bag{
+    color: #f74364;
+    cursor: pointer;
+}
+#end{
+    width: 100%;
+    height: 20px;
+    background-color: black;
+}
     </style>
 </head>
 
@@ -232,7 +302,7 @@
     </div>
     <div id="two">
         <p> CHECKOUT </p>
-        <p>VIEW BAG</p>
+        <p id="bag">VIEW BAG</p>
     </div>
 
 
@@ -249,10 +319,8 @@
                 <input id="ek" type="submit" value="Express Store Pick Up">
             </div>
 
-
-
             <form id="form">
-                <p> ADD NEW ADDRESS</p>
+                <p> Add New Address</p>
                 <div id="name">
 
                     <!-- name -->
@@ -290,42 +358,33 @@
                     <label for="vehicle1">Use this as my default delivery address</label><br>
                     <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
                     <label for="vehicle2"> I agree to the Terms and Conditions</label><br>
+                    
 
                 </div>
                 <!-- last -->
                 <input onclick="myFunction()" id="button" type="submit" value="SAVE AND PROCEED">
             </form>
 
-
-
-
-
-
-
-
         </div>
         <div id="first2">
             <div id="second">
 
-
                 <p id="para3"> <b>ORDER SUMMARY</b></p>
                 <input id="sub1" type="text" placeholder="Enter promo/coupan code">
                 <input id="sub2" type="submit" value="APPLY">
+   
                 <div id="sec">
                     <form>
 
                         <div id="div1">
                             <p>Sub total</p>
-                            <p>Rs 20000</p>
+                            <p id="sbt"></p>
                         </div>
 
                         <div id="div1">
-                            <p>Delivary charges</p>
+                            <p>Delivary charges*</p>
                             <p>FREE</p>
                         </div>
-
-
-
 
                         <div id="div1">
                             <p>Gift Packing</p>
@@ -334,7 +393,7 @@
 
                         <div id="div1">
                             <p>Offer Discount</p>
-                            <p>NA</p>
+                            <p>-20%</p>
                         </div>
 
                         <div id="div1">
@@ -344,12 +403,12 @@
 
                         <div id="div1">
                             <p>Payable Amount</p>
-                            <p>NA</p>
+                            <p id="PAmt"></p>
                         </div>
 
                         <div id="div1">
                             <p> you have saved</p>
-                            <p> NA </p>
+                            <p id="yhs"></p>
                         </div>
 
 
@@ -358,12 +417,205 @@
                 </form>
 
             </div>
-
+        </div> 
+     </div> 
+     
+     <div id="footer1">
+        <div>
+            <div>
+                <p class="footer1-p">DOWNLOAD THE APP ON</p>
+            </div>
+            <div>
+                <img src="images/app1.jpg" alt="">
+            </div>
+        </div>
+        <div class="flexb margin-top">
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-certificate fa-2x"></i></p>
+    
+                <p class="footer1-p">Authentic Products</p>
+            </div>
+            <div>
+                <p class="footer1-p"> <i class="fa-solid fa-truck-fast fa-2x"></i></p>
+    
+                <p class="footer1-p">Free Delivery*</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-arrows-rotate fa-2x"></i></p>
+    
+                <p class="footer1-p">Easy Exchange and Return</p>
+            </div>
+            <div>
+                <p class="footer1-p"><i class="fa-solid fa-truck-pickup fa-2x"></i></p>
+                <p class="footer1-p">Express Store Pickup</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="footer1-p">FOLLOW US</p>
+            </div>
+            <div class="flexb">
+                <div id="fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div id="twitter"><i class="fa-brands fa-twitter"></i></div>
+                <div id="insta"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div style="height:130px;width:100%;">
+            <div style="width:100%;display:flex;justify-content: space-between; margin:20px auto">
+                <div style="display:inline-block;height:130px;width:25%;border:1px soli;">
+                    <div
+                        style="height:40px;width:90px;border:1px soli;margin-left:40%;display:inline-block;color:gray">
+                        <h5>QUESTIONS?</h5>
+                    </div>
+                    <div style="height:18px;width:208px;border:1px soli;margin-left: 25%">
+                        <p1 style="color:red;text-decoration:underline">customercare@shopersstop.com</p1>
+                    </div>
+    
+                </div>
+    
+                <div style="height:130px;width:25%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:200px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">PAY SECURELY BY</h5>
+                    </div>
+                    <div style="height:88px;width:200px;border:1px soli">
+                        <img style="height: 30px;width:200px;" src="https://www.aviyoggroup.in/Pay%201.png">
+                    </div>
+    
+                </div>
+    
+                <div style="height:130px;width:28%;border:1px soli;display:inline-block;">
+                    <div style="height:40px;width:170px;border:1px soli">
+                        <h5 style="color:gray;text-align:center">VERIFIED BY</h5>
+                    </div>
+                    <div style="height:88px;width:170px;border:1px soli">
+                        <img style="height:40px;width:40px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT8y4qzvWRx4y4qhafV_cEaI8ThrBUA-T1w&usqp=CAU">
+                        <img style="height:40px;width:80px;display:inline-block"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp16IhxuHCrag-7t5t3mBsi_m4GhogySb45Q&usqp=CAU">
+                        <img style="height:35px;width:38px;display:inline-block" src="image1.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:500px;width:100%;border:1px soli">
+            <div style="display:flex;justify-content:space-evenly">
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block;margin-left: 3%">
+                    <h3>WOMEN</h3>
+                    <h5 style="color:gray">Indian Wear</h5>
+                    <h5 style="color:gray">Western Wear</h5>
+                    <h5 style="color:gray">Lingerie & Night Wear</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Bags &Wallets</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Jawellery</h5>
+                    <h5 style="color:gray">Travel</h5>
+    
+                </div>
+                <div
+                    style="height:500px;width:15%;border:1px soli;display:inline-block;margin:auto;text-align:top">
+                    <h3>MEN</h3>
+                    <h5 style="color:gray">Clothing</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h5 style="color:gray">Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Sunglasses & Frames</h5>
+                    <h5 style="color:gray">Accessories</h5>
+                    <h5 style="color:gray">Jewellery</h5>
+    
+    
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>KIDS</h3>
+                    <h5 style="color:gray">Boys</h5>
+                    <h5 style="color:gray">Girls</h5>
+                    <h5 style="color:gray">Infants</h5>
+                    <h5 style="color:gray">Toys</h5>
+                    <h5 style="color:gray">School Essential</h5>
+                    <h5 style="color:gray">Footwear</h5>
+                    <h5 style="color:gray">Watches</h5>
+                    <h4 style="color:gray">Accessories</h5>
+    
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>BEAUTY</h3>
+                    <h5 style="color:gray">Make Up</h5>
+                    <h5 style="color:gray">Skincare</h5>
+                    <h5 style="color:gray">Bath & Body</h5>
+                    <h5 style="color:gray">Nails</h5>
+                    <h5 style="color:gray">Haircare</h5>
+                    <h5 style="color:gray">Tools & Accessories</h5>
+                    <h5 style="color:gray">Women's Fragrances</h5>
+                    <h5 style="color:gray">Men's Fragrances</h5>
+                    <h5 style="color:gray">Grooming For Men</h5>
+                    <h5 style="color:gray">Personal Hygiene</h5>
+    
+                </div>
+                <div style="height:500px;width:15%;border:1px soli;display:inline-block">
+                    <h3>HOMESTOP</h3>
+                    <h5 style="color:gray">Kitchen & Dining</h5>
+                    <h5 style="color:gray">Decor</h5>
+                    <h5 style="color:gray">Home Furnishing</h5>
+                    <h5 style="color:gray">Storage & Organization</h5>
+                    <h5 style="color:gray">Smart Home and Appliances</h5>
+                    <h5 style="color:gray">Bath</h5>
+                    <h5 style="color:gray">Bedding</h5>
+    
+    
+                </div>
+                <div style="height:200px;width:15%;border:1px soli;display:inline-block;margin-bottom: 10%;">
+                    <h3>WATCHES</h3>
+                    <h5 style="color:gray">Mens Watches</h5>
+                    <h5 style="color:gray">Women Watches</h5>
+                    <h5 style="color:gray">Kids Watches</h5>
+    
+    
+    
+                </div>
+            </div>
+        </div>
+        
+<div id="end"></div>
 </body>
 
 </html>
 
 <script>
+
+    document.querySelector("#sbt").innerHTML=JSON.parse(localStorage.getItem("SubTotal"));
+    document.querySelector("#yhs").innerHTML=JSON.parse(localStorage.getItem("Usave"));
+    document.querySelector("#PAmt").innerHTML=JSON.parse(localStorage.getItem("payableAmt"));
+
+    document.querySelector("#fb").addEventListener("click",Myfb);
+
+function Myfb(){
+    window.location.href="https://www.facebook.com/shoppersstopindia";
+}
+
+document.querySelector("#twitter").addEventListener("click",Mytwitter);
+
+function Mytwitter(){
+window.location.href="https://twitter.com/shoppersstop";
+}
+
+document.querySelector("#insta").addEventListener("click",Myinsta);
+
+function Myinsta(){
+window.location.href="https://www.instagram.com/shoppers_stop/";
+}
+    document.querySelector("#bag").addEventListener("click",Mycart);
+
+    function Mycart(){
+        window.location.href="cart.html";
+    }
+
+
     document.querySelector("form").addEventListener("submit", myFunction)
     function myFunction() {
         event.preventDefault();
