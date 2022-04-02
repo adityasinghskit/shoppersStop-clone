@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For Fontawesome -->
+    <script src="https://kit.fontawesome.com/40ce6520f1.js" crossorigin="anonymous"></script>
+    <!-- For Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- For GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Shoppers Stop</title>
+    <!-- For CSS -->
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+
+<body>
+    <!-- HTML FOR HEADER -->
+    <div id="navbar">
+        <div id="navbar-l">
+            <div>
+                <p><i class="fa-solid fa-shop fa-1x"></i>All Stores</p>
+            </div>
+            <div>
+                <p><i class="fa-regular fa-address-book"></i>Contact Us</p>
+            </div>
+        </div>
+
+        <div id="navbar-r">
+            <div><img onclick="window.location.href='index.html'"
+                    src="https://prodstatic.shoppersstop.com/_ui/updated_path/images/newLogo.svg" alt=""></div>
+            <div><input type="text" placeholder="Search Products & Brands"></div>
+            <div><i class="fa-regular fa-heart fa-2x"></i></div>
+            <!-- <div><i class="fa-solid fa-bag-shopping fa-2x open-button" id="cartIcon" onclick="window.location.href='cart.html'"></i></div> -->
+            <div>
+                <a href="#" class="notification">
+                    <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon"
+                            onclick="window.location.href='cart.html'"></i></span>
+                    <span id="cartIcon-no" class="badge"></span>
+                </a>
+            </div>
+
+            <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
+            <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="window.location.href='signup.html'"></i></div> -->
+            <div class="dropdown2" id="loginIcon-id">
+                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
+                    onclick="window.location.href='signup.html'"></i>
+                <div class="dropdown-content2 modify-drop2" id="login-drop-id">
+                    <a href="#">MY ACCOUNT</a>
+                    <a href="cart.html">ORDERS</a>
+                    <a href="profile.html">PROFILE</a>
+                    <a class="pointer-1" onclick="signOutfunc()">SIGN OUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar-2">
+        <!-- <div>
+            <p><a href="#">MEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">MEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Clothing</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Clothing for Men</a>
+                <a href="#">Sunglasses & Frames</a>
+            </div>
+        </div>
+        <!-- <div>
+            <p><a href="#">WOMEN</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="womens.html">WOMEN</a></button>
+            <div class="dropdown-content">
+                <a href="#">Indian Wear</a>
+                <a href="#">Western Wear</a>
+                <a href="#">Lingerie & Night Wear</a>
+                <a href="#">Fragnances</a>
+                <a href="#">Footwear</a>
+                <a href="#">Watches</a>
+            </div>
+        </div>
+        <!-- <div>
+            <p><a href="kids.html">KIDS</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="kids.html">KIDS</a></button>
+            <div class="dropdown-content">
+                <a href="#">Boys</a>
+                <a href="#">Girls</a>
+                <a href="#">Infants</a>
+                <a href="#">Toys</a>
+                <a href="#">School Essentials</a>
+                <a href="#">Footwear</a>
+            </div>
+        </div>
+        <!-- <div>
+            <p><a href="#">WATCHES</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="watch.html">WATCHES</a></button>
+            <div class="dropdown-content">
+                <a href="menwatches.html">Mens Watches</a>
+                <a href="#">Womens Watches</a>
+                <a href="#">Kids Watches</a>
+            </div>
+        </div>
+        <!-- <div>
+            <p><a href="#">BEAUTY</a></p>
+        </div> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="#">BEAUTY</a></button>
+            <div class="dropdown-content">
+                <a href="#">MakeUp</a>
+                <a href="#">Beauty</a>
+                <a href="#">Bath & Body</a>
+                <a href="#">Nails</a>
+                <a href="#">Hair Care</a>
+            </div>
+        </div>
+        <div>
+            <p><a href="#">HOMESTOP</a></p>
+        </div>
+        <div>
+            <p><a href="#">LUXE</a></p>
+        </div>
+        <div>
+            <p><a href="#">GIFTS</a></p>
+        </div>
+        <div>
+            <p><a href="#">BRANDS</a></p>
+        </div>
+    </div>
+    <!-- HTML FOR HEADER -->
+    <div id="content-pro">
+        <div>
+
+        </div>
+        <div>
+            <p class="heading-pro">PERSONAL INFORMATION</p>
+            <table>
+                <tr>
+                    <td>First name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Last name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number(10 digits) </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td></td>
+                </tr>
+            </table>
+            <button class="btn-pro">EDIT PROFILE</button>
+        </div>
+    </div>
+</body>
+
+</html>
