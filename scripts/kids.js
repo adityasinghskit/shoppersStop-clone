@@ -91,10 +91,25 @@ if(otp1=="1234"){
 
 signInfunc();
  // CART ICON FUNCTION
+ function wishindi(){
+    let icon=document.querySelector("#wishIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("wishkey")) || [];
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }else{
+        icon.innerText="";
+    }
+}
 
+function wishindiRem(){
+    let icon=document.querySelector("#wishIcon-no");
+    icon.innerText="";
+
+}
 function cartindi(){
     let icon=document.querySelector("#cartIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
     let l=cartarr.length;
     if(l>0){
         icon.innerText=l;
@@ -123,6 +138,7 @@ function loginindiRem() {
 function signInfunc(){
     let signin=localStorage.getItem("signinkey");
     if(signin=="true"){
+        wishindi();
         cartindi();
         loginindi();
         let login=document.querySelector("#loginIcon-id");
@@ -138,6 +154,7 @@ function signInfunc(){
         })
         
     }else{
+        wishindiRem();
         cartindiRem();
         loginindiRem();
         let login=document.querySelector("#loginIcon-id");
@@ -151,6 +168,15 @@ function signInfunc(){
 function signOutfunc() {
     localStorage.setItem("signinkey","false");
     window.location.reload();
+}
+//********** */ FUNCTION FOR WISHLIST ACCESS
+function towishfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="true"){
+        window.location.href="wishlist.html";
+    }else{
+        alert("You need to SignUp/In first!");
+    }
 }
 //********** */ FUNCTION FOR CART ACCESS
 function tocartfunc(){

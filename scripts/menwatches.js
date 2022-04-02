@@ -226,7 +226,6 @@ let wdata=[
 ]
 	countfunc();
 	showitems(wdata);
-	cartindi();
 	loginindi();
 	function showitems(arr){
 		document.querySelector("#items").innerHTML="";
@@ -293,6 +292,7 @@ let wdata=[
 		cartindi();
 		}
 	}
+	/////FOR WISHLIST
 	function addtowishlist(el) {
 		let wisharr=JSON.parse(localStorage.getItem("wishkey")) || [];
 		let dup=false;
@@ -500,7 +500,7 @@ if(otp1=="1234"){
 
 function cartindi(){
     let icon=document.querySelector("#cartIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
     let l=cartarr.length;
     if(l>0){
         icon.innerText=l;
@@ -512,13 +512,12 @@ function cartindi(){
 function cartindiRem(){
     let icon=document.querySelector("#cartIcon-no");
     icon.innerText="";
-    
 }
-// CART ICON FUNCTION
+// WISH ICON FUNCTION
 
 function wishindi(){
     let icon=document.querySelector("#wishIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("wishkey"));
+    let cartarr=JSON.parse(localStorage.getItem("wishkey")) || [];
     let l=cartarr.length;
     if(l>0){
         icon.innerText=l;
@@ -527,10 +526,10 @@ function wishindi(){
     }
 }
 
-function cartindiRem(){
+function wishindiRem(){
     let icon=document.querySelector("#wishIcon-no");
     icon.innerText="";
-    
+
 }
 // LOGIN ICON FUNCTION
 function loginindi() {
@@ -587,7 +586,7 @@ function tocartfunc(){
         alert("You need to SignUp/In first!");
     }
 }
-//********** */ FUNCTION FOR CART ACCESS
+//********** */ FUNCTION FOR WISHLIST ACCESS
 function towishfunc(){
     let sign=localStorage.getItem("signinkey");
     if(sign=="true"){

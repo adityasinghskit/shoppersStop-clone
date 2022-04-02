@@ -31,11 +31,13 @@ function showprof(){
     let gender2=document.querySelector("#gender-r");
     gender2.innerText=gender1;
 }
+
+signInfunc();
 // CART ICON FUNCTION
 
 function cartindi(){
     let icon=document.querySelector("#cartIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("cartkey"));
+    let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
     let l=cartarr.length;
     if(l>0){
         icon.innerText=l;
@@ -48,6 +50,24 @@ function cartindiRem(){
     let icon=document.querySelector("#cartIcon-no");
     icon.innerText="";
     
+}
+// WISH ICON FUNCTION
+
+function wishindi(){
+    let icon=document.querySelector("#wishIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("wishkey")) || [];
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }else{
+        icon.innerText="";
+    }
+}
+
+function wishindiRem(){
+    let icon=document.querySelector("#wishIcon-no");
+    icon.innerText="";
+
 }
 // LOGIN ICON FUNCTION
 function loginindi() {
@@ -64,6 +84,7 @@ function loginindiRem() {
 function signInfunc(){
     let signin=localStorage.getItem("signinkey");
     if(signin=="true"){
+        wishindi();
         cartindi();
         loginindi();
         let login=document.querySelector("#loginIcon-id");
@@ -79,6 +100,7 @@ function signInfunc(){
         })
         
     }else{
+        wishindiRem();
         cartindiRem();
         loginindiRem();
         let login=document.querySelector("#loginIcon-id");
@@ -98,6 +120,15 @@ function tocartfunc(){
     let sign=localStorage.getItem("signinkey");
     if(sign=="true"){
         window.location.href="cart.html";
+    }else{
+        alert("You need to SignUp/In first!");
+    }
+}
+//********** */ FUNCTION FOR WISHLIST ACCESS
+function towishfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="true"){
+        window.location.href="wishlist.html";
     }else{
         alert("You need to SignUp/In first!");
     }
