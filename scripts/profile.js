@@ -91,7 +91,7 @@ function signInfunc(){
 //*********** */ SIGNOUT FUNCTION
 function signOutfunc() {
     localStorage.setItem("signinkey","false");
-    window.location.reload();
+    window.location.href="index.html";
 }
 //********** */ FUNCTION FOR CART ACCESS
 function tocartfunc(){

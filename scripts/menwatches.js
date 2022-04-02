@@ -224,6 +224,7 @@ let wdata=[
 		order:"22",
 	},
 ]
+	countfunc();
 	showitems(wdata);
 	cartindi();
 	loginindi();
@@ -356,6 +357,11 @@ let wdata=[
 			narr=wdata.filter(x => (x.price>5000 && x.price<=10000));
 		}
 		showitems(narr);
+	}
+
+	function countfunc(){
+		let l=wdata.length;
+		document.querySelector("#prodCount").innerText=l+" Products";
 	}
 
 // 	// When the user scrolls the page, execute myFunction
