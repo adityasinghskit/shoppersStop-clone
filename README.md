@@ -29,13 +29,14 @@ Windows 10
 
 ## LOGIN PAGE
 1.Here it is a Login page of our website.
-
 2.You have to fill your details in it and create your account it will redirect you to the Home Page.
-
 ![Screenshot (571)](https://user-images.githubusercontent.com/101727982/161374796-2f9b2250-227a-4766-ac37-ea34c30b0ca3.png)
+## USER PROFILE
+1. It displays the User details
+2. The details can also be edited, through this page.
+
 ## HOME PAGE
 1.This is the main and landing page of our website .
-
 2. If you click on the product is will directly redirect you to go on that product .
  
 ![Screenshot (581)](https://user-images.githubusercontent.com/101727982/161375004-b2e67fcd-ec62-4657-a668-dbb8ed7d675a.png)
