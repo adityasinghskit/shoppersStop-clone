@@ -13,6 +13,7 @@ function openForm1() {
       event.preventDefault();
     
     let mobile1=document.querySelector("#mobile").value;
+    localStorage.setItem("mobilekey",mobile1);
     let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
     exist=false;
     signuparr.map(function(el){
