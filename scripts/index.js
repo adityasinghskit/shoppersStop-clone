@@ -332,9 +332,9 @@ function tocartfunc(){
 //********** */ FUNCTION FOR SIGNUP ACCESS
 function tosignfunc(){
     let sign=localStorage.getItem("signinkey");
-    if(sign=="false"){
+    if(sign=="false" || sign==null){
         window.location.href="signup.html";
-    }else{
+    }else if(sign=="true"){
         alert("You are already SignedIn!");
     }
 }
