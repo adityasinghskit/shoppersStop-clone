@@ -258,13 +258,23 @@ let wdata=[
 				off1.innerText=el.off +"% off";
 			}
 			div2.append(price1,strprice1,off1);
+
+			let div3=document.createElement("div");
+			div3.setAttribute("class","item-pricediv");
 			add1=document.createElement("button");
 			add1.setAttribute("class","item-btn");
 			add1.innerText="Add to Cart";
 			add1.onclick=function() {
 				addtocart(el);
 			}
-			div1.append(img1,brand1,name1,div2,add1);
+			add2=document.createElement("button");
+			add2.setAttribute("class","item-btn");
+			add2.innerText="Add to Wishlist";
+			add2.onclick=function() {
+				addtowishlist(el);
+			}
+			div3.append(add1,add2);
+			div1.append(img1,brand1,name1,div2,div3);
 			document.querySelector("#items").append(div1);
 		})
 	}
@@ -281,6 +291,20 @@ let wdata=[
 		cartarr.push(el);
 		localStorage.setItem("cartkey",JSON.stringify(cartarr));
 		cartindi();
+		}
+	}
+	function addtowishlist(el) {
+		let wisharr=JSON.parse(localStorage.getItem("wishkey")) || [];
+		let dup=false;
+		wisharr.map(function(elm){
+			if(el.name==elm.name) {
+				dup=true;
+			}
+		})
+		if(!dup){
+		wisharr.push(el);
+		localStorage.setItem("wishkey",JSON.stringify(wisharr));
+		wishindi();
 		}
 	}
 
@@ -490,6 +514,24 @@ function cartindiRem(){
     icon.innerText="";
     
 }
+// CART ICON FUNCTION
+
+function wishindi(){
+    let icon=document.querySelector("#wishIcon-no");
+    let cartarr=JSON.parse(localStorage.getItem("wishkey"));
+    let l=cartarr.length;
+    if(l>0){
+        icon.innerText=l;
+    }else{
+        icon.innerText="";
+    }
+}
+
+function cartindiRem(){
+    let icon=document.querySelector("#wishIcon-no");
+    icon.innerText="";
+    
+}
 // LOGIN ICON FUNCTION
 function loginindi() {
 let icon=document.querySelector("#loginIcon");
@@ -505,6 +547,7 @@ function loginindiRem() {
 function signInfunc(){
     let signin=localStorage.getItem("signinkey");
     if(signin=="true"){
+		wishindi();
         cartindi();
         loginindi();
         let login=document.querySelector("#loginIcon-id");
@@ -520,6 +563,7 @@ function signInfunc(){
         })
         
     }else{
+		wishindiRem();
         cartindiRem();
         loginindiRem();
         let login=document.querySelector("#loginIcon-id");
@@ -539,6 +583,15 @@ function tocartfunc(){
     let sign=localStorage.getItem("signinkey");
     if(sign=="true"){
         window.location.href="cart.html";
+    }else{
+        alert("You need to SignUp/In first!");
+    }
+}
+//********** */ FUNCTION FOR CART ACCESS
+function towishfunc(){
+    let sign=localStorage.getItem("signinkey");
+    if(sign=="true"){
+        window.location.href="wishlist.html";
     }else{
         alert("You need to SignUp/In first!");
     }
