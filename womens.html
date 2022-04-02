@@ -287,8 +287,8 @@
             text-decoration: none;
             color: black;
             /* padding: 15px 26px; */
-            /* position: relative; */
-            /* display: inline-block; */
+            position: relative;
+            display: inline-block;
             /* border-radius: 2px; */
         }
 
@@ -298,8 +298,8 @@
 
         .badge {
             position: relative;
-            top: -10px;
-            right: -10px;
+            top: -12px;
+            right: 12px;
             padding: 5px 10px;
             border-radius: 50%;
             background: red;
@@ -309,56 +309,63 @@
         .icon-hover:hover {
             color: #ff5d3b;
         }
-        /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
-  .pointer-1{
-      cursor: pointer;
-      color:black;
-  }
-  .dropdown2 {
-    position: relative;
-    display: inline-block;
-  }
- 
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content2 {
-      /* margin-top: 10px; */
-    font-weight: 400;
-    display: none;
-    color:gray;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .modify-drop2{
-      min-width:200px;
-      right:-20px;
-  }
-  .modify-drop2 a:hover{
-    border-bottom: 2px solid #ff5d3b;
-    color:#ff5d3b;
-  }
 
-  /* Links inside the dropdown */
-  .dropdown-content2 a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content2 a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown2:hover .dropdown-content2 {
-    display: block;
-  }
-  /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
-  .social{
-    cursor: pointer;
-}
+        /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
+        .pointer-1 {
+            cursor: pointer;
+            color: black;
+        }
+
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content2 {
+            /* margin-top: 10px; */
+            font-weight: 400;
+            display: none;
+            color: gray;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .modify-drop2 {
+            min-width: 200px;
+            right: -20px;
+        }
+
+        .modify-drop2 a:hover {
+            border-bottom: 2px solid #ff5d3b;
+            color: #ff5d3b;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content2 a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown2:hover .dropdown-content2 {
+            display: block;
+        }
+
+        /* CSS FOR LOGIN/OUT ICON FUNCTIONALITY */
+        .social {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -380,7 +387,7 @@
             <div>
                 <a href="#" class="notification">
                     <span><i class="fa-regular fa-heart fa-2x open-button icon-hover" id="wishIcon"
-                        onclick="towishfunc()"></i></span>
+                            onclick="towishfunc()"></i></span>
                     <span id="wishIcon-no" class="badge"></span>
                 </a>
             </div>
@@ -388,7 +395,7 @@
             <div>
                 <a href="#" class="notification">
                     <span><i class="fa-solid fa-bag-shopping fa-2x open-button icon-hover" id="cartIcon"
-                        onclick="tocartfunc()"></i></span>
+                            onclick="tocartfunc()"></i></span>
                     <span id="cartIcon-no" class="badge"></span>
                 </a>
             </div>
@@ -398,14 +405,15 @@
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button" onclick="openForm1()"></i></div> -->
             <!-- <div><i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
                     onclick="window.location.href='signup.html'"></i></div> -->
-                
+
             <div class="dropdown2" id="loginIcon-id">
-                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon" onclick="tosignfunc()"></i>
+                <i class="fa-regular fa-circle-user fa-2x open-button icon-hover" id="loginIcon"
+                    onclick="tosignfunc()"></i>
                 <div class="dropdown-content2 modify-drop2" id="login-drop-id">
                     <a href="#">MY ACCOUNT</a>
                     <a href="cart.html">ORDERS</a>
                     <a href="profile.html">PROFILE</a>
-                    <a class="pointer-1" onclick="signOutfunc()" >SIGN OUT</a>
+                    <a class="pointer-1" onclick="signOutfunc()">SIGN OUT</a>
                 </div>
             </div>
 
@@ -1197,132 +1205,132 @@
     cartindi();
     loginindi();
     signInfunc();
- // CART ICON FUNCTION
+    // CART ICON FUNCTION
 
-function cartindi(){
-    let icon=document.querySelector("#cartIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
-    let l=cartarr.length;
-    if(l>0){
-        icon.innerText=l;
-    }else{
-        icon.innerText="";
+    function cartindi() {
+        let icon = document.querySelector("#cartIcon-no");
+        let cartarr = JSON.parse(localStorage.getItem("cartkey")) || [];
+        let l = cartarr.length;
+        if (l > 0) {
+            icon.innerText = l;
+        } else {
+            icon.innerText = "";
+        }
     }
-}
 
-function cartindiRem(){
-    let icon=document.querySelector("#cartIcon-no");
-    icon.innerText="";
-    
-}
-// WISH ICON FUNCTION
-
-function wishindi(){
-    let icon=document.querySelector("#wishIcon-no");
-    let cartarr=JSON.parse(localStorage.getItem("wishkey")) || [];
-    let l=cartarr.length;
-    if(l>0){
-        icon.innerText=l;
-    }else{
-        icon.innerText="";
-    }
-}
-
-function wishindiRem(){
-    let icon=document.querySelector("#wishIcon-no");
-    icon.innerText="";
-
-}
-// LOGIN ICON FUNCTION
-function loginindi() {
-let icon=document.querySelector("#loginIcon");
-    icon.style.color="#34eb37";
-
-}
-function loginindiRem() {
-    let icon=document.querySelector("#loginIcon");
-    icon.style.color="black";
+    function cartindiRem() {
+        let icon = document.querySelector("#cartIcon-no");
+        icon.innerText = "";
 
     }
-//*********** */ SIGNIN FUNCTION
-function signInfunc(){
-    let signin=localStorage.getItem("signinkey");
-    if(signin=="true"){
-        wishindi();
-        cartindi();
-        loginindi();
-        let login=document.querySelector("#loginIcon-id");
-        login.addEventListener("mouseover",function(){
-            let login2=document.querySelector("#login-drop-id");
-            login2.style.display="block";
-           
-        })
-        login.addEventListener("mouseleave",function(){
-            let login2=document.querySelector("#login-drop-id");
-            login2.style.display="none";
-           
-        })
-        
-    }else{
-        wishindiRem();
-        cartindiRem();
-        loginindiRem();
-        let login=document.querySelector("#loginIcon-id");
-        login.addEventListener("mouseover",function(){
-            let login2=document.querySelector("#login-drop-id");
-            login2.style.display="none";
-    })
-}
-}
-//*********** */ SIGNOUT FUNCTION
-function signOutfunc() {
-    localStorage.setItem("signinkey","false");
-    window.location.reload();
-}
-//********** */ FUNCTION FOR CART ACCESS
-function tocartfunc(){
-    let sign=localStorage.getItem("signinkey");
-    if(sign=="true"){
-        window.location.href="cart.html";
-    }else{
-        alert("You need to SignUp/In first!");
+    // WISH ICON FUNCTION
+
+    function wishindi() {
+        let icon = document.querySelector("#wishIcon-no");
+        let cartarr = JSON.parse(localStorage.getItem("wishkey")) || [];
+        let l = cartarr.length;
+        if (l > 0) {
+            icon.innerText = l;
+        } else {
+            icon.innerText = "";
+        }
     }
-}
-//********** */ FUNCTION FOR WISHLIST ACCESS
-function towishfunc(){
-    let sign=localStorage.getItem("signinkey");
-    if(sign=="true"){
-        window.location.href="wishlist.html";
-    }else{
-        alert("You need to SignUp/In first!");
+
+    function wishindiRem() {
+        let icon = document.querySelector("#wishIcon-no");
+        icon.innerText = "";
+
     }
-}
-//********** */ FUNCTION FOR SIGNUP ACCESS******
-function tosignfunc(){
-    let sign=localStorage.getItem("signinkey");
-    if(sign=="false" || sign==null){
-        window.location.href="signup.html";
-    }else if(sign=="true"){
-        alert("You are already SignedIn!");
+    // LOGIN ICON FUNCTION
+    function loginindi() {
+        let icon = document.querySelector("#loginIcon");
+        icon.style.color = "#34eb37";
+
     }
-}
+    function loginindiRem() {
+        let icon = document.querySelector("#loginIcon");
+        icon.style.color = "black";
+
+    }
+    //*********** */ SIGNIN FUNCTION
+    function signInfunc() {
+        let signin = localStorage.getItem("signinkey");
+        if (signin == "true") {
+            wishindi();
+            cartindi();
+            loginindi();
+            let login = document.querySelector("#loginIcon-id");
+            login.addEventListener("mouseover", function () {
+                let login2 = document.querySelector("#login-drop-id");
+                login2.style.display = "block";
+
+            })
+            login.addEventListener("mouseleave", function () {
+                let login2 = document.querySelector("#login-drop-id");
+                login2.style.display = "none";
+
+            })
+
+        } else {
+            wishindiRem();
+            cartindiRem();
+            loginindiRem();
+            let login = document.querySelector("#loginIcon-id");
+            login.addEventListener("mouseover", function () {
+                let login2 = document.querySelector("#login-drop-id");
+                login2.style.display = "none";
+            })
+        }
+    }
+    //*********** */ SIGNOUT FUNCTION
+    function signOutfunc() {
+        localStorage.setItem("signinkey", "false");
+        window.location.reload();
+    }
+    //********** */ FUNCTION FOR CART ACCESS
+    function tocartfunc() {
+        let sign = localStorage.getItem("signinkey");
+        if (sign == "true") {
+            window.location.href = "cart.html";
+        } else {
+            alert("You need to SignUp/In first!");
+        }
+    }
+    //********** */ FUNCTION FOR WISHLIST ACCESS
+    function towishfunc() {
+        let sign = localStorage.getItem("signinkey");
+        if (sign == "true") {
+            window.location.href = "wishlist.html";
+        } else {
+            alert("You need to SignUp/In first!");
+        }
+    }
+    //********** */ FUNCTION FOR SIGNUP ACCESS******
+    function tosignfunc() {
+        let sign = localStorage.getItem("signinkey");
+        if (sign == "false" || sign == null) {
+            window.location.href = "signup.html";
+        } else if (sign == "true") {
+            alert("You are already SignedIn!");
+        }
+    }
 
 
 
-document.querySelector("#fb").addEventListener("click",Myfb);
-function Myfb(){
-    window.location.href="https://www.facebook.com/shoppersstopindia";
-}
+    document.querySelector("#fb").addEventListener("click", Myfb);
+    function Myfb() {
+        window.location.href = "https://www.facebook.com/shoppersstopindia";
+    }
 
-document.querySelector("#twitter").addEventListener("click",Mytwitter);
+    document.querySelector("#twitter").addEventListener("click", Mytwitter);
 
-function Mytwitter(){
-window.location.href="https://twitter.com/shoppersstop";
-}
+    function Mytwitter() {
+        window.location.href = "https://twitter.com/shoppersstop";
+    }
 
-document.querySelector("#insta").addEventListener("click",Myinsta);
+    document.querySelector("#insta").addEventListener("click", Myinsta);
 
-function Myinsta(){
-window.location.href="https://www.instagram.com/shoppers_stop/";
-}
+    function Myinsta() {
+        window.location.href = "https://www.instagram.com/shoppers_stop/";
+    }
 </script>
