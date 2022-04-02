@@ -111,3 +111,51 @@ function tosignfunc(){
         alert("You are already SignedIn!");
     }
 }
+// FUNCTION FOR POPUP FORM
+function openForm() {
+    document.getElementById("myForm-3").style.display = "block";
+    
+    
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm-3").style.display = "none";
+  }
+
+  function editfunc(){
+      event.preventDefault();
+    let name1=document.querySelector("#name-3").value;
+    let email1=document.querySelector("#email-3").value;
+    let mobile1=document.querySelector("#mobile-3").value;
+    let mob=localStorage.getItem("mobilekey");
+    let signuparr=JSON.parse(localStorage.getItem("signupkey"));
+    let index=0;
+    signuparr.map(function(el,ind){
+        if(el.mobile==mob){
+            index=ind;
+        }
+    })
+    if(name1!="") signuparr[index].name=name1;
+    if(email1!="") signuparr[index].email=email1;
+    if(mobile1!="") signuparr[index].mobile=mobile1;
+    
+    localStorage.setItem("signupkey",JSON.stringify(signuparr));
+    document.getElementById("myForm-3").style.display = "none";
+    document.getElementById("myForm-4").style.display = "block";
+  }
+
+  function otpfunc(){
+      event.preventDefault();
+    let otp1=document.querySelector("#otp-3").value;
+    if(otp1=="1234"){
+        alert("Profile edited!");
+        document.getElementById("myForm-4").style.display = "none";
+        window.location.reload();
+    }else{
+        alert("Incorrect OTP!");
+    }
+  }
+
+  function closeForm2() {
+    document.getElementById("myForm-4").style.display = "none";
+  }
