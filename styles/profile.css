@@ -497,3 +497,125 @@ body{
   .icon-hover:hover{
     color:#ff5d3b;
   }
+  #content-pro{
+    margin:0px auto;
+    padding:40px 60px;
+    background-color:#f5f5f5;
+    display:flex;
+    justify-content: space-between;
+
+
+  }
+  #content-pro-l{
+    width:20%;
+    background-color: white;
+    border-radius: 5px;
+    margin:0;
+
+  }
+  #content-pro-l-1{
+    margin:0;
+    padding:20px;
+    height:170px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    background-color: #ff0066;
+  }
+
+  #content-pro-l-1>div:nth-child(1){
+    width:22%;
+
+  }
+  #content-pro-l-1>div:nth-child(1)>img{
+    width:100%;
+    border-radius: 50%;
+    background-color: white;
+  }
+  #content-pro-l-1>div:nth-child(2){
+    width:77%;
+
+  }
+  #content-pro-l-1>div:nth-child(2)>p{
+    color:white;
+    font-size: 12px;
+    font-weight: 200;
+  }
+  #content-pro-l-2{
+    margin:5px 0 0 0;
+    
+    width:100%;
+    background-color: white;
+  }
+  .content-pro-l-2-btn2{
+    padding: 15px 0;
+    border:0;
+    border-bottom: 1px solid #c4c4c4;
+    font-size: 14px;
+    background-color: white;
+    text-align: left;
+    width:100%;
+
+  }
+  .content-pro-l-2-btn2:hover{
+    padding:22px 0;
+  }
+  #content-pro-l-2-btn{
+    padding: 15px 0;
+    width:100%;
+    font-size: 12px;
+    color:#666666;
+    background-color: white;
+    border:0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #content-pro-l-2-btn:hover{
+    color:#ff0066;
+  }
+  #content-pro-l-3{
+    margin:5px 0 0 0;
+    padding: 0 10px;
+    width:100%;
+    background-color: white;
+  }
+  #content-pro-r{
+    width:77%;
+    background-color: white;
+    border-radius: 5px;
+    margin:0;
+    padding:20px;
+
+
+  }
+  .heading-pro{
+    font-size:23px;
+    font-weight:700px;
+    color:black;
+
+  }
+  tr>td:nth-child(1){
+    font-size:14px;
+    color:#666666;
+    font-weight: 600;
+  }
+  tr>td:nth-child(2){
+    font-size:14px;
+    
+  }
+  td{
+    line-height: 1.8;
+  }
+  .btn-pro{
+    color:white;
+    background-color: #ff0066;
+    padding:10px 40px;
+    border:0;
+    border-radius: 2px;
+    font-size:16px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+  .btn-pro:hover{
+    background-color: gray;
+  }
