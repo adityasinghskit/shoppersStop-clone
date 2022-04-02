@@ -21,6 +21,13 @@ function showprof(){
     let email=document.querySelector("#email-l");
     email.innerText="Email: "+email1;
     let mobile=document.querySelector("#mobile-l");
-    mobile.innerText="Mobile: "+name1;
-
+    mobile.innerText="Mobile: "+mobile1;
+    let name2=document.querySelector("#name-r");
+    name2.innerText=name1;
+    let email2=document.querySelector("#email-r");
+    email2.innerText=email1;
+    let mobile2=document.querySelector("#mobile-r");
+    mobile2.innerText=mobile1;
+    let gender2=document.querySelector("#gender-r");
+    gender2.innerText=gender1;
 }
