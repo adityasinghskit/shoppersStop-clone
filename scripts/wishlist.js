@@ -1,5 +1,6 @@
 let wisharr=JSON.parse(localStorage.getItem("wishkey")) || [];
 showitems(wisharr);
+countfunc();
 showprof();
 
 function showprof(){
@@ -55,16 +56,38 @@ function showitems(arr){
             off1.innerText=el.off +"% off";
         }
         div2.append(price1,strprice1,off1);
-        
+        let div3=document.createElement("div");
+        div3.setAttribute("class","item-pricediv")
         add1=document.createElement("button");
         add1.setAttribute("class","item-btn");
         add1.innerText="Add to Cart";
         add1.onclick=function() {
             addtocart(el);
         }
-        div1.append(img1,brand1,name1,div2,add1);
+        add2=document.createElement("button");
+        add2.setAttribute("class","item-btn");
+        add2.innerText="Remove Item";
+        add2.onclick=function() {
+            removeit(el);
+        }
+        div3.append(add1,add2);
+        div1.append(img1,brand1,name1,div2,div3);
         document.querySelector("#items").append(div1);
     })
+}
+function removeit(el){
+    let wisharr=JSON.parse(localStorage.getItem("wishkey"));
+    wisharr.map(function(elm,ind){
+        if(elm.name==el.name){
+            wisharr.splice(ind,1);
+            localStorage.setItem("wishkey",JSON.stringify(wisharr));
+        }
+    })
+    cartindi();
+    wishindi();
+    showitems(wisharr);
+    countfunc();
+
 }
 function addtocart(el) {
     let cartarr=JSON.parse(localStorage.getItem("cartkey")) || [];
@@ -91,6 +114,7 @@ function addtocart(el) {
     cartindi();
      wishindi();
     showitems(wisharr);
+    countfunc();
 }
 
 function tocartfunc(){
@@ -180,4 +204,10 @@ function signInfunc(){
             login2.style.display="none";
     })
 }
+}
+function countfunc(){
+    let wisharr=JSON.parse(localStorage.getItem("wishkey")) || [];
+    let n=wisharr.length;
+    let count=document.querySelector("#wishcount");
+    count.innerText="("+n+" ITEMS)";
 }

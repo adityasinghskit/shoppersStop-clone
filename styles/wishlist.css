@@ -579,16 +579,33 @@ body{
   }
   #content-pro-r{
     width:77%;
-    background-color: white;
+    background-color: #f5f5f5;
     border-radius: 5px;
     margin:0;
-    padding:20px;
 
-
+  }
+  #content-pro-r-1{
+    width:100%;
+    background-color: white;
+    border-radius: 2px;
+    margin:0;
+    padding:10px 15px 5px 15px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #content-pro-r-1>div:nth-child(1){
+    margin-right:5px;
   }
   .heading-pro{
     font-size:23px;
     font-weight:700px;
+    color:black;
+
+  }
+  .subheading-pro{
+    font-size:15px;
+    font-weight:200px;
     color:black;
 
   }
@@ -676,6 +693,7 @@ body{
 }
 /* CSS FOR ITEMS */
 #items{
+  margin-top: 10px;
     width:100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
