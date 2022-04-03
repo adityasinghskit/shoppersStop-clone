@@ -78,10 +78,14 @@ if(otp1=="1234"){
      let email1=document.querySelector("#email").value;
      let gender1=document.querySelector("#gender").value;
      let mob1=localStorage.getItem("mobilekey");
-    if(mobile1!=mob1){
+    if(name1=="" || mobile1=="" || email1=="" || gender1==""){
+      alert("Fill all details!");
+    }
+    else if(mobile1!=mob1){
       alert("Enter same mobile no!");
 
-    }else{
+    }
+    else{
      let obj={
          name:name1,
          mobile:mobile1,
