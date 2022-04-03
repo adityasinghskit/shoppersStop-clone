@@ -12,7 +12,7 @@ function openForm1() {
   function openForm2() {
       event.preventDefault();
     
-    let mobile1=document.querySelector("#mobile").value;
+    let mobile1=document.querySelector("#mobile-1").value;
     localStorage.setItem("mobilekey",mobile1);
     let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
     exist=false;
@@ -74,16 +74,21 @@ if(otp1=="1234"){
  function addDetail(){
     event.preventDefault();
      let name1=document.querySelector("#name").value;
-     let mobile1=document.querySelector("#mobile").value;
+     let mobile1=document.querySelector("#mobile-2").value;
      let email1=document.querySelector("#email").value;
      let gender1=document.querySelector("#gender").value;
+     let mob1=localStorage.getItem("mobilekey");
+    if(mobile1!=mob1){
+      alert("Enter same mobile no!");
 
+    }else{
      let obj={
          name:name1,
          mobile:mobile1,
          email:email1,
          gender:gender1,
      }
+
      let signuparr=JSON.parse(localStorage.getItem("signupkey")) || [];
      signuparr.push(obj);
      localStorage.setItem("signupkey",JSON.stringify(signuparr));
@@ -92,5 +97,5 @@ if(otp1=="1234"){
      alert("You have been registered & Signed In!");
      //closeForm3b();
      history.back();
-     
+    }
  }
