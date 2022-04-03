@@ -284,6 +284,7 @@ let wdata=[
 		cartarr.map(function(elm){
 			if(el.name==elm.name) {
 				dup=true;
+				alert("Already in cart!");
 			}
 		})
 		if(!dup){
@@ -299,6 +300,7 @@ let wdata=[
 		wisharr.map(function(elm){
 			if(el.name==elm.name) {
 				dup=true;
+				alert("Already in wishlist!");
 			}
 		})
 		if(!dup){
