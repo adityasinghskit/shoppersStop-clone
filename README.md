@@ -27,38 +27,47 @@ Windows/MAC/LINUX
 3.Node JS-10.6
 
 ## LOGIN PAGE
-1.Here it is a Login page of our website.
+1.Here it is a Login page of our website.<br>
 2.You have to fill your details in it and create your account it will redirect you to the Home Page.
+
 ![Screenshot (571)](https://user-images.githubusercontent.com/101727982/161374796-2f9b2250-227a-4766-ac37-ea34c30b0ca3.png)
 ## USER PROFILE
-1. It displays the User details
+1. It displays the User details.<br>
 2. The details can also be edited, through this page.
-![Screenshot (328)](https://user-images.githubusercontent.com/68966858/161418786-19582287-fe9b-40a2-807e-924bcb030697.png)
+
+![Screenshot (328)](https://user-images.githubusercontent.com/68966858/161420044-b09b8b2f-8a52-4e00-8889-54bfc0c285bc.png)
 ## HOME PAGE
-1.This is the main and landing page of our website .
-2. If you click on the product is will directly redirect you to go on that product .
+1.This is the main and landing page of our website.<br>
+2. If you click on the product is will directly redirect you to go on that product.
+
 ![Screenshot (581)](https://user-images.githubusercontent.com/101727982/161375004-b2e67fcd-ec62-4657-a668-dbb8ed7d675a.png)
 ## WATCHES DISPLAY PAGE
-1. This pages displays the items.
+1. This pages displays the items.<br>
 2. Each item has 2 buttons one adds to cart and other to wishlist.
-##WISHLIST
-1. This page displays the wishlist
+
+![mensWatches](https://user-images.githubusercontent.com/68966858/161420161-47449e99-ad78-4020-9b2a-120b61cbb970.png)
+## WISHLIST
+1. This page displays the Wishlist.<br>
 2. Each item has 2 buttons one adds item directly to the cart other removes it from wishlist.
-![Screenshot (329)](https://user-images.githubusercontent.com/68966858/161419006-ca6b8a1d-1f94-47ef-a65f-3c2ea5337bae.png)
+![Wishlist](https://user-images.githubusercontent.com/68966858/161420075-92cdce23-f53b-4c0b-81a6-691939a43f80.png)
 ## ADD TO CART PAGE
-1.When you add to bag a product it will redirect you to the add to bag page
-2. Here  you will see your details about the product.
+1.When you add to bag a product it will redirect you to the add to bag page.<br>
+2. Here  you will see your details about the product.<br>
 3.After clicking  on checkout it will redirect you to the CHECKOUT PAGE.
+
 ![Screenshot (587)](https://user-images.githubusercontent.com/101727982/161376349-cbc0ac70-7ba3-45bc-874a-5e79eb6a4ec6.png)
 ## CHECKOUT PAGE
-1.Here you will fill your full address and details.
+1.Here you will fill your full address and details.<br>
 2.On clicking save and proceed it will redirect you to the payment page.
+
 ![Screenshot (566)](https://user-images.githubusercontent.com/101727982/161376580-fccd9131-0a2f-48fb-b195-9e7be225e1b6.png)
 ## PAYMENT PAGE
-1. Here you will fill details of your card.
-2. It will redirect you to 
+1. Here you will fill details of your card.<br>
+2. It will redirect you to OTP confirmation page.
+
 ![Screenshot (567)](https://user-images.githubusercontent.com/101727982/161377064-6bbd4b03-04ea-454c-9509-5caf6c10deeb.png)
 ## OTP & CONFIRMAITON PAGE
-1.Here you will enter your otp.
-2.It will redirect you to the confirmation page
-![Screenshot (331)](https://user-images.githubusercontent.com/68966858/161419079-1289fc6a-f60e-4b28-86f8-39800aa63ebd.png)
+1.Here you will enter your otp.<br>
+2.It will redirect you to the confirmation page.
+
+![Confirmation page](https://user-images.githubusercontent.com/68966858/161420100-6138de81-7327-462a-87ad-defbd0ebbdfb.png)
