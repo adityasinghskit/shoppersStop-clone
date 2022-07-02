@@ -3,6 +3,7 @@
 Hi everyone! Here we have showcased our first project which is a clone of SHOPPERS STOP website. The project was asigned to us by MASAI SCHOOL.  
 Shoppers Stop is an Indian department store chain.There are 46 stores across 13 cities and largest town in India, with clothing, toys, beauticare, accessories, shoes ans sandals, Heels, fragrances, cosmetics,and beauty products, home furnishing, and decorations products Items.
 
+![Hero image](https://user-images.githubusercontent.com/68966858/177002780-0d94b517-fcbf-4dc0-8530-e05ad84a2c90.png)
 
 ## Contribution
 OUR TEAM MEMBERS INCLUDES:-
