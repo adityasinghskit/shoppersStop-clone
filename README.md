@@ -20,12 +20,11 @@ OUR TEAM MEMBERS INCLUDES:-
 “Our team member have put great efforts in this project. However, it would not have been possible without the kind of support and help of many individuals and organisations. We would like to extend my sincere thanks to all of them." 
 ## OPERATING SYSTEM
 Windows/MAC/LINUX
-## PROGRAMMING LANGUAGE
-1.HTML-5
-
-2.CSS-12.8
-
-3.Node JS-10.6
+## Tech Stack
+![view - Documentation](https://img.shields.io/badge/HTML-green?style=for-the-badge&logo=html5)
+![view - Documentation](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3)
+![view - Documentation](https://img.shields.io/badge/JS-red?style=for-the-badge&logo=javaScript)
+![view - Documentation](https://img.shields.io/badge/Bootstrap-white?style=for-the-badge&logo=bootstrap)
 
 ## LOGIN PAGE
 1.Here it is a Login page of our website.<br>
